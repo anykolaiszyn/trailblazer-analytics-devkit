@@ -1,0 +1,21 @@
+{
+  "name": "trailblazer-analytics",
+  "version": "0.0.1",
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "package": "astro build && cd dist && zip -r ../trailblazer-analytics-dist.zip . && cd .."
+  },
+  "dependencies": {
+    "astro": "^4.3.0",
+    "@astrojs/react": "^3.4.0",
+    "react": "^18.3.0",
+    "react-dom": "^18.3.0",
+    "tailwindcss": "^3.4.2"
+  },
+  "devDependencies": {
+    "@astrojs/tailwind": "^5.0.0"
+  }
+}

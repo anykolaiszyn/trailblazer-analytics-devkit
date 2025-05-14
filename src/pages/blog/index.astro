@@ -1,0 +1,14 @@
+---
+import Navbar from '../../components/Navbar.astro';
+import { Astro } from 'astro';
+const posts = await Astro.glob('../../content/blog/*.mdx');
+---
+<Navbar />
+<section class="container mx-auto py-12">
+  <h2 class="text-3xl font-bold mb-4">Blog</h2>
+  <ul class="space-y-4">
+    {posts.map(post => (
+      <li><a href={post.url} class="text-brandGreen underline">{post.frontmatter.title}</a></li>
+    ))}
+  </ul>
+</section>
