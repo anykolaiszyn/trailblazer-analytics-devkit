@@ -20,3 +20,15 @@
 ## Maintenance
 - Quarterly `pnpm audit fix`.
 - Lighthouse CI budget: **Perf ≥ 90**, **a11y ≥ 95**.
+
+## Maintenance Checklist
+
+- [ ] Run `pnpm audit fix` (quarterly or before major releases)
+- [ ] Review and commit any dependency/security updates
+- [ ] Run Lighthouse CI and check for:
+  - [ ] Performance ≥ 90
+  - [ ] Accessibility ≥ 95
+- [ ] Review and update guides as needed
+
+---
+For reminders, set a recurring calendar event or task in your project management tool to run `pnpm audit fix` every 3 months.

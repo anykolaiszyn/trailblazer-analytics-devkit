@@ -1,7 +1,7 @@
 {
-  "$ref": "#/definitions/blog",
+  "$ref": "#/definitions/caseStudies",
   "definitions": {
-    "blog": {
+    "caseStudies": {
       "type": "object",
       "properties": {
         "title": {
@@ -10,7 +10,10 @@
         "date": {
           "type": "string"
         },
-        "description": {
+        "client": {
+          "type": "string"
+        },
+        "summary": {
           "type": "string"
         },
         "$schema": {

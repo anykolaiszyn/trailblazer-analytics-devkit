@@ -35,3 +35,15 @@ Upload the **contents** of that zip via HostGator’s File Manager.
 ## 6. Commit & push
 Use GitHub Desktop **Commit → Push origin**.  
 GitHub Actions will also build & attach the same zip as an artifact.
+
+## Local Dev Process (Quick Reference)
+
+- [ ] Run `pnpm run dev` to start the local server.
+- [ ] Run `pnpm run build` to generate the static site.
+- [ ] Run `pnpm run preview` to preview the production build.
+- [ ] Run `pnpm run package` to create the HostGator zip.
+- [ ] **Occasionally:** Run `pnpm run lighthouse-ci` to check performance and accessibility (see LIGHTHOUSE_CI_GUIDE.md for details).
+- [ ] **Quarterly:** Run `pnpm audit fix` to check for security issues.
+
+---
+For more details, see the guides in the project root.

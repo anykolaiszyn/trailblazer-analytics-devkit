@@ -6,7 +6,8 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "package": "astro build && cd dist && zip -r ../trailblazer-analytics-dist.zip . && cd .."
+    "package": "astro build && cd dist && zip -r ../trailblazer-analytics-dist.zip . && cd ..",
+    "lighthouse-ci": "lhci autorun"
   },
   "dependencies": {
     "@astrojs/mdx": "^4.2.6",
@@ -18,6 +19,7 @@
   },
   "devDependencies": {
     "@astrojs/tailwind": "^6.0.2",
+    "@lhci/cli": "^0.14.0",
     "autoprefixer": "10.4.15",
     "postcss": "8.4.38"
   }
