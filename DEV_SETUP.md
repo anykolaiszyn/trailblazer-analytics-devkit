@@ -1,13 +1,17 @@
 # 🛠️ Local Development Setup (GitHub Desktop + HostGator)
 
-## 1. Clone with GitHub Desktop
+## 1. Clone with GitHub Desktop - Done
 1. **File → Clone Repository…**  
 2. Paste your repo URL (`https://github.com/your-username/trailblazer-analytics.git`).  
 3. Choose a local path and clone.
 
 ## 2. Install prerequisites
 - **Node.js 18 or 20**  
-- **PNPM** → `npm i -g pnpm`
+```bash
+node --version
+npm install -g pnpm
+pnpm --version
+```
 
 ## 3. First‑time setup
 ```bash
