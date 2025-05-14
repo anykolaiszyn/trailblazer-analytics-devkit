@@ -9,6 +9,7 @@
     "package": "astro build && cd dist && zip -r ../trailblazer-analytics-dist.zip . && cd .."
   },
   "dependencies": {
+    "@astrojs/mdx": "^4.2.6",
     "@astrojs/react": "^4.2.7",
     "astro": "^5.7.13",
     "react": "^18.3.0",
