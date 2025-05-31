@@ -1,21 +1,163 @@
 ---
+import Base from '../layouts/Base.astro';
 import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.jsx';
 import { getCollection } from 'astro:content';
 import CaseStudyCard from '../components/CaseStudyCard.jsx';
-const caseStudies = await getCollection('caseStudies');
----
-<Navbar />
-<section class="container mx-auto py-16 text-center">
-  <h1 class="text-4xl font-extrabold text-brandGreen mb-4">Trailblazer Analytics</h1>
-  <p class="max-w-xl mx-auto">Transforming data into actionable insight with BI expertise, AI innovation, and clear storytelling.</p>
-  <a href="/contact" class="mt-6 inline-block bg-brandGold text-white py-3 px-6 rounded-lg">Start a conversation</a>
-</section>
 
-<section class="container mx-auto py-16">
-  <h2 class="text-2xl font-bold mb-6">Case Studies</h2>
-  <div class="grid gap-6 md:grid-cols-2">
-    {caseStudies.map(cs => (
-      <CaseStudyCard {...cs.data} />
-    ))}
-  </div>
-</section>
+const caseStudies = await getCollection('caseStudies');
+
+// SEO meta data
+const seoData = {
+  title: "Trailblazer Analytics - Where Data Strategy Meets Action",
+  description: "Transform your business with expert data strategy, analytics implementation, and AI innovation. Get actionable insights, not just reports. Download free tools and connect with Alexander Trailblazer.",
+  image: "/og-image-home.png"
+};
+---
+
+<Base {...seoData}>
+  <Navbar />
+  
+  <!-- Hero Section -->
+  <section class="relative bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white min-h-screen flex items-center">
+    <div class="absolute inset-0 bg-black opacity-50"></div>
+    <div class="container mx-auto px-6 relative z-10">
+      <div class="max-w-4xl mx-auto text-center">
+        <h1 class="text-5xl md:text-7xl font-bold mb-6">
+          Where Data Strategy
+          <span class="text-brandGold block">Meets Action</span>
+        </h1>
+        <p class="text-xl md:text-2xl mb-8 text-gray-300 max-w-3xl mx-auto">
+          Transform your data into competitive advantage with expert analytics, AI innovation, and strategic insights that drive real business results.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="/contact" class="bg-brandGold hover:bg-yellow-600 text-black font-semibold py-4 px-8 rounded-lg transition-colors">
+            Start Your Journey
+          </a>
+          <a href="/insights" class="border-2 border-brandGold text-brandGold hover:bg-brandGold hover:text-black font-semibold py-4 px-8 rounded-lg transition-colors">
+            Explore Insights
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Value Proposition Section -->
+  <section class="py-20 bg-white">
+    <div class="container mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold text-gray-900 mb-4">Data Solutions That Deliver</h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          From strategy to implementation, we guide organizations through their data transformation journey with proven methodologies and cutting-edge technology.
+        </p>
+      </div>
+      
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="text-center p-6">
+          <div class="w-16 h-16 bg-brandGreen rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-2">Strategic Analytics</h3>
+          <p class="text-gray-600">Turn data chaos into strategic clarity with proven frameworks and methodologies.</p>
+        </div>
+        
+        <div class="text-center p-6">
+          <div class="w-16 h-16 bg-brandGreen rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-2">AI Innovation</h3>
+          <p class="text-gray-600">Harness the power of artificial intelligence to unlock hidden patterns and opportunities.</p>
+        </div>
+        
+        <div class="text-center p-6">
+          <div class="w-16 h-16 bg-brandGreen rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-2">Clear Storytelling</h3>
+          <p class="text-gray-600">Transform complex data into compelling narratives that drive decision-making.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Content Section -->
+  <section class="py-20 bg-gray-50">
+    <div class="container mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold text-gray-900 mb-4">Latest Insights & Resources</h2>
+        <p class="text-xl text-gray-600">Stay ahead with expert analysis, tools, and strategies.</p>
+      </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-gray-900 mb-2">Insights</h3>
+            <p class="text-gray-600 mb-4">Expert analysis on data trends, technology, and business strategy.</p>
+            <a href="/insights" class="text-brandGreen font-semibold hover:text-green-700">Explore Insights →</a>
+          </div>
+        </div>
+        
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-gray-900 mb-2">Podcast</h3>
+            <p class="text-gray-600 mb-4">Conversations with data leaders and industry innovators.</p>
+            <a href="/podcast" class="text-brandGreen font-semibold hover:text-green-700">Listen Now →</a>
+          </div>
+        </div>
+        
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-gray-900 mb-2">Tech Notes</h3>
+            <p class="text-gray-600 mb-4">Technical tutorials, code snippets, and developer resources.</p>
+            <a href="/tech-notes" class="text-brandGreen font-semibold hover:text-green-700">Browse Notes →</a>
+          </div>
+        </div>
+        
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-gray-900 mb-2">Tools & Downloads</h3>
+            <p class="text-gray-600 mb-4">Free resources, templates, and frameworks to accelerate your data journey.</p>
+            <a href="/tools" class="text-brandGreen font-semibold hover:text-green-700">Get Resources →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Case Studies Section -->
+  {caseStudies.length > 0 && (
+    <section class="py-20 bg-white">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-gray-900 mb-4">Success Stories</h2>
+          <p class="text-xl text-gray-600">Real results from real organizations.</p>
+        </div>
+        <div class="grid gap-8 md:grid-cols-2">
+          {caseStudies.map(cs => (
+            <CaseStudyCard {...cs.data} />
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <!-- CTA Section -->
+  <section class="py-20 bg-brandGreen text-white">
+    <div class="container mx-auto px-6 text-center">
+      <h2 class="text-4xl font-bold mb-4">Ready to Transform Your Data Strategy?</h2>
+      <p class="text-xl mb-8 max-w-2xl mx-auto">
+        Let's discuss how we can help you turn data into your competitive advantage.
+      </p>
+      <a href="/contact" class="bg-brandGold hover:bg-yellow-600 text-black font-semibold py-4 px-8 rounded-lg transition-colors">
+        Start the Conversation
+      </a>
+    </div>
+  </section>
+
+  <Footer />
+</Base>

@@ -1,0 +1,334 @@
+---
+import Base from '../layouts/Base.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.jsx';
+
+// SEO meta data
+const seoData = {
+  title: "Analytics Tools & Software - Data Strategy Resources",
+  description: "Explore powerful analytics tools, BI software recommendations, and strategic frameworks. Interactive calculators, assessment tools, and curated resources for data professionals.",
+  image: "/og-image-tools.png"
+};
+
+// Tools and software categories
+const toolCategories = [
+  {
+    id: 'frameworks',
+    title: 'Strategic Frameworks',
+    description: 'Proven methodologies for data strategy and analytics implementation',
+    icon: '📋',
+    tools: [
+      {
+        name: 'Data Strategy Canvas',
+        description: 'A comprehensive framework for developing and communicating your data strategy.',
+        type: 'Template',
+        format: 'PDF + Excel',
+        price: 'Free',
+        downloadUrl: '/downloads/data-strategy-canvas.pdf'
+      },
+      {
+        name: 'Analytics Maturity Assessment',
+        description: 'Evaluate your organization\'s analytics capabilities and identify improvement areas.',
+        type: 'Assessment',
+        format: 'Interactive Tool',
+        price: 'Free',
+        downloadUrl: '/tools/maturity-assessment'
+      },
+      {
+        name: 'ROI Calculator for Analytics Projects',
+        description: 'Calculate and justify the return on investment for your analytics initiatives.',
+        type: 'Calculator',
+        format: 'Excel + Web App',
+        price: '$49',
+        downloadUrl: '/tools/roi-calculator'
+      }
+    ]
+  },
+  {
+    id: 'templates',
+    title: 'Templates & Checklists',
+    description: 'Ready-to-use templates for common data and analytics tasks',
+    icon: '📝',
+    tools: [
+      {
+        name: 'Data Governance Starter Kit',
+        description: 'Complete set of templates for establishing data governance in your organization.',
+        type: 'Template Pack',
+        format: 'Word + PowerPoint',
+        price: 'Free',
+        downloadUrl: '/downloads/data-governance-kit.zip'
+      },
+      {
+        name: 'Dashboard Design Checklist',
+        description: 'Ensure your dashboards follow best practices for usability and effectiveness.',
+        type: 'Checklist',
+        format: 'PDF',
+        price: 'Free',
+        downloadUrl: '/downloads/dashboard-checklist.pdf'
+      },
+      {
+        name: 'Data Quality Audit Template',
+        description: 'Systematic approach to assessing and improving data quality across your organization.',
+        type: 'Template',
+        format: 'Excel + Guide',
+        price: '$29',
+        downloadUrl: '/tools/data-quality-audit'
+      }
+    ]
+  },
+  {
+    id: 'calculators',
+    title: 'Calculators & Tools',
+    description: 'Interactive tools for planning and measuring analytics success',
+    icon: '🧮',
+    tools: [
+      {
+        name: 'Cloud Cost Optimizer',
+        description: 'Optimize your cloud data platform costs with intelligent recommendations.',
+        type: 'Web App',
+        format: 'Online Tool',
+        price: '$99/month',
+        downloadUrl: '/tools/cloud-optimizer'
+      },
+      {
+        name: 'Sample Size Calculator',
+        description: 'Determine the right sample size for your A/B tests and experiments.',
+        type: 'Calculator',
+        format: 'Web App',
+        price: 'Free',
+        downloadUrl: '/tools/sample-size'
+      },
+      {
+        name: 'Data Team Capacity Planner',
+        description: 'Plan and optimize your data team resources and project timelines.',
+        type: 'Planner',
+        format: 'Excel + Web App',
+        price: '$79',
+        downloadUrl: '/tools/capacity-planner'
+      }
+    ]
+  },
+  {
+    id: 'courses',
+    title: 'Training & Courses',
+    description: 'Educational resources to build data literacy and analytics skills',
+    icon: '🎓',
+    tools: [
+      {
+        name: 'Data Strategy Fundamentals',
+        description: 'A comprehensive course on building and executing effective data strategies.',
+        type: 'Online Course',
+        format: '8 Modules + Resources',
+        price: '$299',
+        downloadUrl: '/courses/data-strategy-fundamentals'
+      },
+      {
+        name: 'Executive Data Literacy',
+        description: 'Essential data concepts and skills for business leaders and executives.',
+        type: 'Workshop Series',
+        format: '4 Sessions + Materials',
+        price: '$199',
+        downloadUrl: '/courses/executive-data-literacy'
+      },
+      {
+        name: 'Analytics Team Leadership',
+        description: 'Build and lead high-performing analytics teams in your organization.',
+        type: 'Masterclass',
+        format: 'Live + Recorded Sessions',
+        price: '$499',
+        downloadUrl: '/courses/analytics-leadership'
+      }
+    ]
+  }
+];
+
+// Featured tools
+const featuredTools = [
+  {
+    name: 'Data Strategy Canvas',
+    description: 'The most popular framework for developing comprehensive data strategies',
+    category: 'Strategic Framework',
+    downloads: '10,000+',
+    rating: 4.9,
+    image: '/images/tools/data-strategy-canvas.png'
+  },
+  {
+    name: 'Analytics Maturity Assessment',
+    description: 'Interactive tool to evaluate your organization\'s analytics capabilities',
+    category: 'Assessment Tool',
+    downloads: '5,000+',
+    rating: 4.8,
+    image: '/images/tools/maturity-assessment.png'
+  }
+];
+---
+
+<Base {...seoData}>
+  <Navbar />
+  
+  <!-- Header Section -->
+  <section class="bg-gradient-to-br from-gray-900 to-gray-800 text-white py-20">
+    <div class="container mx-auto px-6">
+      <div class="max-w-4xl mx-auto text-center">
+        <h1 class="text-5xl md:text-6xl font-bold mb-6">
+          Tools & <span class="text-brandGold">Software</span>
+        </h1>
+        <p class="text-xl md:text-2xl text-gray-300 mb-8">
+          Practical tools, templates, and frameworks to accelerate your data journey and analytics success.
+        </p>
+        <div class="flex flex-wrap justify-center gap-4">
+          <span class="bg-brandGreen/20 text-brandGreen px-4 py-2 rounded-full">Free Resources</span>
+          <span class="bg-brandGold/20 text-brandGold px-4 py-2 rounded-full">Premium Tools</span>
+          <span class="bg-blue-500/20 text-blue-400 px-4 py-2 rounded-full">Templates</span>
+          <span class="bg-purple-500/20 text-purple-400 px-4 py-2 rounded-full">Training</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Tools -->
+  <section class="py-16 bg-white">
+    <div class="container mx-auto px-6">
+      <div class="max-w-6xl mx-auto">
+        <h2 class="text-3xl font-bold text-gray-900 mb-12 text-center">Featured Tools</h2>
+        
+        <div class="grid md:grid-cols-2 gap-8 mb-16">
+          {featuredTools.map((tool) => (
+            <div class="bg-gradient-to-br from-brandGreen to-green-600 rounded-2xl p-8 text-white">
+              <div class="flex items-start justify-between mb-4">
+                <div>
+                  <span class="bg-brandGold text-black px-3 py-1 rounded-full text-sm font-semibold">Featured</span>
+                  <h3 class="text-2xl font-bold mt-4 mb-2">{tool.name}</h3>
+                  <p class="text-sm opacity-75 mb-2">{tool.category}</p>
+                </div>
+                <div class="text-right">
+                  <div class="flex items-center gap-1 mb-1">
+                    <svg class="w-4 h-4 text-brandGold" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                    </svg>
+                    <span class="text-sm font-semibold">{tool.rating}</span>
+                  </div>
+                  <p class="text-xs opacity-75">{tool.downloads} downloads</p>
+                </div>
+              </div>
+              <p class="text-lg mb-6 opacity-90">{tool.description}</p>
+              <button class="bg-white text-brandGreen px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                Download Now
+              </button>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tools Categories -->
+  <section class="py-16 bg-gray-50">
+    <div class="container mx-auto px-6">
+      <div class="max-w-6xl mx-auto">
+        <h2 class="text-3xl font-bold text-gray-900 mb-12 text-center">Browse by Category</h2>
+        
+        <div class="space-y-16">
+          {toolCategories.map((category) => (
+            <div id={category.id}>
+              <div class="text-center mb-8">
+                <div class="text-6xl mb-4">{category.icon}</div>
+                <h3 class="text-3xl font-bold text-gray-900 mb-2">{category.title}</h3>
+                <p class="text-lg text-gray-600">{category.description}</p>
+              </div>
+              
+              <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {category.tools.map((tool) => (
+                  <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                    <div class="p-6">
+                      <div class="flex justify-between items-start mb-4">
+                        <h4 class="text-xl font-bold text-gray-900">{tool.name}</h4>
+                        <span class={`px-3 py-1 rounded-full text-sm font-semibold ${
+                          tool.price === 'Free' 
+                            ? 'bg-green-100 text-green-800' 
+                            : 'bg-brandGold text-black'
+                        }`}>
+                          {tool.price}
+                        </span>
+                      </div>
+                      
+                      <p class="text-gray-600 mb-4">{tool.description}</p>
+                      
+                      <div class="flex justify-between items-center mb-4">
+                        <span class="text-sm text-gray-500">{tool.type}</span>
+                        <span class="text-sm text-gray-500">{tool.format}</span>
+                      </div>
+                      
+                      <button class="w-full bg-brandGreen hover:bg-green-700 text-white font-semibold py-3 px-4 rounded-lg transition-colors">
+                        {tool.price === 'Free' ? 'Download Free' : 'Get Tool'}
+                      </button>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Custom Solutions -->
+  <section class="py-16 bg-white">
+    <div class="container mx-auto px-6">
+      <div class="max-w-4xl mx-auto text-center">
+        <h2 class="text-3xl font-bold text-gray-900 mb-8">Need Something Custom?</h2>
+        <div class="bg-gray-50 rounded-2xl p-8">
+          <div class="w-16 h-16 bg-brandGreen rounded-full flex items-center justify-center mx-auto mb-6">
+            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+            </svg>
+          </div>
+          <h3 class="text-2xl font-bold text-gray-900 mb-4">Custom Tool Development</h3>
+          <p class="text-lg text-gray-600 mb-6">
+            We create bespoke analytics tools, dashboards, and frameworks tailored to your specific industry and organizational needs.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="/contact" class="bg-brandGreen text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors">
+              Discuss Your Needs
+            </a>
+            <a href="/downloads" class="border-2 border-brandGreen text-brandGreen px-6 py-3 rounded-lg font-semibold hover:bg-brandGreen hover:text-white transition-colors">
+              View Portfolio
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter Signup -->
+  <section class="py-16 bg-brandGreen text-white">
+    <div class="container mx-auto px-6">
+      <div class="max-w-2xl mx-auto text-center">
+        <h2 class="text-3xl font-bold mb-4">Get New Tools First</h2>
+        <p class="text-xl mb-8 opacity-90">
+          Be the first to access our latest tools, templates, and resources.
+        </p>
+        <div class="bg-white/10 rounded-lg p-6">
+          <form class="flex flex-col sm:flex-row gap-4">
+            <input 
+              type="email" 
+              placeholder="Enter your email" 
+              class="flex-1 px-4 py-3 rounded-lg text-gray-900 placeholder-gray-500"
+              required
+            />
+            <button 
+              type="submit"
+              class="bg-brandGold hover:bg-yellow-600 text-black font-semibold px-6 py-3 rounded-lg transition-colors"
+            >
+              Subscribe
+            </button>
+          </form>
+          <p class="text-sm opacity-75 mt-3">Get notified about new releases and exclusive content.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+</Base>

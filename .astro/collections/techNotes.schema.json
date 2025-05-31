@@ -1,7 +1,7 @@
 {
-  "$ref": "#/definitions/caseStudies",
+  "$ref": "#/definitions/techNotes",
   "definitions": {
-    "caseStudies": {
+    "techNotes": {
       "type": "object",
       "properties": {
         "title": {
@@ -10,31 +10,32 @@
         "date": {
           "type": "string"
         },
-        "client": {
-          "type": "string"
-        },
-        "industry": {
-          "type": "string"
-        },
-        "summary": {
-          "type": "string"
-        },
         "description": {
           "type": "string"
         },
-        "challenge": {
+        "difficulty": {
+          "type": "string",
+          "enum": [
+            "Beginner",
+            "Intermediate",
+            "Advanced"
+          ]
+        },
+        "readTime": {
           "type": "string"
         },
-        "solution": {
-          "type": "string"
+        "category": {
+          "type": "string",
+          "enum": [
+            "Python",
+            "SQL",
+            "JavaScript",
+            "ML",
+            "Data Engineering",
+            "Visualization"
+          ]
         },
-        "results": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          }
-        },
-        "technologies": {
+        "tags": {
           "type": "array",
           "items": {
             "type": "string"

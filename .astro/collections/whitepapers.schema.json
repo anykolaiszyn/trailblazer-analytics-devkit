@@ -1,7 +1,7 @@
 {
-  "$ref": "#/definitions/caseStudies",
+  "$ref": "#/definitions/whitepapers",
   "definitions": {
-    "caseStudies": {
+    "whitepapers": {
       "type": "object",
       "properties": {
         "title": {
@@ -10,38 +10,29 @@
         "date": {
           "type": "string"
         },
-        "client": {
-          "type": "string"
-        },
-        "industry": {
-          "type": "string"
-        },
-        "summary": {
-          "type": "string"
-        },
         "description": {
           "type": "string"
         },
-        "challenge": {
+        "category": {
           "type": "string"
         },
-        "solution": {
+        "pages": {
+          "type": "number"
+        },
+        "downloadUrl": {
           "type": "string"
         },
-        "results": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          }
-        },
-        "technologies": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          }
+        "gated": {
+          "type": "boolean"
         },
         "featured": {
           "type": "boolean"
+        },
+        "rating": {
+          "type": "number"
+        },
+        "downloads": {
+          "type": "number"
         },
         "$schema": {
           "type": "string"

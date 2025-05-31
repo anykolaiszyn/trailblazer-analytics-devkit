@@ -1,7 +1,7 @@
 {
-  "$ref": "#/definitions/caseStudies",
+  "$ref": "#/definitions/tools",
   "definitions": {
-    "caseStudies": {
+    "tools": {
       "type": "object",
       "properties": {
         "title": {
@@ -10,38 +10,38 @@
         "date": {
           "type": "string"
         },
-        "client": {
-          "type": "string"
-        },
-        "industry": {
-          "type": "string"
-        },
-        "summary": {
-          "type": "string"
-        },
         "description": {
           "type": "string"
         },
-        "challenge": {
+        "category": {
+          "type": "string",
+          "enum": [
+            "Frameworks",
+            "Templates",
+            "Calculators",
+            "Courses"
+          ]
+        },
+        "price": {
           "type": "string"
         },
-        "solution": {
+        "demoUrl": {
           "type": "string"
         },
-        "results": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          }
+        "purchaseUrl": {
+          "type": "string"
+        },
+        "featured": {
+          "type": "boolean"
+        },
+        "rating": {
+          "type": "number"
         },
         "technologies": {
           "type": "array",
           "items": {
             "type": "string"
           }
-        },
-        "featured": {
-          "type": "boolean"
         },
         "$schema": {
           "type": "string"

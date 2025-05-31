@@ -1,7 +1,7 @@
 {
-  "$ref": "#/definitions/caseStudies",
+  "$ref": "#/definitions/downloads",
   "definitions": {
-    "caseStudies": {
+    "downloads": {
       "type": "object",
       "properties": {
         "title": {
@@ -10,38 +10,36 @@
         "date": {
           "type": "string"
         },
-        "client": {
-          "type": "string"
-        },
-        "industry": {
-          "type": "string"
-        },
-        "summary": {
-          "type": "string"
-        },
         "description": {
           "type": "string"
         },
-        "challenge": {
+        "category": {
+          "type": "string",
+          "enum": [
+            "Templates",
+            "Tools",
+            "Guides",
+            "Checklists",
+            "Frameworks"
+          ]
+        },
+        "fileType": {
           "type": "string"
         },
-        "solution": {
+        "fileSize": {
           "type": "string"
         },
-        "results": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          }
-        },
-        "technologies": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          }
+        "downloadUrl": {
+          "type": "string"
         },
         "featured": {
           "type": "boolean"
+        },
+        "rating": {
+          "type": "number"
+        },
+        "downloads": {
+          "type": "number"
         },
         "$schema": {
           "type": "string"
