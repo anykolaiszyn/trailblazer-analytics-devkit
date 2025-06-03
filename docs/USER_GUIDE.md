@@ -14,7 +14,7 @@ This guide helps users navigate and get the most out of the Trailblazer Analytic
   - **Downloads** - Free templates, checklists, and tools
   - **White Papers** - In-depth research and strategy guides
   - **Analytics Tools** - Software recommendations and calculators
-- **About** - Learn about Alexander Trailblazer
+- **About** - Learn about Alexander Nykolaiszyn
 - **Contact** - Get in touch for consulting services
 
 ### Quick Access Features

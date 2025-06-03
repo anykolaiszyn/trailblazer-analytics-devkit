@@ -1,108 +1,23 @@
 ---
+import { getCollection } from 'astro:content';
 import Base from '../layouts/Base.astro';
 import Navbar from '../components/Navbar.astro';
 import Footer from '../components/Footer.jsx';
 
+const whitepapers = await getCollection('whitepapers');
+
 // SEO meta data
 const seoData = {
   title: "White Papers - Data Strategy & Analytics Research",
-  description: "Download free white papers on data strategy, AI implementation, governance frameworks, and analytics ROI. Expert insights from Alexander Trailblazer for data-driven business transformation.",
+  description: "Download free white papers on data strategy, AI implementation, governance frameworks, and analytics ROI. Expert insights from Alexander Nykolaiszyn for data-driven business transformation.",
   image: "/og-image-whitepapers.png"
 };
 
-// White paper data
-const whitePapers = [
-  {
-    id: 1,
-    title: "The Executive's Guide to Data Strategy in 2025",
-    subtitle: "Building a Data-Driven Organization That Delivers Results",
-    description: "A comprehensive framework for executives to develop and execute data strategies that create competitive advantage and drive business growth.",
-    pages: 45,
-    published: "January 2024",
-    category: "Strategy",
-    featured: true,
-    topics: ["Data Strategy", "Executive Leadership", "Digital Transformation", "ROI Measurement"],
-    preview: "/previews/executives-guide-preview.pdf",
-    gated: true,
-    downloadCount: 2400
-  },
-  {
-    id: 2,
-    title: "AI Implementation Playbook for Mid-Market Companies",
-    subtitle: "Practical Steps to AI Success Without Enterprise Budgets",
-    description: "Step-by-step guidance for mid-market companies to successfully implement AI initiatives with limited resources and technical expertise.",
-    pages: 38,
-    published: "December 2023",
-    category: "AI & Machine Learning",
-    featured: true,
-    topics: ["Artificial Intelligence", "Implementation", "Budget Planning", "Risk Management"],
-    preview: "/previews/ai-playbook-preview.pdf",
-    gated: true,
-    downloadCount: 1800
-  },
-  {
-    id: 3,
-    title: "Data Governance Framework for Growing Organizations",
-    subtitle: "Establishing Control Without Stifling Innovation",
-    description: "A balanced approach to data governance that ensures compliance and quality while maintaining agility and innovation capacity.",
-    pages: 52,
-    published: "November 2023",
-    category: "Governance",
-    featured: false,
-    topics: ["Data Governance", "Compliance", "Data Quality", "Organizational Design"],
-    preview: "/previews/governance-framework-preview.pdf",
-    gated: true,
-    downloadCount: 1600
-  },
-  {
-    id: 4,
-    title: "The Analytics ROI Measurement Guide",
-    subtitle: "Proving the Value of Your Data Investments",
-    description: "Practical methodologies for measuring and communicating the return on investment of analytics and data science initiatives.",
-    pages: 29,
-    published: "October 2023",
-    category: "Business Value",
-    featured: false,
-    topics: ["ROI Measurement", "Business Value", "KPIs", "Executive Communication"],
-    preview: "/previews/roi-guide-preview.pdf",
-    gated: true,
-    downloadCount: 2100
-  },
-  {
-    id: 5,
-    title: "Cloud Data Architecture Decision Framework",
-    subtitle: "Choosing the Right Technology Stack for Your Needs",
-    description: "A systematic approach to evaluating and selecting cloud data platforms, tools, and architectures for different organizational contexts.",
-    pages: 41,
-    published: "September 2023",
-    category: "Technology",
-    featured: false,
-    topics: ["Cloud Architecture", "Technology Selection", "Vendor Evaluation", "Cost Optimization"],
-    preview: "/previews/cloud-architecture-preview.pdf",
-    gated: true,
-    downloadCount: 1400
-  },
-  {
-    id: 6,
-    title: "Building High-Performance Analytics Teams",
-    subtitle: "Recruiting, Organizing, and Leading Data Professionals",
-    description: "Best practices for building, structuring, and managing analytics teams that deliver consistent business value.",
-    pages: 35,
-    published: "August 2023",
-    category: "Team Building",
-    featured: false,
-    topics: ["Team Management", "Talent Acquisition", "Organizational Design", "Performance Management"],
-    preview: "/previews/analytics-teams-preview.pdf",
-    gated: true,
-    downloadCount: 1900
-  }
-];
-
-// Categories
+// Categories for filtering
 const categories = ["All", "Strategy", "AI & Machine Learning", "Governance", "Business Value", "Technology", "Team Building"];
 
 // Featured white papers
-const featuredPapers = whitePapers.filter(paper => paper.featured);
+const featuredPapers = whitepapers.filter(paper => paper.data.featured);
 
 // Format download count
 function formatDownloadCount(count) {
@@ -140,39 +55,55 @@ function formatDownloadCount(count) {
   <section class="py-16 bg-white">
     <div class="container mx-auto px-6">
       <div class="max-w-6xl mx-auto">
-        <h2 class="text-3xl font-bold text-gray-900 mb-12 text-center">Featured Research</h2>
-        
+        <h2 class="text-3xl font-bold text-gray-900 mb-12 text-center">Featured Research</h2>        
         <div class="grid lg:grid-cols-2 gap-8 mb-16">
           {featuredPapers.map((paper) => (
             <div class="bg-gradient-to-br from-brandGreen to-green-600 rounded-2xl p-8 text-white">
               <span class="bg-brandGold text-black px-3 py-1 rounded-full text-sm font-semibold">Featured</span>
-              <h3 class="text-2xl font-bold mt-4 mb-2">{paper.title}</h3>
-              <h4 class="text-lg opacity-90 mb-4">{paper.subtitle}</h4>
-              <p class="text-lg mb-6 opacity-90">{paper.description}</p>
+              <h3 class="text-2xl font-bold mt-4 mb-2">{paper.data.title}</h3>
+              {paper.data.subtitle && (
+                <h4 class="text-lg opacity-90 mb-4">{paper.data.subtitle}</h4>
+              )}
+              <p class="text-lg mb-6 opacity-90">{paper.data.description}</p>
               
-              <div class="flex flex-wrap gap-2 mb-6">
-                {paper.topics.slice(0, 3).map(topic => (
-                  <span class="bg-white/20 px-3 py-1 rounded-full text-sm">{topic}</span>
-                ))}
-              </div>
+              {paper.data.topics && (
+                <div class="flex flex-wrap gap-2 mb-6">
+                  {paper.data.topics.slice(0, 3).map(topic => (
+                    <span class="bg-white/20 px-3 py-1 rounded-full text-sm">{topic}</span>
+                  ))}
+                </div>
+              )}
               
               <div class="flex items-center justify-between mb-6">
                 <div class="flex items-center gap-4 text-sm opacity-75">
-                  <span>{paper.pages} pages</span>
-                  <span>•</span>
-                  <span>{paper.published}</span>
-                  <span>•</span>
-                  <span>{formatDownloadCount(paper.downloadCount)} downloads</span>
+                  {paper.data.pages && <span>{paper.data.pages} pages</span>}
+                  {paper.data.published && (
+                    <>
+                      <span>•</span>
+                      <span>{paper.data.published}</span>
+                    </>
+                  )}
+                  {paper.data.downloadCount && (
+                    <>
+                      <span>•</span>
+                      <span>{formatDownloadCount(paper.data.downloadCount)} downloads</span>
+                    </>
+                  )}
                 </div>
               </div>
               
               <div class="flex gap-3">
-                <button class="bg-white text-brandGreen px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                <a 
+                  href={`/whitepapers/${paper.slug}`}
+                  class="bg-white text-brandGreen px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                >
                   Download Free
-                </button>
-                <a href={paper.preview} class="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-brandGreen transition-colors">
-                  Preview
                 </a>
+                {paper.data.preview && (
+                  <a href={paper.data.preview} class="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-brandGreen transition-colors">
+                    Preview
+                  </a>
+                )}
               </div>
             </div>
           ))}
@@ -198,10 +129,9 @@ function formatDownloadCount(count) {
             </button>
           ))}
         </div>
-        
-        <!-- White Papers Grid -->
+          <!-- White Papers Grid -->
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {whitePapers.map((paper) => (
+          {whitepapers.map((paper) => (
             <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
               {/* Preview Image Placeholder */}
               <div class="h-48 bg-gray-100 flex items-center justify-center">
@@ -211,41 +141,56 @@ function formatDownloadCount(count) {
                       <path fill-rule="evenodd" d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4zm2 6a1 1 0 011-1h6a1 1 0 110 2H7a1 1 0 01-1-1zm1 3a1 1 0 100 2h6a1 1 0 100-2H7z" clip-rule="evenodd"></path>
                     </svg>
                   </div>
-                  <span class="text-sm text-gray-500">{paper.pages} Pages</span>
+                  <span class="text-sm text-gray-500">{paper.data.pages || 'Digital'} Pages</span>
                 </div>
               </div>
               
               <div class="p-6">
                 <div class="flex justify-between items-start mb-3">
-                  <span class="bg-gray-100 text-gray-700 px-2 py-1 rounded text-sm">{paper.category}</span>
-                  <span class="text-sm text-gray-500">{formatDownloadCount(paper.downloadCount)} downloads</span>
-                </div>
-                
-                <h3 class="text-xl font-bold text-gray-900 mb-2">{paper.title}</h3>
-                <h4 class="text-sm text-brandGreen font-semibold mb-3">{paper.subtitle}</h4>
-                <p class="text-gray-600 mb-4 line-clamp-3">{paper.description}</p>
-                
-                <div class="flex flex-wrap gap-2 mb-4">
-                  {paper.topics.slice(0, 2).map(topic => (
-                    <span class="bg-gray-100 text-gray-600 px-2 py-1 rounded text-xs">{topic}</span>
-                  ))}
-                  {paper.topics.length > 2 && (
-                    <span class="text-brandGreen text-xs font-semibold">+{paper.topics.length - 2} more</span>
+                  <span class="bg-gray-100 text-gray-700 px-2 py-1 rounded text-sm">{paper.data.category || 'Research'}</span>
+                  {paper.data.downloadCount && (
+                    <span class="text-sm text-gray-500">{formatDownloadCount(paper.data.downloadCount)} downloads</span>
                   )}
                 </div>
                 
+                <h3 class="text-xl font-bold text-gray-900 mb-2">{paper.data.title}</h3>
+                {paper.data.subtitle && (
+                  <h4 class="text-sm text-brandGreen font-semibold mb-3">{paper.data.subtitle}</h4>
+                )}
+                <p class="text-gray-600 mb-4 line-clamp-3">{paper.data.description}</p>
+                
+                {paper.data.topics && (
+                  <div class="flex flex-wrap gap-2 mb-4">
+                    {paper.data.topics.slice(0, 2).map(topic => (
+                      <span class="bg-gray-100 text-gray-600 px-2 py-1 rounded text-xs">{topic}</span>
+                    ))}
+                    {paper.data.topics.length > 2 && (
+                      <span class="text-brandGreen text-xs font-semibold">+{paper.data.topics.length - 2} more</span>
+                    )}
+                  </div>
+                )}
+                
                 <div class="flex items-center justify-between mb-4">
-                  <span class="text-sm text-gray-500">{paper.published}</span>
-                  <span class="text-sm text-gray-500">{paper.pages} pages</span>
+                  {paper.data.published && (
+                    <span class="text-sm text-gray-500">{paper.data.published}</span>
+                  )}
+                  {paper.data.pages && (
+                    <span class="text-sm text-gray-500">{paper.data.pages} pages</span>
+                  )}
                 </div>
                 
                 <div class="flex gap-2">
-                  <button class="flex-1 bg-brandGreen hover:bg-green-700 text-white font-semibold py-2 px-4 rounded-lg transition-colors text-sm">
+                  <a 
+                    href={`/whitepapers/${paper.slug}`}
+                    class="flex-1 bg-brandGreen hover:bg-green-700 text-white font-semibold py-2 px-4 rounded-lg transition-colors text-sm text-center"
+                  >
                     Download
-                  </button>
-                  <a href={paper.preview} class="border-2 border-gray-300 hover:border-brandGreen text-gray-700 hover:text-brandGreen px-4 py-2 rounded-lg transition-colors text-sm">
-                    Preview
                   </a>
+                  {paper.data.preview && (
+                    <a href={paper.data.preview} class="border-2 border-gray-300 hover:border-brandGreen text-gray-700 hover:text-brandGreen px-4 py-2 rounded-lg transition-colors text-sm">
+                      Preview
+                    </a>
+                  )}
                 </div>
               </div>
             </div>

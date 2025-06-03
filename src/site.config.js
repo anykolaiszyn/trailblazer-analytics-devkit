@@ -2,21 +2,23 @@
 export default {
   // Site Information
   title: "Trailblazer Analytics",
-  description: "Transforming data into actionable insight with BI expertise, AI innovation, and clear storytelling.",
+  description: "Manager Business Insights at Lennar | Host of Trailblazer Analytics Podcast | 15+ years transforming raw data into strategic business value through BI, automation, and AI integrations.",
   url: "https://trailblazer-analytics.com",
-  author: "Alexander Trailblazer",
+  author: "Alexander Nykolaiszyn",  // Content Sources
+  mediumUsername: "alex.nykolaiszyn", // Real Medium username
+  spotifyShowId: "7r1DNHAYJr4Xme88DvMBuX", // Real Spotify podcast ID
   
   // Analytics & Tracking
   plausibleDomain: "trailblazer-analytics.com", // Update when domain is ready
   googleAnalyticsId: "", // Add when configured
-  
-  // Social Media
-  twitter: "@trailblazer_data", // Update with real handle
-  linkedin: "alexandertrailblazer", // Update with real profile
+  hotjarId: "", // Add when configured  // Social Media
+  twitter: "@AlexNyk", // Real Twitter handle
+  linkedin: "alexnyk", // Real LinkedIn profile
+  medium: "@alex.nykolaiszyn", // Real Medium username
   
   // Business Information
   email: "alexander@trailblazer-analytics.com",
-  location: "Global",
+  location: "Boca Raton, Florida, United States",
   
   // SEO & Meta
   defaultImage: "/og-image.png",
@@ -26,7 +28,6 @@ export default {
   newsletterEnabled: true,
   podcastEnabled: true,
   downloadTrackingEnabled: true,
-  
-  // API Settings
-  corsOrigins: ["https://trailblazer-analytics.com", "http://localhost:4321", "http://localhost:4322", "http://localhost:4323"]
+    // API Settings
+  corsOrigins: ["https://trailblazer-analytics.com", "http://localhost:4321", "http://localhost:4322", "http://localhost:4323", "http://localhost:4324"]
 };

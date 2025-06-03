@@ -1,7 +1,10 @@
 ---
+import { getCollection } from 'astro:content';
 import Base from '../layouts/Base.astro';
 import Navbar from '../components/Navbar.astro';
 import Footer from '../components/Footer.jsx';
+
+const tools = await getCollection('tools');
 
 // SEO meta data
 const seoData = {
@@ -9,63 +12,98 @@ const seoData = {
   description: "Explore powerful analytics tools, BI software recommendations, and strategic frameworks. Interactive calculators, assessment tools, and curated resources for data professionals.",
   image: "/og-image-tools.png"
 };
+---
 
-// Tools and software categories
-const toolCategories = [
-  {
-    id: 'frameworks',
-    title: 'Strategic Frameworks',
-    description: 'Proven methodologies for data strategy and analytics implementation',
-    icon: '📋',
-    tools: [
-      {
-        name: 'Data Strategy Canvas',
-        description: 'A comprehensive framework for developing and communicating your data strategy.',
-        type: 'Template',
-        format: 'PDF + Excel',
-        price: 'Free',
-        downloadUrl: '/downloads/data-strategy-canvas.pdf'
-      },
-      {
-        name: 'Analytics Maturity Assessment',
-        description: 'Evaluate your organization\'s analytics capabilities and identify improvement areas.',
-        type: 'Assessment',
-        format: 'Interactive Tool',
-        price: 'Free',
-        downloadUrl: '/tools/maturity-assessment'
-      },
-      {
-        name: 'ROI Calculator for Analytics Projects',
-        description: 'Calculate and justify the return on investment for your analytics initiatives.',
-        type: 'Calculator',
-        format: 'Excel + Web App',
-        price: '$49',
-        downloadUrl: '/tools/roi-calculator'
-      }
-    ]
-  },
-  {
-    id: 'templates',
-    title: 'Templates & Checklists',
-    description: 'Ready-to-use templates for common data and analytics tasks',
-    icon: '📝',
-    tools: [
-      {
-        name: 'Data Governance Starter Kit',
-        description: 'Complete set of templates for establishing data governance in your organization.',
-        type: 'Template Pack',
-        format: 'Word + PowerPoint',
-        price: 'Free',
-        downloadUrl: '/downloads/data-governance-kit.zip'
-      },
-      {
-        name: 'Dashboard Design Checklist',
-        description: 'Ensure your dashboards follow best practices for usability and effectiveness.',
-        type: 'Checklist',
-        format: 'PDF',
-        price: 'Free',
-        downloadUrl: '/downloads/dashboard-checklist.pdf'
-      },
+<Base {...seoData}>
+  <Navbar />
+  
+  <!-- Header Section -->
+  <section class="bg-gradient-to-br from-gray-900 to-gray-800 text-white py-20">
+    <div class="container mx-auto px-6">
+      <div class="max-w-4xl mx-auto text-center">
+        <h1 class="text-5xl md:text-6xl font-bold mb-6">
+          Analytics <span class="text-brandGold">Tools</span>
+        </h1>
+        <p class="text-xl md:text-2xl text-gray-300 mb-8">
+          Powerful tools and frameworks to accelerate your data analytics journey.
+        </p>
+        <div class="flex flex-wrap justify-center gap-4">
+          <span class="bg-brandGreen/20 text-brandGreen px-4 py-2 rounded-full">Interactive Tools</span>
+          <span class="bg-brandGold/20 text-brandGold px-4 py-2 rounded-full">Calculators</span>
+          <span class="bg-blue-500/20 text-blue-400 px-4 py-2 rounded-full">Templates</span>
+          <span class="bg-purple-500/20 text-purple-400 px-4 py-2 rounded-full">Frameworks</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tools Grid -->
+  <section class="py-16 bg-gray-50">
+    <div class="container mx-auto px-6">
+      <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold text-gray-900 mb-4">Available Tools</h2>
+          <p class="text-lg text-gray-600">Professional-grade tools and resources for data practitioners</p>
+        </div>
+        
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {tools.map((tool) => (
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+              <div class="h-48 bg-gradient-to-br from-brandGreen to-green-600 flex items-center justify-center">
+                <div class="text-center text-white">
+                  <div class="w-16 h-16 bg-white/20 rounded-lg flex items-center justify-center mx-auto mb-2">
+                    <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path>
+                    </svg>
+                  </div>
+                  <span class="text-sm font-medium">{tool.data.type || 'Tool'}</span>
+                </div>
+              </div>
+              
+              <div class="p-6">
+                <div class="flex justify-between items-start mb-3">
+                  <span class="bg-brandGreen/10 text-brandGreen px-2 py-1 rounded text-sm font-medium">
+                    {tool.data.category || 'Analytics'}
+                  </span>
+                  {tool.data.price && (
+                    <span class="text-lg font-bold text-gray-900">{tool.data.price}</span>
+                  )}
+                </div>
+                
+                <h3 class="text-xl font-bold text-gray-900 mb-2">{tool.data.title}</h3>
+                <p class="text-gray-600 mb-4">{tool.data.description}</p>
+                
+                {tool.data.features && (
+                  <div class="flex flex-wrap gap-2 mb-4">
+                    {tool.data.features.slice(0, 3).map(feature => (
+                      <span class="bg-gray-100 text-gray-600 px-2 py-1 rounded text-xs">{feature}</span>
+                    ))}
+                  </div>
+                )}
+                
+                <div class="flex gap-2">
+                  <a 
+                    href={`/tools/${tool.slug}`}
+                    class="flex-1 bg-brandGreen hover:bg-green-700 text-white font-semibold py-2 px-4 rounded-lg transition-colors text-sm text-center"
+                  >
+                    Learn More
+                  </a>
+                  {tool.data.demoUrl && (
+                    <a href={tool.data.demoUrl} class="border-2 border-brandGreen text-brandGreen px-4 py-2 rounded-lg hover:bg-brandGreen hover:text-white transition-colors text-sm">
+                      Demo
+                    </a>
+                  )}
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+</Base>
       {
         name: 'Data Quality Audit Template',
         description: 'Systematic approach to assessing and improving data quality across your organization.',

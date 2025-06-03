@@ -9,14 +9,42 @@ This guide explains how to manage case studies on your Trailblazer Analytics sit
    ```mdx
    ---
    title: "Case Study Title"
-   date: "2025-05-14"
+   date: "2025-05-31"
    client: "Client Name"
-   summary: "Short summary of the project."
+   industry: "Technology" # e.g., Healthcare, Finance, Retail, etc.
+   summary: "Short summary of the project outcome."
+   description: "Brief description of the project scope."
+   challenge: "What problem needed to be solved?"
+   solution: "How did we solve it?"
+   results: 
+     - "Increased data accuracy by 95%"
+     - "Reduced reporting time by 60%"
+     - "Improved decision-making speed by 40%"
+   technologies: 
+     - "Power BI"
+     - "Azure Data Factory"
+     - "SQL Server"
+   featured: false # Set to true to feature on homepage
    ---
    
-   Write the full case study details here. You can use Markdown formatting.
+   ## Project Overview
+   Write the full case study details here. You can use Markdown formatting including:
+   - **Bold text**
+   - *Italic text*
+   - Lists and bullet points
+   - Headers and subheaders
+   - Links and images
+   
+   ## The Challenge
+   Describe the specific business challenges the client faced...
+   
+   ## Our Solution
+   Explain the approach and methodology used...
+   
+   ## Results & Impact
+   Detail the measurable outcomes and business impact...
    ```
-4. Fill in the `title`, `date`, `client`, and `summary` fields. Then write your case study content below the `---` line.
+4. Fill in all the fields in the frontmatter (between the `---` lines). Then write your case study content below.
 5. Save the file. The new case study will appear on the homepage automatically.
 
 ## 2. Edit an Existing Case Study

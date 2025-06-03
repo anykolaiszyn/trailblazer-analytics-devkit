@@ -52,7 +52,7 @@ PLAUSIBLE_DOMAIN=trailblazer-analytics.com
 
 # Medium Integration
 MEDIUM_USERNAME=@alexandertrailblazer
-MEDIUM_RSS_URL=https://medium.com/feed/@alexandertrailblazer
+MEDIUM_RSS_URL=https://medium.com/feed/@alex.nykolaiszyn
 
 # Optional Analytics
 GOOGLE_ANALYTICS_ID=G-XXXXXXXXXX
@@ -76,7 +76,7 @@ Central configuration for:
 title: "Your Post Title"
 description: "Brief description"
 publishDate: "2025-05-31"
-author: "Alexander Trailblazer"
+author: "Alexander Nykolaiszyn"
 tags: ["data-strategy", "analytics"]
 featured: true
 ---

@@ -1,12 +1,15 @@
 ---
+import { getCollection } from 'astro:content';
 import Base from '../layouts/Base.astro';
 import Navbar from '../components/Navbar.astro';
 import Footer from '../components/Footer.jsx';
 
+const techNotes = await getCollection('techNotes');
+
 // SEO meta data
 const seoData = {
   title: "Tech Notes - Code Snippets & Developer Resources",
-  description: "Technical insights, code snippets, and developer resources for data professionals. SQL tips, Python tricks, and analytics engineering best practices from Alexander Trailblazer.",
+  description: "Technical insights, code snippets, and developer resources for data professionals. SQL tips, Python tricks, and analytics engineering best practices from Alexander Nykolaiszyn.",
   image: "/og-image-technotes.png"
 };
 ---
@@ -80,72 +83,39 @@ const seoData = {
             <button class="px-4 py-2 bg-white text-gray-600 border rounded-lg text-sm hover:bg-gray-50">SQL</button>
             <button class="px-4 py-2 bg-white text-gray-600 border rounded-lg text-sm hover:bg-gray-50">ML</button>
           </div>
-        </div>
-
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <!-- Tech Note 1 -->
-          <article class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
-            <div class="p-6">
-              <div class="flex items-center gap-2 mb-3">
-                <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full">Python</span>
-                <span class="bg-gray-100 text-gray-600 text-xs px-2 py-1 rounded-full">Beginner</span>
+        </div>        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {techNotes.map((note) => (
+            <article class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+              <div class="p-6">
+                <div class="flex items-center gap-2 mb-3">
+                  {note.data.tags && note.data.tags.map(tag => (
+                    <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full">{tag}</span>
+                  ))}                  {note.data.difficulty && (
+                    <span class={
+                      note.data.difficulty === 'Beginner' ? 'bg-gray-100 text-gray-600 text-xs px-2 py-1 rounded-full' :
+                      note.data.difficulty === 'Intermediate' ? 'bg-yellow-100 text-yellow-800 text-xs px-2 py-1 rounded-full' :
+                      'bg-red-100 text-red-800 text-xs px-2 py-1 rounded-full'
+                    }>
+                      {note.data.difficulty}
+                    </span>
+                  )}
+                </div>
+                <h3 class="text-lg font-semibold text-gray-900 mb-2">{note.data.title}</h3>
+                <p class="text-gray-600 text-sm mb-4">{note.data.description}</p>
+                <div class="flex items-center justify-between">
+                  {note.data.readTime && (
+                    <span class="text-xs text-gray-500">{note.data.readTime}</span>
+                  )}
+                  <a 
+                    href={`/tech-notes/${note.slug}`} 
+                    class="text-brandGreen text-sm font-medium hover:text-green-700"
+                  >
+                    Read →
+                  </a>
+                </div>
               </div>
-              <h3 class="text-lg font-semibold text-gray-900 mb-2">Pandas Performance Tips</h3>
-              <p class="text-gray-600 text-sm mb-4">Essential optimization techniques for faster data processing with pandas DataFrame operations.</p>
-              <div class="flex items-center justify-between">
-                <span class="text-xs text-gray-500">5 min read</span>
-                <a href="#" class="text-brandGreen text-sm font-medium hover:text-green-700">Read →</a>
-              </div>
-            </div>
-          </article>
-
-          <!-- Tech Note 2 -->
-          <article class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
-            <div class="p-6">
-              <div class="flex items-center gap-2 mb-3">
-                <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full">SQL</span>
-                <span class="bg-yellow-100 text-yellow-800 text-xs px-2 py-1 rounded-full">Intermediate</span>
-              </div>
-              <h3 class="text-lg font-semibold text-gray-900 mb-2">Window Functions Explained</h3>
-              <p class="text-gray-600 text-sm mb-4">Master advanced SQL window functions with practical examples and performance considerations.</p>
-              <div class="flex items-center justify-between">
-                <span class="text-xs text-gray-500">8 min read</span>
-                <a href="#" class="text-brandGreen text-sm font-medium hover:text-green-700">Read →</a>
-              </div>
-            </div>
-          </article>
-
-          <!-- Tech Note 3 -->
-          <article class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
-            <div class="p-6">
-              <div class="flex items-center gap-2 mb-3">
-                <span class="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full">JavaScript</span>
-                <span class="bg-gray-100 text-gray-600 text-xs px-2 py-1 rounded-full">Beginner</span>
-              </div>
-              <h3 class="text-lg font-semibold text-gray-900 mb-2">D3.js Data Visualization</h3>
-              <p class="text-gray-600 text-sm mb-4">Create interactive charts and graphs with D3.js for modern web applications.</p>
-              <div class="flex items-center justify-between">
-                <span class="text-xs text-gray-500">12 min read</span>
-                <a href="#" class="text-brandGreen text-sm font-medium hover:text-green-700">Read →</a>
-              </div>
-            </div>
-          </article>
-
-          <!-- Tech Note 4 -->
-          <article class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
-            <div class="p-6">
-              <div class="flex items-center gap-2 mb-3">
-                <span class="bg-red-100 text-red-800 text-xs px-2 py-1 rounded-full">ML</span>
-                <span class="bg-red-100 text-red-800 text-xs px-2 py-1 rounded-full">Advanced</span>
-              </div>
-              <h3 class="text-lg font-semibold text-gray-900 mb-2">Model Deployment with Docker</h3>
-              <p class="text-gray-600 text-sm mb-4">Step-by-step guide to containerizing and deploying machine learning models in production.</p>
-              <div class="flex items-center justify-between">
-                <span class="text-xs text-gray-500">20 min read</span>
-                <a href="#" class="text-brandGreen text-sm font-medium hover:text-green-700">Read →</a>
-              </div>
-            </div>
-          </article>
+            </article>
+          ))}
 
           <!-- Tech Note 5 -->
           <article class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">

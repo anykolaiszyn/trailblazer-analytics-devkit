@@ -2,6 +2,7 @@
 import Base from '../layouts/Base.astro';
 import Navbar from '../components/Navbar.astro';
 import Footer from '../components/Footer.jsx';
+import siteConfig from '../site.config.js';
 
 // SEO meta data
 const seoData = {
@@ -10,74 +11,9 @@ const seoData = {
   image: "/og-image-podcast.png"
 };
 
-// Podcast episodes data (replace with actual Spotify URLs and details)
-const podcastEpisodes = [
-  {
-    id: 1,
-    title: "The Future of Data Strategy in 2025",
-    description: "Exploring emerging trends in data strategy, AI integration, and the evolving role of the Chief Data Officer in an AI-first world.",
-    guest: "Sarah Chen, CDO at TechCorp",
-    duration: "45 min",
-    date: "2025-05-20",
-    spotifyUrl: "https://open.spotify.com/embed/episode/4rOoJ6Egrf8K2IrywzwOMk", // Example Spotify episode
-    appleUrl: "https://podcasts.apple.com/podcast/id123456789",
-    topics: ["Data Strategy", "AI", "Leadership", "Future Trends"]
-  },
-  {
-    id: 2,
-    title: "Building Data-Driven Culture: Lessons from the Trenches",
-    description: "How to transform organizational mindset and create a culture where data drives decision-making at every level. Real-world case studies and practical strategies.",
-    guest: "Michael Rodriguez, VP Analytics at DataFirst",
-    duration: "38 min",
-    date: "2025-05-15",
-    spotifyUrl: "https://open.spotify.com/embed/episode/0Q86acNH6mVIoxBk0XvIEY", // Example Spotify episode
-    appleUrl: "https://podcasts.apple.com/podcast/id123456789",
-    topics: ["Culture", "Change Management", "Analytics", "Case Studies"]
-  },
-  {
-    id: 3,
-    title: "AI Ethics and Responsible Analytics: Navigating the Gray Areas",
-    description: "Navigating the ethical challenges of AI implementation and ensuring responsible use of data analytics. A deep dive into bias detection, fairness metrics, and governance frameworks.",
-    guest: "Dr. Emma Thompson, AI Ethics Researcher at Stanford",
-    duration: "52 min",
-    date: "2025-05-10",
-    spotifyUrl: "https://open.spotify.com/embed/episode/1A6nKpyq6hIGkHVVPrqwxZ", // Example Spotify episode
-    appleUrl: "https://podcasts.apple.com/podcast/id123456789",
-    topics: ["AI Ethics", "Governance", "Bias Detection", "Responsible AI"]
-  },
-  {
-    id: 4,
-    title: "Real-Time Analytics at Scale: Architecture and Implementation",
-    description: "Technical deep dive into building real-time analytics platforms that can handle massive data volumes. From streaming architectures to edge computing.",
-    guest: "James Park, Principal Engineer at StreamTech",
-    duration: "41 min",
-    date: "2025-05-05",
-    spotifyUrl: "https://open.spotify.com/embed/episode/2Z8Q5qJ3yVrKpXk7mN9wLx", // Example Spotify episode
-    appleUrl: "https://podcasts.apple.com/podcast/id123456789",
-    topics: ["Real-time Analytics", "Architecture", "Streaming", "Scale"]
-  },  {
-    id: 5,
-    title: "Data Mesh vs Data Fabric: Choosing the Right Architecture",
-    description: "Comparing modern data architecture approaches and helping you decide which pattern fits your organization's needs and maturity level.",
-    guest: "Alex Kumar, Solutions Architect at CloudData",
-    duration: "47 min",
-    date: "2025-04-30",
-    spotifyUrl: "https://open.spotify.com/embed/episode/3Y7K8qJ5yVrKpXk7mN9wLx", // Example Spotify episode
-    appleUrl: "https://podcasts.apple.com/podcast/id123456789",
-    topics: ["Data Architecture", "Data Mesh", "Data Fabric", "Enterprise"]
-  },
-  {
-    id: 6,
-    title: "The ROI of Data: Measuring Analytics Success",
-    description: "How to calculate and demonstrate the business value of your data initiatives. Frameworks for measuring analytics ROI and communicating impact to stakeholders.",
-    guest: "Lisa Wang, Analytics Director at FinanceForward",
-    duration: "43 min",
-    date: "2025-04-25",
-    spotifyUrl: "https://open.spotify.com/embed/episode/4Z9Q6qJ7yVrKpXk7mN9wLx", // Example Spotify episode
-    appleUrl: "https://podcasts.apple.com/podcast/id123456789",
-    topics: ["ROI", "Business Value", "Analytics", "Stakeholder Management"]
-  }
-];
+// Podcast episodes data - Replace with real episodes when available
+// For now, we'll show a message directing users to Spotify
+const podcastEpisodes = [];
 
 // Format date
 function formatDate(dateString) {
@@ -101,10 +37,9 @@ function formatDate(dateString) {
         </h1>
         <p class="text-xl md:text-2xl text-gray-300 mb-8">
           Conversations with data leaders, innovators, and practitioners who are shaping the future of analytics and business intelligence.
-        </p>
-        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        </p>        <div class="flex flex-col sm:flex-row gap-4 justify-center">
           <a 
-            href="https://open.spotify.com/show/YOUR_SHOW_ID" 
+            href={`https://open.spotify.com/show/${siteConfig.spotifyShowId}`}
             target="_blank" 
             rel="noopener noreferrer"
             class="bg-green-600 hover:bg-green-700 text-white font-semibold py-4 px-8 rounded-lg transition-colors flex items-center justify-center gap-2"
@@ -126,47 +61,94 @@ function formatDate(dateString) {
       </div>
     </div>
   </section>
-
-  <!-- Featured Episode -->
-  {podcastEpisodes.length > 0 && (
-    <section class="py-16 bg-white">
-      <div class="container mx-auto px-6">
-        <div class="max-w-4xl mx-auto">
-          <div class="bg-gradient-to-r from-brandGreen to-green-600 rounded-2xl p-8 text-white mb-8">
-            <span class="bg-brandGold text-black px-3 py-1 rounded-full text-sm font-semibold">Latest Episode</span>
-            <h2 class="text-3xl font-bold mt-4 mb-2">{podcastEpisodes[0].title}</h2>
-            <p class="text-lg opacity-90 mb-4">with {podcastEpisodes[0].guest}</p>
-            <p class="text-xl mb-6 opacity-90">{podcastEpisodes[0].description}</p>
-            <div class="flex flex-wrap gap-4 mb-6">
-              {podcastEpisodes[0].topics.map(topic => (
-                <span class="bg-white/20 px-3 py-1 rounded-full text-sm">{topic}</span>
-              ))}
-            </div>
-            <div class="flex items-center justify-between">
-              <div class="flex items-center gap-4 text-sm opacity-75">
-                <span>{formatDate(podcastEpisodes[0].date)}</span>
-                <span>•</span>
-                <span>{podcastEpisodes[0].duration}</span>
+  <!-- Featured Podcast Player -->
+  <section class="py-16 bg-white">
+    <div class="container mx-auto px-6">
+      <div class="max-w-4xl mx-auto">
+        <div class="text-center mb-8">
+          <h2 class="text-3xl font-bold text-gray-900 mb-4">Listen to the Podcast</h2>
+          <p class="text-lg text-gray-600">
+            Dive deep into data strategy, analytics, and business intelligence with industry experts and thought leaders.
+          </p>
+        </div>
+        
+        <!-- Spotify Embed -->
+        <div class="rounded-xl overflow-hidden shadow-lg">
+          <iframe 
+            src={`https://open.spotify.com/embed/show/${siteConfig.spotifyShowId}?utm_source=generator&theme=0`}
+            width="100%" 
+            height="352" 
+            frameborder="0" 
+            allowfullscreen="" 
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+            loading="lazy">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Episodes List -->
+  <section class="py-16 bg-gray-50">
+    <div class="container mx-auto px-6">
+      <div class="max-w-6xl mx-auto">
+        <h2 class="text-3xl font-bold text-gray-900 mb-12 text-center">Episodes</h2>
+        
+        {podcastEpisodes.length > 0 ? (
+          <div class="space-y-8">
+            {podcastEpisodes.map((episode) => (
+              <div class="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow duration-300">
+                <div class="flex flex-col lg:flex-row gap-6">
+                  <div class="lg:w-16 lg:h-16 w-12 h-12 bg-brandGreen rounded-full flex items-center justify-center flex-shrink-0">
+                    <span class="text-white font-bold text-lg">#{episode.id}</span>
+                  </div>
+                  
+                  <div class="flex-1">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-2">{episode.title}</h3>
+                    <p class="text-lg text-brandGreen mb-3">with {episode.guest}</p>
+                    <p class="text-gray-600 mb-4">{episode.description}</p>
+                    
+                    <div class="flex flex-wrap gap-2 mb-4">
+                      {episode.topics.map(topic => (
+                        <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">{topic}</span>
+                      ))}
+                    </div>
+                    
+                    <div class="flex items-center justify-between">
+                      <div class="flex items-center gap-4 text-sm text-gray-500">
+                        <span>{formatDate(episode.date)}</span>
+                        <span>•</span>
+                        <span>{episode.duration}</span>
+                      </div>
+                      <a 
+                        href={episode.spotifyUrl} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        class="bg-green-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-green-700 transition-colors"
+                      >
+                        Listen
+                      </a>
+                    </div>
+                  </div>
+                </div>
               </div>
-            </div>
+            ))}
           </div>
-          
-          <!-- Spotify Embed Placeholder -->
-          <div class="bg-gray-100 rounded-xl p-8 text-center">
-            <div class="bg-green-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-              <svg class="w-8 h-8 text-white" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.42 1.56-.299.421-1.02.599-1.559.3z"/>
+        ) : (
+          <div class="bg-white rounded-xl shadow-lg p-12 text-center">
+            <div class="w-20 h-20 bg-brandGreen rounded-full flex items-center justify-center mx-auto mb-6">
+              <svg class="w-10 h-10 text-white" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 14c1.66 0 2.99-1.34 2.99-3L15 5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3zm5.3-3c0 3-2.54 5.1-5.3 5.1S6.7 14 6.7 11H5c0 3.41 2.72 6.23 6 6.72V21h2v-3.28c3.28-.48 6-3.3 6-6.72h-1.7z"/>
               </svg>
             </div>
-            <h3 class="text-xl font-bold text-gray-900 mb-2">Spotify Player</h3>
-            <p class="text-gray-600 mb-4">
-              Spotify embed will appear here once podcast episodes are published.
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">Episodes Coming Soon</h3>
+            <p class="text-lg text-gray-600 mb-6">
+              New episodes are in production! Listen to the show on Spotify for the latest episodes and subscribe to never miss a conversation.
             </p>
             <a 
-              href="https://open.spotify.com/show/YOUR_SHOW_ID" 
+              href={`https://open.spotify.com/show/${siteConfig.spotifyShowId}`}
               target="_blank" 
               rel="noopener noreferrer"
-              class="bg-green-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors inline-flex items-center gap-2"
+              class="bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors inline-flex items-center gap-2"
             >
               <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.42 1.56-.299.421-1.02.599-1.559.3z"/>
@@ -174,56 +156,7 @@ function formatDate(dateString) {
               Listen on Spotify
             </a>
           </div>
-        </div>
-      </div>
-    </section>
-  )}
-
-  <!-- Episodes List -->
-  <section class="py-16 bg-gray-50">
-    <div class="container mx-auto px-6">
-      <div class="max-w-6xl mx-auto">
-        <h2 class="text-3xl font-bold text-gray-900 mb-12 text-center">Recent Episodes</h2>
-        
-        <div class="space-y-8">
-          {podcastEpisodes.map((episode) => (
-            <div class="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow duration-300">
-              <div class="flex flex-col lg:flex-row gap-6">
-                <div class="lg:w-16 lg:h-16 w-12 h-12 bg-brandGreen rounded-full flex items-center justify-center flex-shrink-0">
-                  <span class="text-white font-bold text-lg">#{episode.id}</span>
-                </div>
-                
-                <div class="flex-1">
-                  <h3 class="text-2xl font-bold text-gray-900 mb-2">{episode.title}</h3>
-                  <p class="text-lg text-brandGreen mb-3">with {episode.guest}</p>
-                  <p class="text-gray-600 mb-4">{episode.description}</p>
-                  
-                  <div class="flex flex-wrap gap-2 mb-4">
-                    {episode.topics.map(topic => (
-                      <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">{topic}</span>
-                    ))}
-                  </div>
-                  
-                  <div class="flex items-center justify-between">
-                    <div class="flex items-center gap-4 text-sm text-gray-500">
-                      <span>{formatDate(episode.date)}</span>
-                      <span>•</span>
-                      <span>{episode.duration}</span>
-                    </div>
-                    <a 
-                      href={episode.spotifyUrl} 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      class="bg-green-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-green-700 transition-colors"
-                    >
-                      Listen
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
+        )}
       </div>
     </div>
   </section>
@@ -232,14 +165,13 @@ function formatDate(dateString) {
   <section class="py-16 bg-white">
     <div class="container mx-auto px-6">
       <div class="max-w-4xl mx-auto text-center">
-        <h2 class="text-3xl font-bold text-gray-900 mb-8">About the Host</h2>
-        <div class="bg-gray-50 rounded-2xl p-8">
+        <h2 class="text-3xl font-bold text-gray-900 mb-8">About the Host</h2>        <div class="bg-gray-50 rounded-2xl p-8">
           <div class="w-24 h-24 bg-brandGreen rounded-full flex items-center justify-center mx-auto mb-6">
-            <span class="text-white font-bold text-2xl">A</span>
+            <span class="text-white font-bold text-2xl">AN</span>
           </div>
-          <h3 class="text-2xl font-bold text-gray-900 mb-4">Alexander</h3>
+          <h3 class="text-2xl font-bold text-gray-900 mb-4">{siteConfig.author}</h3>
           <p class="text-lg text-gray-600 mb-6">
-            Data strategist, analytics expert, and founder of Trailblazer Analytics. With over a decade of experience in transforming organizations through data-driven insights, Alexander brings practical wisdom and industry expertise to every conversation.
+            Manager Business Insights at Lennar and host of the Trailblazer Analytics Podcast. With 15+ years of experience transforming organizations through data-driven insights, Alexander brings practical wisdom and industry expertise to every conversation.
           </p>
           <a href="/about" class="text-brandGreen hover:text-green-700 font-semibold">
             Learn More About Alexander →
@@ -256,10 +188,9 @@ function formatDate(dateString) {
         <h2 class="text-3xl font-bold mb-4">Never Miss an Episode</h2>
         <p class="text-xl mb-8 opacity-90">
           Subscribe to get notified when new episodes are released.
-        </p>
-        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        </p>        <div class="flex flex-col sm:flex-row gap-4 justify-center">
           <a 
-            href="https://open.spotify.com/show/YOUR_SHOW_ID" 
+            href={`https://open.spotify.com/show/${siteConfig.spotifyShowId}`}
             target="_blank" 
             rel="noopener noreferrer"
             class="bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors flex items-center justify-center gap-2"

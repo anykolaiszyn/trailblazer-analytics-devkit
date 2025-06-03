@@ -1,13 +1,17 @@
 {
   "name": "trailblazer-analytics",
   "version": "0.0.1",
-  "type": "module",
-  "scripts": {
+  "type": "module",  "scripts": {
     "dev": "astro dev",
+    "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "package": "astro build && cd dist && zip -r ../trailblazer-analytics-dist.zip . && cd ..",
-    "lighthouse-ci": "lhci autorun"
+    "check": "astro check",
+    "lighthouse": "lhci autorun",
+    "package:win": "pnpm run build && cd dist && powershell Compress-Archive -Path * -DestinationPath ../trailblazer-analytics-dist.zip -Force && cd ..",
+    "package:unix": "pnpm run build && cd dist && zip -r ../trailblazer-analytics-dist.zip . && cd ..",
+    "clean": "rmdir /s /q dist 2>nul || rm -rf dist",
+    "typecheck": "astro check"
   },
   "dependencies": {
     "@astrojs/mdx": "^4.2.6",

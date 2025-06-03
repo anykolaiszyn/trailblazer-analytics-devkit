@@ -13,9 +13,8 @@ export default function Footer() {
                 <span className="text-black font-bold text-lg">TA</span>
               </div>
               <span className="font-bold text-xl text-brandGold">Trailblazer Analytics</span>
-            </div>
-            <p className="text-gray-400 mb-6 max-w-sm">
-              Where data strategy meets action. Transforming organizations through expert analytics, AI innovation, and strategic insights.
+            </div>            <p className="text-gray-400 mb-6 max-w-sm">
+              Empowering analytics professionals through tools, insights, and thought leadership. Building careers in data and analytics.
             </p>
             <div className="flex gap-4">
               <a href="https://twitter.com/trailblazeranalytics" aria-label="Twitter" className="hover:text-brandGold transition-colors">
@@ -28,7 +27,7 @@ export default function Footer() {
                   <path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5v-14c0-2.76-2.24-5-5-5zm-11 19h-3v-9h3v9zm-1.5-10.28c-.97 0-1.75-.79-1.75-1.75s.78-1.75 1.75-1.75 1.75.79 1.75 1.75-.78 1.75-1.75 1.75zm13.5 10.28h-3v-4.5c0-1.08-.02-2.47-1.5-2.47-1.5 0-1.73 1.17-1.73 2.39v4.58h-3v-9h2.88v1.23h.04c.4-.75 1.38-1.54 2.84-1.54 3.04 0 3.6 2 3.6 4.59v4.72z"/>
                 </svg>
               </a>
-              <a href="https://medium.com/@alexandertrailblazer" aria-label="Medium" className="hover:text-brandGold transition-colors">
+              <a href="https://medium.com/@alex.nykolaiszyn" aria-label="Medium" className="hover:text-brandGold transition-colors">
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M13.54 12a6.8 6.8 0 01-6.77 6.82A6.8 6.8 0 010 12a6.8 6.8 0 016.77-6.82A6.8 6.8 0 0113.54 12zM20.96 12c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42 3.38 2.88 3.38 6.42M24 12c0 3.17-.53 5.75-1.19 5.75-.66 0-1.19-2.58-1.19-5.75s.53-5.75 1.19-5.75C23.47 6.25 24 8.83 24 12z"/>
                 </svg>
@@ -50,25 +49,22 @@ export default function Footer() {
               <li><a href="/downloads" className="text-gray-400 hover:text-brandGold transition-colors">Free Downloads</a></li>
               <li><a href="/white-papers" className="text-gray-400 hover:text-brandGold transition-colors">White Papers</a></li>
             </ul>
-          </div>
-
-          {/* Company */}
+          </div>          {/* Community */}
           <div>
-            <h3 className="font-bold text-lg text-white mb-4">Company</h3>
+            <h3 className="font-bold text-lg text-white mb-4">Community</h3>
             <ul className="space-y-2">
               <li><a href="/about" className="text-gray-400 hover:text-brandGold transition-colors">About Alexander</a></li>
-              <li><a href="/services" className="text-gray-400 hover:text-brandGold transition-colors">Services</a></li>
-              <li><a href="/case-studies" className="text-gray-400 hover:text-brandGold transition-colors">Case Studies</a></li>
-              <li><a href="/contact" className="text-gray-400 hover:text-brandGold transition-colors">Contact</a></li>
-              <li><a href="/careers" className="text-gray-400 hover:text-brandGold transition-colors">Careers</a></li>
+              <li><a href="/tools" className="text-gray-400 hover:text-brandGold transition-colors">Analytics Tools</a></li>
+              <li><a href="/contact" className="text-gray-400 hover:text-brandGold transition-colors">Connect</a></li>
+              <li><a href="/speaking" className="text-gray-400 hover:text-brandGold transition-colors">Speaking</a></li>
+              <li><a href="/newsletter" className="text-gray-400 hover:text-brandGold transition-colors">Newsletter</a></li>
             </ul>
           </div>
 
           {/* Newsletter */}
           <div>
-            <h3 className="font-bold text-lg text-white mb-4">Stay Updated</h3>
-            <p className="text-gray-400 mb-4 text-sm">
-              Get the latest insights on data strategy and analytics.
+            <h3 className="font-bold text-lg text-white mb-4">Stay Updated</h3>            <p className="text-gray-400 mb-4 text-sm">
+              Get the latest tools, insights, and analytics career tips.
             </p>
             <form className="space-y-3">
               <input 

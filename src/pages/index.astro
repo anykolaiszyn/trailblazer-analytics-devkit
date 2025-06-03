@@ -4,13 +4,14 @@ import Navbar from '../components/Navbar.astro';
 import Footer from '../components/Footer.jsx';
 import { getCollection } from 'astro:content';
 import CaseStudyCard from '../components/CaseStudyCard.jsx';
+import NewsletterSignup from '../components/NewsletterSignup.jsx';
 
 const caseStudies = await getCollection('caseStudies');
 
 // SEO meta data
 const seoData = {
   title: "Trailblazer Analytics - Where Data Strategy Meets Action",
-  description: "Transform your business with expert data strategy, analytics implementation, and AI innovation. Get actionable insights, not just reports. Download free tools and connect with Alexander Trailblazer.",
+  description: "Transform your business with expert data strategy, analytics implementation, and AI innovation. Get actionable insights, not just reports. Download free tools and connect with Alexander Nykolaiszyn.",
   image: "/og-image-home.png"
 };
 ---
@@ -21,66 +22,73 @@ const seoData = {
   <!-- Hero Section -->
   <section class="relative bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white min-h-screen flex items-center">
     <div class="absolute inset-0 bg-black opacity-50"></div>
-    <div class="container mx-auto px-6 relative z-10">
-      <div class="max-w-4xl mx-auto text-center">
+    <div class="container mx-auto px-6 relative z-10">      <div class="max-w-4xl mx-auto text-center">
         <h1 class="text-5xl md:text-7xl font-bold mb-6">
-          Where Data Strategy
-          <span class="text-brandGold block">Meets Action</span>
+          Data Insights & Tools
+          <span class="text-brandGold block">For Analytics Professionals</span>
         </h1>
         <p class="text-xl md:text-2xl mb-8 text-gray-300 max-w-3xl mx-auto">
-          Transform your data into competitive advantage with expert analytics, AI innovation, and strategic insights that drive real business results.
+          In-depth articles, practical tools, and strategic frameworks to advance your data and analytics career.
         </p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center">
-          <a href="/contact" class="bg-brandGold hover:bg-yellow-600 text-black font-semibold py-4 px-8 rounded-lg transition-colors">
-            Start Your Journey
+          <a href="/insights" class="bg-brandGold hover:bg-yellow-600 text-black font-semibold py-4 px-8 rounded-lg transition-colors">
+            Read Latest Articles
           </a>
-          <a href="/insights" class="border-2 border-brandGold text-brandGold hover:bg-brandGold hover:text-black font-semibold py-4 px-8 rounded-lg transition-colors">
-            Explore Insights
+          <a href="/tools" class="border-2 border-brandGold text-brandGold hover:bg-brandGold hover:text-black font-semibold py-4 px-8 rounded-lg transition-colors">
+            Explore Tools
           </a>
         </div>
       </div>
     </div>
   </section>
-
   <!-- Value Proposition Section -->
   <section class="py-20 bg-white">
     <div class="container mx-auto px-6">
       <div class="text-center mb-16">
-        <h2 class="text-4xl font-bold text-gray-900 mb-4">Data Solutions That Deliver</h2>
+        <h2 class="text-4xl font-bold text-gray-900 mb-4">Your Data Career Advancement Hub</h2>
         <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-          From strategy to implementation, we guide organizations through their data transformation journey with proven methodologies and cutting-edge technology.
+          Deep insights, practical tools, and strategic frameworks to help you excel in the rapidly evolving world of data and analytics.
         </p>
       </div>
       
       <div class="grid md:grid-cols-3 gap-8">
-        <div class="text-center p-6">
-          <div class="w-16 h-16 bg-brandGreen rounded-full flex items-center justify-center mx-auto mb-4">
-            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
-            </svg>
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+          <div class="p-6">
+            <div class="w-16 h-16 bg-brandGreen rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-2">In-Depth Articles</h3>
+            <p class="text-gray-600 mb-4">Weekly insights on data strategy, analytics trends, and career advancement from a practicing professional.</p>
+            <a href="/insights" class="text-brandGreen font-semibold hover:text-green-700">Read Articles →</a>
           </div>
-          <h3 class="text-xl font-bold text-gray-900 mb-2">Strategic Analytics</h3>
-          <p class="text-gray-600">Turn data chaos into strategic clarity with proven frameworks and methodologies.</p>
         </div>
         
-        <div class="text-center p-6">
-          <div class="w-16 h-16 bg-brandGreen rounded-full flex items-center justify-center mx-auto mb-4">
-            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-            </svg>
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+          <div class="p-6">
+            <div class="w-16 h-16 bg-brandGreen rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-2">Practical Tools</h3>
+            <p class="text-gray-600 mb-4">Ready-to-use calculators, frameworks, and templates that solve real analytics challenges.</p>
+            <a href="/tools" class="text-brandGreen font-semibold hover:text-green-700">Explore Tools →</a>
           </div>
-          <h3 class="text-xl font-bold text-gray-900 mb-2">AI Innovation</h3>
-          <p class="text-gray-600">Harness the power of artificial intelligence to unlock hidden patterns and opportunities.</p>
         </div>
         
-        <div class="text-center p-6">
-          <div class="w-16 h-16 bg-brandGreen rounded-full flex items-center justify-center mx-auto mb-4">
-            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
-            </svg>
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+          <div class="p-6">
+            <div class="w-16 h-16 bg-brandGreen rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-2">Podcast Discussions</h3>
+            <p class="text-gray-600 mb-4">Deep conversations with data leaders about trends, challenges, and career insights.</p>
+            <a href="/podcast" class="text-brandGreen font-semibold hover:text-green-700">Listen Now →</a>
           </div>
-          <h3 class="text-xl font-bold text-gray-900 mb-2">Clear Storytelling</h3>
-          <p class="text-gray-600">Transform complex data into compelling narratives that drive decision-making.</p>
         </div>
       </div>
     </div>
@@ -128,34 +136,20 @@ const seoData = {
       </div>
     </div>
   </section>
-
-  <!-- Case Studies Section -->
-  {caseStudies.length > 0 && (
-    <section class="py-20 bg-white">
-      <div class="container mx-auto px-6">
-        <div class="text-center mb-16">
-          <h2 class="text-4xl font-bold text-gray-900 mb-4">Success Stories</h2>
-          <p class="text-xl text-gray-600">Real results from real organizations.</p>
-        </div>
-        <div class="grid gap-8 md:grid-cols-2">
-          {caseStudies.map(cs => (
-            <CaseStudyCard {...cs.data} />
-          ))}
-        </div>
-      </div>
-    </section>
-  )}
-
-  <!-- CTA Section -->
+  <!-- Newsletter Section -->
   <section class="py-20 bg-brandGreen text-white">
     <div class="container mx-auto px-6 text-center">
-      <h2 class="text-4xl font-bold mb-4">Ready to Transform Your Data Strategy?</h2>
+      <h2 class="text-4xl font-bold mb-4">Stay Ahead of the Data Curve</h2>
       <p class="text-xl mb-8 max-w-2xl mx-auto">
-        Let's discuss how we can help you turn data into your competitive advantage.
+        Get weekly insights, tool updates, and career tips delivered to your inbox.
       </p>
-      <a href="/contact" class="bg-brandGold hover:bg-yellow-600 text-black font-semibold py-4 px-8 rounded-lg transition-colors">
-        Start the Conversation
-      </a>
+      <div class="max-w-md mx-auto">
+        <NewsletterSignup 
+          placeholder="Enter your email for weekly insights"
+          buttonText="Subscribe"
+          source="homepage-cta"
+        />
+      </div>
     </div>
   </section>
 
