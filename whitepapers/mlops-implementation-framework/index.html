@@ -1,0 +1,1009 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Trailblazer Analytics</title><!-- Adding inline styles for critical CSS --><!-- Debug script for asset loading issues --><script>
+      window.addEventListener('DOMContentLoaded', () => {
+        console.log('Base URL:', '${base}');
+        console.log('Asset paths:');
+        document.querySelectorAll('link[rel="stylesheet"], script[src]').forEach(el => {
+          console.log(el.getAttribute('href') || el.getAttribute('src'));
+        });
+        
+        // Check for 404 errors on CSS/JS files
+        window.addEventListener('error', function(e) {
+          if (e.target && (e.target.tagName === 'LINK' || e.target.tagName === 'SCRIPT')) {
+            console.error('Failed to load:', e.target.getAttribute('href') || e.target.getAttribute('src'));
+          }
+        }, true);
+      });
+    </script><link rel="stylesheet" href="/trailblazer-analytics-devkit/assets/about.ruywttTK.css"></head> <body class="min-h-screen flex flex-col">  <nav class="w-full px-6 py-4 bg-gray-900 border-b border-gray-800 text-white sticky top-0 z-50"> <div class="container mx-auto flex justify-between items-center"> <a href="/trailblazer-analytics-devkit" class="font-bold text-xl flex items-center gap-3"> <div class="w-8 h-8 bg-brandGreen rounded-full flex items-center justify-center"> <span class="text-white font-bold text-sm">TA</span> </div>
+Trailblazer Analytics
+</a> <!-- Desktop Navigation --> <div class="hidden md:flex space-x-8"> <a href="/trailblazer-analytics-devkit/insights" class="hover:text-brandGold transition-colors">Insights</a> <a href="/trailblazer-analytics-devkit/podcast" class="hover:text-brandGold transition-colors">Podcast</a> <a href="/trailblazer-analytics-devkit/tech-notes" class="hover:text-brandGold transition-colors">Tech Notes</a> <!-- Resources Dropdown --> <div class="relative group"> <button class="flex items-center hover:text-brandGold transition-colors">
+Resources
+<svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path> </svg> </button> <!-- Dropdown Menu --> <div class="absolute left-0 mt-2 w-48 bg-white rounded-lg shadow-lg border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50"> <div class="py-2"> <a href="/trailblazer-analytics-devkit/downloads" class="block px-4 py-2 text-gray-700 hover:bg-gray-50 hover:text-brandGreen transition-colors"> <div class="flex items-center"> <svg class="w-4 h-4 mr-3 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path> </svg>
+Downloads
+</div> <div class="text-xs text-gray-500 ml-7">Templates & Tools</div> </a> <a href="/trailblazer-analytics-devkit/white-papers" class="block px-4 py-2 text-gray-700 hover:bg-gray-50 hover:text-brandGreen transition-colors"> <div class="flex items-center"> <svg class="w-4 h-4 mr-3 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path> </svg>
+White Papers
+</div> <div class="text-xs text-gray-500 ml-7">Research & Insights</div> </a> <a href="/trailblazer-analytics-devkit/tools" class="block px-4 py-2 text-gray-700 hover:bg-gray-50 hover:text-brandGreen transition-colors"> <div class="flex items-center"> <svg class="w-4 h-4 mr-3 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path> </svg>
+Analytics Tools
+</div> <div class="text-xs text-gray-500 ml-7">Calculators & Apps</div> </a> </div> </div> </div> <a href="/trailblazer-analytics-devkit/about" class="hover:text-brandGold transition-colors">About</a> <a href="/trailblazer-analytics-devkit/contact" class="bg-brandGold text-gray-900 px-4 py-2 rounded-lg hover:bg-yellow-500 transition-colors font-medium">Connect</a> </div> <!-- Mobile Menu Button --> <button id="mobile-menu-button" class="md:hidden text-white hover:text-brandGold transition-colors"> <svg id="menu-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path> </svg> <svg id="close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path> </svg> </button> </div> <!-- Mobile Navigation Menu --> <div id="mobile-menu" class="hidden md:hidden border-t border-gray-800 bg-gray-900"> <div class="container mx-auto px-6 py-4 space-y-4"> <a href="/trailblazer-analytics-devkit/insights" class="block text-white hover:text-brandGold transition-colors py-2">Insights</a> <a href="/trailblazer-analytics-devkit/podcast" class="block text-white hover:text-brandGold transition-colors py-2">Podcast</a> <a href="/trailblazer-analytics-devkit/tech-notes" class="block text-white hover:text-brandGold transition-colors py-2">Tech Notes</a> <!-- Mobile Resources Section --> <div class="border-t border-gray-700 pt-4 mt-4"> <div class="text-brandGold font-medium mb-3 text-sm uppercase tracking-wide">Resources</div> <div class="space-y-3 pl-4"> <a href="/trailblazer-analytics-devkit/downloads" class="block text-white hover:text-brandGold transition-colors py-1"> <div class="flex items-center"> <svg class="w-4 h-4 mr-3 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path> </svg> <div> <div class="text-white">Downloads</div> <div class="text-xs text-gray-400">Templates & Tools</div> </div> </div> </a> <a href="/trailblazer-analytics-devkit/white-papers" class="block text-white hover:text-brandGold transition-colors py-1"> <div class="flex items-center"> <svg class="w-4 h-4 mr-3 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path> </svg> <div> <div class="text-white">White Papers</div> <div class="text-xs text-gray-400">Research & Insights</div> </div> </div> </a> <a href="/trailblazer-analytics-devkit/tools" class="block text-white hover:text-brandGold transition-colors py-1"> <div class="flex items-center"> <svg class="w-4 h-4 mr-3 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path> </svg> <div> <div class="text-white">Analytics Tools</div> <div class="text-xs text-gray-400">Calculators & Apps</div> </div> </div> </a> </div> </div> <div class="border-t border-gray-700 pt-4"> <a href="/trailblazer-analytics-devkit/about" class="block text-white hover:text-brandGold transition-colors py-2">About</a> <a href="/trailblazer-analytics-devkit/contact" class="block bg-brandGold text-gray-900 px-4 py-3 rounded-lg hover:bg-yellow-500 transition-colors font-medium text-center mt-4">Connect</a> </div> </div> </div> </nav> <script type="module">document.addEventListener("DOMContentLoaded",function(){const t=document.getElementById("mobile-menu-button"),e=document.getElementById("mobile-menu"),d=document.getElementById("menu-icon"),s=document.getElementById("close-icon");t&&e&&(t.addEventListener("click",function(){!e.classList.contains("hidden")?(e.classList.add("hidden"),d.classList.remove("hidden"),s.classList.add("hidden")):(e.classList.remove("hidden"),d.classList.add("hidden"),s.classList.remove("hidden"))}),e.querySelectorAll("a").forEach(n=>{n.addEventListener("click",function(){e.classList.add("hidden"),d.classList.remove("hidden"),s.classList.add("hidden")})}),document.addEventListener("click",function(n){!t.contains(n.target)&&!e.contains(n.target)&&(e.classList.add("hidden"),d.classList.remove("hidden"),s.classList.add("hidden"))}))});</script> <article class="py-16 bg-white"> <div class="container mx-auto px-6"> <div class="max-w-4xl mx-auto"> <!-- Article Header --> <header class="mb-12"> <div class="text-center mb-8"> <span class="bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
+Whitepaper
+</span> </div> <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6 text-center"> MLOps Implementation Framework: Scaling Machine Learning in Production </h1> <p class="text-xl text-gray-600 text-center mb-8"> Complete guide to implementing MLOps practices that bridge the gap between data science experimentation and reliable production ML systems, including toolchain selection, workflow automation, and organizational best practices. </p> <div class="flex flex-col sm:flex-row items-center justify-center gap-4 text-gray-500 mb-8"> <div class="flex items-center gap-2"> <div class="w-10 h-10 bg-brandGreen rounded-full flex items-center justify-center"> <span class="text-white font-bold text-sm">AN</span> </div> <span class="font-medium">Alexander Nykolaiszyn</span> </div> <span class="hidden sm:block">•</span> <time>January 31, 2024</time>  </div> <div class="text-center"> <a href="/downloads/mlops-implementation-framework.pdf" target="_blank" rel="noopener noreferrer" class="bg-brandGold text-black px-8 py-4 rounded-lg font-semibold hover:bg-yellow-500 transition-colors inline-flex items-center gap-2"> <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path> </svg>
+Download PDF
+</a> </div> </header> <!-- Article Content --> <div class="prose prose-lg max-w-none prose-headings:text-gray-900 prose-a:text-brandGreen prose-a:no-underline hover:prose-a:underline prose-blockquote:border-brandGreen prose-blockquote:bg-gray-50 prose-blockquote:py-4 prose-blockquote:px-6 prose-blockquote:rounded-lg"> <h1 id="mlops-implementation-framework-scaling-machine-learning-in-production">MLOps Implementation Framework: Scaling Machine Learning in Production</h1>
+<p><em>Transform your ML capabilities from experimental prototypes to reliable, scalable production systems that deliver consistent business value</em></p>
+<h2 id="executive-summary">Executive Summary</h2>
+<p>Machine Learning Operations (MLOps) has emerged as the critical discipline for organizations seeking to scale their AI initiatives beyond proof-of-concepts. This comprehensive framework provides technical and organizational leaders with proven methodologies for implementing MLOps practices that reduce time-to-production, improve model reliability, and accelerate business value realization.</p>
+<p><strong>Industry Impact:</strong></p>
+<ul>
+<li>89% of ML projects never reach production without proper MLOps practices</li>
+<li>Organizations with mature MLOps see 3.2x faster time-to-market for ML solutions</li>
+<li>Automated ML pipelines reduce model deployment time from months to days</li>
+<li>Proper MLOps practices improve model performance monitoring by 75%</li>
+</ul>
+<h2 id="what-youll-learn">What You’ll Learn</h2>
+<h3 id="strategic-foundation">Strategic Foundation</h3>
+<ul>
+<li><strong>Business Case for MLOps</strong>: ROI models, risk mitigation, and competitive advantage</li>
+<li><strong>Maturity Assessment</strong>: Evaluating current ML capabilities and identifying improvement opportunities</li>
+<li><strong>Organizational Design</strong>: Building cross-functional teams for sustainable ML operations</li>
+</ul>
+<h3 id="technical-implementation">Technical Implementation</h3>
+<ul>
+<li><strong>Pipeline Architecture</strong>: End-to-end ML workflow automation and orchestration</li>
+<li><strong>Infrastructure Patterns</strong>: Cloud-native and hybrid deployment architectures</li>
+<li><strong>Monitoring and Observability</strong>: Production ML system health and performance tracking</li>
+</ul>
+<h3 id="operational-excellence">Operational Excellence</h3>
+<ul>
+<li><strong>Model Governance</strong>: Version control, approval workflows, and compliance frameworks</li>
+<li><strong>Risk Management</strong>: Model drift detection, bias monitoring, and failure recovery</li>
+<li><strong>Continuous Improvement</strong>: Feedback loops and performance optimization cycles</li>
+</ul>
+<h2 id="chapter-overview">Chapter Overview</h2>
+<h3 id="chapter-1-the-mlops-imperative">Chapter 1: The MLOps Imperative</h3>
+<p><strong>Why Traditional Software Development Practices Fall Short for ML</strong></p>
+<p>Machine learning systems present unique challenges that traditional DevOps practices cannot address:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="yaml"><code><span class="line"><span style="color:#85E89D">Traditional Software Challenges</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#E1E4E8">  - </span><span style="color:#9ECBFF">Code versioning and deployment</span></span>
+<span class="line"><span style="color:#E1E4E8">  - </span><span style="color:#9ECBFF">Infrastructure provisioning</span></span>
+<span class="line"><span style="color:#E1E4E8">  - </span><span style="color:#9ECBFF">Application monitoring</span></span>
+<span class="line"><span style="color:#E1E4E8">  - </span><span style="color:#9ECBFF">User experience optimization</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#85E89D">Additional ML Challenges</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#E1E4E8">  - </span><span style="color:#9ECBFF">Data versioning and lineage</span></span>
+<span class="line"><span style="color:#E1E4E8">  - </span><span style="color:#9ECBFF">Model versioning and registry</span></span>
+<span class="line"><span style="color:#E1E4E8">  - </span><span style="color:#9ECBFF">Data drift detection</span></span>
+<span class="line"><span style="color:#E1E4E8">  - </span><span style="color:#9ECBFF">Model performance degradation</span></span>
+<span class="line"><span style="color:#E1E4E8">  - </span><span style="color:#9ECBFF">Feature store management</span></span>
+<span class="line"><span style="color:#E1E4E8">  - </span><span style="color:#9ECBFF">A/B testing for ML models</span></span>
+<span class="line"><span style="color:#E1E4E8">  - </span><span style="color:#9ECBFF">Regulatory compliance for AI</span></span></code></pre>
+<p><strong>The Cost of ML Technical Debt</strong></p>
+<ul>
+<li>Hidden feedback loops in production systems</li>
+<li>Undeclared consumers of model predictions</li>
+<li>Data dependencies and cascade failures</li>
+<li>Configuration complexity and maintenance overhead</li>
+</ul>
+<h3 id="chapter-2-mlops-maturity-model">Chapter 2: MLOps Maturity Model</h3>
+<p><strong>Level 0: Manual Process</strong></p>
+<ul>
+<li>Ad-hoc model development and deployment</li>
+<li>Manual testing and validation</li>
+<li>No automation or monitoring</li>
+<li>Weeks to months for model updates</li>
+</ul>
+<p><strong>Level 1: ML Pipeline Automation</strong></p>
+<ul>
+<li>Automated model training pipelines</li>
+<li>Continuous integration for ML code</li>
+<li>Basic model validation and testing</li>
+<li>Reduced deployment time to days</li>
+</ul>
+<p><strong>Level 2: CI/CD Pipeline Automation</strong></p>
+<ul>
+<li>Automated deployment pipelines</li>
+<li>Comprehensive testing frameworks</li>
+<li>Model performance monitoring</li>
+<li>A/B testing capabilities</li>
+</ul>
+<p><strong>Level 3: Automated MLOps</strong></p>
+<ul>
+<li>Automated retraining based on performance triggers</li>
+<li>Advanced monitoring and alerting</li>
+<li>Automated rollback and recovery</li>
+<li>Continuous model optimization</li>
+</ul>
+<h3 id="chapter-3-mlops-architecture-patterns">Chapter 3: MLOps Architecture Patterns</h3>
+<p><strong>Core Components of MLOps Infrastructure</strong></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="yaml"><code><span class="line"><span style="color:#85E89D">Data Pipeline</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#85E89D">  Ingestion</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#E1E4E8">    - </span><span style="color:#9ECBFF">Batch data connectors</span></span>
+<span class="line"><span style="color:#E1E4E8">    - </span><span style="color:#9ECBFF">Real-time streaming ingestion</span></span>
+<span class="line"><span style="color:#E1E4E8">    - </span><span style="color:#9ECBFF">Data validation and quality checks</span></span>
+<span class="line"><span style="color:#E1E4E8">  </span></span>
+<span class="line"><span style="color:#85E89D">  Processing</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#E1E4E8">    - </span><span style="color:#9ECBFF">Feature engineering pipelines</span></span>
+<span class="line"><span style="color:#E1E4E8">    - </span><span style="color:#9ECBFF">Data transformation workflows</span></span>
+<span class="line"><span style="color:#E1E4E8">    - </span><span style="color:#9ECBFF">Feature store management</span></span>
+<span class="line"><span style="color:#E1E4E8">  </span></span>
+<span class="line"><span style="color:#85E89D">  Storage</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#E1E4E8">    - </span><span style="color:#9ECBFF">Raw data lakes</span></span>
+<span class="line"><span style="color:#E1E4E8">    - </span><span style="color:#9ECBFF">Processed feature stores</span></span>
+<span class="line"><span style="color:#E1E4E8">    - </span><span style="color:#9ECBFF">Model artifacts repository</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#85E89D">Model Pipeline</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#85E89D">  Training</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#E1E4E8">    - </span><span style="color:#9ECBFF">Experiment tracking (MLflow, Weights &amp; Biases)</span></span>
+<span class="line"><span style="color:#E1E4E8">    - </span><span style="color:#9ECBFF">Hyperparameter optimization</span></span>
+<span class="line"><span style="color:#E1E4E8">    - </span><span style="color:#9ECBFF">Distributed training orchestration</span></span>
+<span class="line"><span style="color:#E1E4E8">  </span></span>
+<span class="line"><span style="color:#85E89D">  Validation</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#E1E4E8">    - </span><span style="color:#9ECBFF">Model evaluation frameworks</span></span>
+<span class="line"><span style="color:#E1E4E8">    - </span><span style="color:#9ECBFF">Performance threshold validation</span></span>
+<span class="line"><span style="color:#E1E4E8">    - </span><span style="color:#9ECBFF">Bias and fairness testing</span></span>
+<span class="line"><span style="color:#E1E4E8">  </span></span>
+<span class="line"><span style="color:#85E89D">  Registry</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#E1E4E8">    - </span><span style="color:#9ECBFF">Model versioning and metadata</span></span>
+<span class="line"><span style="color:#E1E4E8">    - </span><span style="color:#9ECBFF">Approval workflows</span></span>
+<span class="line"><span style="color:#E1E4E8">    - </span><span style="color:#9ECBFF">Deployment artifacts</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#85E89D">Deployment Pipeline</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#85E89D">  Serving</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#E1E4E8">    - </span><span style="color:#9ECBFF">Real-time inference APIs</span></span>
+<span class="line"><span style="color:#E1E4E8">    - </span><span style="color:#9ECBFF">Batch prediction jobs</span></span>
+<span class="line"><span style="color:#E1E4E8">    - </span><span style="color:#9ECBFF">Edge deployment patterns</span></span>
+<span class="line"><span style="color:#E1E4E8">  </span></span>
+<span class="line"><span style="color:#85E89D">  Monitoring</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#E1E4E8">    - </span><span style="color:#9ECBFF">Performance metrics tracking</span></span>
+<span class="line"><span style="color:#E1E4E8">    - </span><span style="color:#9ECBFF">Data drift detection</span></span>
+<span class="line"><span style="color:#E1E4E8">    - </span><span style="color:#9ECBFF">Model explanation and interpretability</span></span>
+<span class="line"><span style="color:#E1E4E8">  </span></span>
+<span class="line"><span style="color:#85E89D">  Management</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#E1E4E8">    - </span><span style="color:#9ECBFF">A/B testing frameworks</span></span>
+<span class="line"><span style="color:#E1E4E8">    - </span><span style="color:#9ECBFF">Canary deployment strategies</span></span>
+<span class="line"><span style="color:#E1E4E8">    - </span><span style="color:#9ECBFF">Automated rollback mechanisms</span></span></code></pre>
+<p><strong>Reference Architecture: Cloud-Native MLOps</strong></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="python"><code><span class="line"><span style="color:#6A737D"># Example: ML Pipeline Configuration with Kubeflow</span></span>
+<span class="line"><span style="color:#F97583">from</span><span style="color:#E1E4E8"> kfp </span><span style="color:#F97583">import</span><span style="color:#E1E4E8"> dsl</span></span>
+<span class="line"><span style="color:#F97583">from</span><span style="color:#E1E4E8"> kfp.components </span><span style="color:#F97583">import</span><span style="color:#E1E4E8"> create_component_from_func</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#B392F0">@create_component_from_func</span></span>
+<span class="line"><span style="color:#F97583">def</span><span style="color:#B392F0"> data_ingestion</span><span style="color:#E1E4E8">(</span></span>
+<span class="line"><span style="color:#E1E4E8">    source_path: </span><span style="color:#79B8FF">str</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#E1E4E8">    output_path: </span><span style="color:#79B8FF">str</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#E1E4E8">    validation_schema: </span><span style="color:#79B8FF">str</span></span>
+<span class="line"><span style="color:#E1E4E8">) -&gt; </span><span style="color:#79B8FF">str</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#9ECBFF">    &quot;&quot;&quot;Data ingestion component with validation&quot;&quot;&quot;</span></span>
+<span class="line"><span style="color:#F97583">    import</span><span style="color:#E1E4E8"> pandas </span><span style="color:#F97583">as</span><span style="color:#E1E4E8"> pd</span></span>
+<span class="line"><span style="color:#F97583">    from</span><span style="color:#E1E4E8"> great_expectations </span><span style="color:#F97583">import</span><span style="color:#E1E4E8"> DataContext</span></span>
+<span class="line"><span style="color:#E1E4E8">    </span></span>
+<span class="line"><span style="color:#6A737D">    # Load and validate data</span></span>
+<span class="line"><span style="color:#E1E4E8">    df </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> pd.read_csv(source_path)</span></span>
+<span class="line"><span style="color:#E1E4E8">    </span></span>
+<span class="line"><span style="color:#6A737D">    # Great Expectations validation</span></span>
+<span class="line"><span style="color:#E1E4E8">    context </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> DataContext()</span></span>
+<span class="line"><span style="color:#E1E4E8">    batch </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> context.get_batch({</span></span>
+<span class="line"><span style="color:#9ECBFF">        &quot;datasource&quot;</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">&quot;pandas_datasource&quot;</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#9ECBFF">        &quot;data_asset&quot;</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">&quot;input_data&quot;</span></span>
+<span class="line"><span style="color:#E1E4E8">    }, df)</span></span>
+<span class="line"><span style="color:#E1E4E8">    </span></span>
+<span class="line"><span style="color:#E1E4E8">    validation_result </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> context.run_validation_operator(</span></span>
+<span class="line"><span style="color:#9ECBFF">        &quot;action_list_operator&quot;</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#FFAB70">        assets_to_validate</span><span style="color:#F97583">=</span><span style="color:#E1E4E8">[batch]</span></span>
+<span class="line"><span style="color:#E1E4E8">    )</span></span>
+<span class="line"><span style="color:#E1E4E8">    </span></span>
+<span class="line"><span style="color:#F97583">    if</span><span style="color:#E1E4E8"> validation_result[</span><span style="color:#9ECBFF">&quot;success&quot;</span><span style="color:#E1E4E8">]:</span></span>
+<span class="line"><span style="color:#E1E4E8">        df.to_parquet(output_path)</span></span>
+<span class="line"><span style="color:#F97583">        return</span><span style="color:#E1E4E8"> output_path</span></span>
+<span class="line"><span style="color:#F97583">    else</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#F97583">        raise</span><span style="color:#79B8FF"> ValueError</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">&quot;Data validation failed&quot;</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#B392F0">@create_component_from_func</span></span>
+<span class="line"><span style="color:#F97583">def</span><span style="color:#B392F0"> feature_engineering</span><span style="color:#E1E4E8">(</span></span>
+<span class="line"><span style="color:#E1E4E8">    input_path: </span><span style="color:#79B8FF">str</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#E1E4E8">    output_path: </span><span style="color:#79B8FF">str</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#E1E4E8">    feature_config: </span><span style="color:#79B8FF">dict</span></span>
+<span class="line"><span style="color:#E1E4E8">) -&gt; </span><span style="color:#79B8FF">str</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#9ECBFF">    &quot;&quot;&quot;Feature engineering component&quot;&quot;&quot;</span></span>
+<span class="line"><span style="color:#F97583">    import</span><span style="color:#E1E4E8"> pandas </span><span style="color:#F97583">as</span><span style="color:#E1E4E8"> pd</span></span>
+<span class="line"><span style="color:#F97583">    from</span><span style="color:#E1E4E8"> sklearn.preprocessing </span><span style="color:#F97583">import</span><span style="color:#E1E4E8"> StandardScaler</span></span>
+<span class="line"><span style="color:#E1E4E8">    </span></span>
+<span class="line"><span style="color:#E1E4E8">    df </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> pd.read_parquet(input_path)</span></span>
+<span class="line"><span style="color:#E1E4E8">    </span></span>
+<span class="line"><span style="color:#6A737D">    # Apply feature transformations</span></span>
+<span class="line"><span style="color:#F97583">    for</span><span style="color:#E1E4E8"> feature, config </span><span style="color:#F97583">in</span><span style="color:#E1E4E8"> feature_config.items():</span></span>
+<span class="line"><span style="color:#F97583">        if</span><span style="color:#E1E4E8"> config[</span><span style="color:#9ECBFF">&quot;type&quot;</span><span style="color:#E1E4E8">] </span><span style="color:#F97583">==</span><span style="color:#9ECBFF"> &quot;scale&quot;</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#E1E4E8">            scaler </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> StandardScaler()</span></span>
+<span class="line"><span style="color:#E1E4E8">            df[feature] </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> scaler.fit_transform(df[[feature]])</span></span>
+<span class="line"><span style="color:#F97583">        elif</span><span style="color:#E1E4E8"> config[</span><span style="color:#9ECBFF">&quot;type&quot;</span><span style="color:#E1E4E8">] </span><span style="color:#F97583">==</span><span style="color:#9ECBFF"> &quot;categorical&quot;</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#E1E4E8">            df[feature] </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> pd.get_dummies(df[feature], </span><span style="color:#FFAB70">prefix</span><span style="color:#F97583">=</span><span style="color:#E1E4E8">feature)</span></span>
+<span class="line"><span style="color:#E1E4E8">    </span></span>
+<span class="line"><span style="color:#E1E4E8">    df.to_parquet(output_path)</span></span>
+<span class="line"><span style="color:#F97583">    return</span><span style="color:#E1E4E8"> output_path</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#B392F0">@create_component_from_func</span></span>
+<span class="line"><span style="color:#F97583">def</span><span style="color:#B392F0"> model_training</span><span style="color:#E1E4E8">(</span></span>
+<span class="line"><span style="color:#E1E4E8">    features_path: </span><span style="color:#79B8FF">str</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#E1E4E8">    model_output_path: </span><span style="color:#79B8FF">str</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#E1E4E8">    hyperparameters: </span><span style="color:#79B8FF">dict</span></span>
+<span class="line"><span style="color:#E1E4E8">) -&gt; </span><span style="color:#79B8FF">dict</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#9ECBFF">    &quot;&quot;&quot;Model training component with experiment tracking&quot;&quot;&quot;</span></span>
+<span class="line"><span style="color:#F97583">    import</span><span style="color:#E1E4E8"> pandas </span><span style="color:#F97583">as</span><span style="color:#E1E4E8"> pd</span></span>
+<span class="line"><span style="color:#F97583">    import</span><span style="color:#E1E4E8"> mlflow</span></span>
+<span class="line"><span style="color:#F97583">    import</span><span style="color:#E1E4E8"> mlflow.sklearn</span></span>
+<span class="line"><span style="color:#F97583">    from</span><span style="color:#E1E4E8"> sklearn.ensemble </span><span style="color:#F97583">import</span><span style="color:#E1E4E8"> RandomForestClassifier</span></span>
+<span class="line"><span style="color:#F97583">    from</span><span style="color:#E1E4E8"> sklearn.model_selection </span><span style="color:#F97583">import</span><span style="color:#E1E4E8"> train_test_split</span></span>
+<span class="line"><span style="color:#F97583">    from</span><span style="color:#E1E4E8"> sklearn.metrics </span><span style="color:#F97583">import</span><span style="color:#E1E4E8"> accuracy_score, f1_score</span></span>
+<span class="line"><span style="color:#E1E4E8">    </span></span>
+<span class="line"><span style="color:#6A737D">    # Load features</span></span>
+<span class="line"><span style="color:#E1E4E8">    df </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> pd.read_parquet(features_path)</span></span>
+<span class="line"><span style="color:#E1E4E8">    X </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> df.drop([</span><span style="color:#9ECBFF">&#39;target&#39;</span><span style="color:#E1E4E8">], </span><span style="color:#FFAB70">axis</span><span style="color:#F97583">=</span><span style="color:#79B8FF">1</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"><span style="color:#E1E4E8">    y </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> df[</span><span style="color:#9ECBFF">&#39;target&#39;</span><span style="color:#E1E4E8">]</span></span>
+<span class="line"><span style="color:#E1E4E8">    </span></span>
+<span class="line"><span style="color:#E1E4E8">    X_train, X_test, y_train, y_test </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> train_test_split(</span></span>
+<span class="line"><span style="color:#E1E4E8">        X, y, </span><span style="color:#FFAB70">test_size</span><span style="color:#F97583">=</span><span style="color:#79B8FF">0.2</span><span style="color:#E1E4E8">, </span><span style="color:#FFAB70">random_state</span><span style="color:#F97583">=</span><span style="color:#79B8FF">42</span></span>
+<span class="line"><span style="color:#E1E4E8">    )</span></span>
+<span class="line"><span style="color:#E1E4E8">    </span></span>
+<span class="line"><span style="color:#6A737D">    # Start MLflow run</span></span>
+<span class="line"><span style="color:#F97583">    with</span><span style="color:#E1E4E8"> mlflow.start_run():</span></span>
+<span class="line"><span style="color:#6A737D">        # Train model</span></span>
+<span class="line"><span style="color:#E1E4E8">        model </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> RandomForestClassifier(</span><span style="color:#F97583">**</span><span style="color:#E1E4E8">hyperparameters)</span></span>
+<span class="line"><span style="color:#E1E4E8">        model.fit(X_train, y_train)</span></span>
+<span class="line"><span style="color:#E1E4E8">        </span></span>
+<span class="line"><span style="color:#6A737D">        # Evaluate model</span></span>
+<span class="line"><span style="color:#E1E4E8">        predictions </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> model.predict(X_test)</span></span>
+<span class="line"><span style="color:#E1E4E8">        accuracy </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> accuracy_score(y_test, predictions)</span></span>
+<span class="line"><span style="color:#E1E4E8">        f1 </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> f1_score(y_test, predictions, </span><span style="color:#FFAB70">average</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">&#39;weighted&#39;</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"><span style="color:#E1E4E8">        </span></span>
+<span class="line"><span style="color:#6A737D">        # Log metrics and model</span></span>
+<span class="line"><span style="color:#E1E4E8">        mlflow.log_params(hyperparameters)</span></span>
+<span class="line"><span style="color:#E1E4E8">        mlflow.log_metric(</span><span style="color:#9ECBFF">&quot;accuracy&quot;</span><span style="color:#E1E4E8">, accuracy)</span></span>
+<span class="line"><span style="color:#E1E4E8">        mlflow.log_metric(</span><span style="color:#9ECBFF">&quot;f1_score&quot;</span><span style="color:#E1E4E8">, f1)</span></span>
+<span class="line"><span style="color:#E1E4E8">        mlflow.sklearn.log_model(model, </span><span style="color:#9ECBFF">&quot;model&quot;</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"><span style="color:#E1E4E8">        </span></span>
+<span class="line"><span style="color:#6A737D">        # Save model artifacts</span></span>
+<span class="line"><span style="color:#F97583">        import</span><span style="color:#E1E4E8"> joblib</span></span>
+<span class="line"><span style="color:#E1E4E8">        joblib.dump(model, model_output_path)</span></span>
+<span class="line"><span style="color:#E1E4E8">        </span></span>
+<span class="line"><span style="color:#F97583">        return</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#9ECBFF">            &quot;accuracy&quot;</span><span style="color:#E1E4E8">: accuracy,</span></span>
+<span class="line"><span style="color:#9ECBFF">            &quot;f1_score&quot;</span><span style="color:#E1E4E8">: f1,</span></span>
+<span class="line"><span style="color:#9ECBFF">            &quot;model_path&quot;</span><span style="color:#E1E4E8">: model_output_path</span></span>
+<span class="line"><span style="color:#E1E4E8">        }</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#B392F0">@dsl.pipeline</span><span style="color:#E1E4E8">(</span></span>
+<span class="line"><span style="color:#FFAB70">    name</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">&#39;ml-training-pipeline&#39;</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#FFAB70">    description</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">&#39;Complete ML training pipeline with validation&#39;</span></span>
+<span class="line"><span style="color:#E1E4E8">)</span></span>
+<span class="line"><span style="color:#F97583">def</span><span style="color:#B392F0"> ml_pipeline</span><span style="color:#E1E4E8">(</span></span>
+<span class="line"><span style="color:#E1E4E8">    source_data_path: </span><span style="color:#79B8FF">str</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#E1E4E8">    model_registry_path: </span><span style="color:#79B8FF">str</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#E1E4E8">    hyperparameters: </span><span style="color:#79B8FF">dict</span><span style="color:#F97583"> =</span><span style="color:#E1E4E8"> {</span><span style="color:#9ECBFF">&quot;n_estimators&quot;</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">100</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">&quot;max_depth&quot;</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">10</span><span style="color:#E1E4E8">}</span></span>
+<span class="line"><span style="color:#E1E4E8">):</span></span>
+<span class="line"><span style="color:#9ECBFF">    &quot;&quot;&quot;ML training pipeline definition&quot;&quot;&quot;</span></span>
+<span class="line"><span style="color:#E1E4E8">    </span></span>
+<span class="line"><span style="color:#6A737D">    # Data ingestion step</span></span>
+<span class="line"><span style="color:#E1E4E8">    data_task </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> data_ingestion(</span></span>
+<span class="line"><span style="color:#FFAB70">        source_path</span><span style="color:#F97583">=</span><span style="color:#E1E4E8">source_data_path,</span></span>
+<span class="line"><span style="color:#FFAB70">        output_path</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">&quot;/tmp/validated_data.parquet&quot;</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#FFAB70">        validation_schema</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">&quot;data_schema.json&quot;</span></span>
+<span class="line"><span style="color:#E1E4E8">    )</span></span>
+<span class="line"><span style="color:#E1E4E8">    </span></span>
+<span class="line"><span style="color:#6A737D">    # Feature engineering step</span></span>
+<span class="line"><span style="color:#E1E4E8">    features_task </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> feature_engineering(</span></span>
+<span class="line"><span style="color:#FFAB70">        input_path</span><span style="color:#F97583">=</span><span style="color:#E1E4E8">data_task.output,</span></span>
+<span class="line"><span style="color:#FFAB70">        output_path</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">&quot;/tmp/features.parquet&quot;</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#FFAB70">        feature_config</span><span style="color:#F97583">=</span><span style="color:#E1E4E8">{</span></span>
+<span class="line"><span style="color:#9ECBFF">            &quot;numerical_feature&quot;</span><span style="color:#E1E4E8">: {</span><span style="color:#9ECBFF">&quot;type&quot;</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">&quot;scale&quot;</span><span style="color:#E1E4E8">},</span></span>
+<span class="line"><span style="color:#9ECBFF">            &quot;categorical_feature&quot;</span><span style="color:#E1E4E8">: {</span><span style="color:#9ECBFF">&quot;type&quot;</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">&quot;categorical&quot;</span><span style="color:#E1E4E8">}</span></span>
+<span class="line"><span style="color:#E1E4E8">        }</span></span>
+<span class="line"><span style="color:#E1E4E8">    )</span></span>
+<span class="line"><span style="color:#E1E4E8">    </span></span>
+<span class="line"><span style="color:#6A737D">    # Model training step</span></span>
+<span class="line"><span style="color:#E1E4E8">    training_task </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> model_training(</span></span>
+<span class="line"><span style="color:#FFAB70">        features_path</span><span style="color:#F97583">=</span><span style="color:#E1E4E8">features_task.output,</span></span>
+<span class="line"><span style="color:#FFAB70">        model_output_path</span><span style="color:#F97583">=</span><span style="color:#E1E4E8">model_registry_path,</span></span>
+<span class="line"><span style="color:#FFAB70">        hyperparameters</span><span style="color:#F97583">=</span><span style="color:#E1E4E8">hyperparameters</span></span>
+<span class="line"><span style="color:#E1E4E8">    )</span></span></code></pre>
+<h3 id="chapter-4-data-and-feature-management">Chapter 4: Data and Feature Management</h3>
+<p><strong>Feature Store Architecture</strong></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="python"><code><span class="line"><span style="color:#6A737D"># Example: Feature Store Implementation with Feast</span></span>
+<span class="line"><span style="color:#F97583">from</span><span style="color:#E1E4E8"> feast </span><span style="color:#F97583">import</span><span style="color:#E1E4E8"> FeatureStore, Entity, Feature, FeatureView</span></span>
+<span class="line"><span style="color:#F97583">from</span><span style="color:#E1E4E8"> feast.types </span><span style="color:#F97583">import</span><span style="color:#E1E4E8"> Float64, Int64, String</span></span>
+<span class="line"><span style="color:#F97583">from</span><span style="color:#E1E4E8"> datetime </span><span style="color:#F97583">import</span><span style="color:#E1E4E8"> timedelta</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D"># Define entities</span></span>
+<span class="line"><span style="color:#E1E4E8">customer </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> Entity(</span></span>
+<span class="line"><span style="color:#FFAB70">    name</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">&quot;customer_id&quot;</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#FFAB70">    value_type</span><span style="color:#F97583">=</span><span style="color:#E1E4E8">String,</span></span>
+<span class="line"><span style="color:#FFAB70">    description</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">&quot;Customer identifier&quot;</span></span>
+<span class="line"><span style="color:#E1E4E8">)</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D"># Define feature views</span></span>
+<span class="line"><span style="color:#E1E4E8">customer_features </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> FeatureView(</span></span>
+<span class="line"><span style="color:#FFAB70">    name</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">&quot;customer_demographics&quot;</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#FFAB70">    entities</span><span style="color:#F97583">=</span><span style="color:#E1E4E8">[</span><span style="color:#9ECBFF">&quot;customer_id&quot;</span><span style="color:#E1E4E8">],</span></span>
+<span class="line"><span style="color:#FFAB70">    ttl</span><span style="color:#F97583">=</span><span style="color:#E1E4E8">timedelta(</span><span style="color:#FFAB70">days</span><span style="color:#F97583">=</span><span style="color:#79B8FF">7</span><span style="color:#E1E4E8">),</span></span>
+<span class="line"><span style="color:#FFAB70">    features</span><span style="color:#F97583">=</span><span style="color:#E1E4E8">[</span></span>
+<span class="line"><span style="color:#E1E4E8">        Feature(</span><span style="color:#FFAB70">name</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">&quot;age&quot;</span><span style="color:#E1E4E8">, </span><span style="color:#FFAB70">dtype</span><span style="color:#F97583">=</span><span style="color:#E1E4E8">Int64),</span></span>
+<span class="line"><span style="color:#E1E4E8">        Feature(</span><span style="color:#FFAB70">name</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">&quot;income&quot;</span><span style="color:#E1E4E8">, </span><span style="color:#FFAB70">dtype</span><span style="color:#F97583">=</span><span style="color:#E1E4E8">Float64),</span></span>
+<span class="line"><span style="color:#E1E4E8">        Feature(</span><span style="color:#FFAB70">name</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">&quot;credit_score&quot;</span><span style="color:#E1E4E8">, </span><span style="color:#FFAB70">dtype</span><span style="color:#F97583">=</span><span style="color:#E1E4E8">Int64),</span></span>
+<span class="line"><span style="color:#E1E4E8">    ],</span></span>
+<span class="line"><span style="color:#FFAB70">    source</span><span style="color:#F97583">=</span><span style="color:#E1E4E8">FileSource(</span></span>
+<span class="line"><span style="color:#FFAB70">        path</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">&quot;data/customer_features.parquet&quot;</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#FFAB70">        timestamp_field</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">&quot;event_timestamp&quot;</span></span>
+<span class="line"><span style="color:#E1E4E8">    )</span></span>
+<span class="line"><span style="color:#E1E4E8">)</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D"># Initialize feature store</span></span>
+<span class="line"><span style="color:#E1E4E8">fs </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> FeatureStore(</span><span style="color:#FFAB70">repo_path</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">&quot;.&quot;</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D"># Apply feature definitions</span></span>
+<span class="line"><span style="color:#E1E4E8">fs.apply([customer, customer_features])</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D"># Retrieve features for model training</span></span>
+<span class="line"><span style="color:#E1E4E8">feature_vector </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> fs.get_historical_features(</span></span>
+<span class="line"><span style="color:#FFAB70">    entity_df</span><span style="color:#F97583">=</span><span style="color:#E1E4E8">training_df,</span></span>
+<span class="line"><span style="color:#FFAB70">    features</span><span style="color:#F97583">=</span><span style="color:#E1E4E8">[</span></span>
+<span class="line"><span style="color:#9ECBFF">        &quot;customer_demographics:age&quot;</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#9ECBFF">        &quot;customer_demographics:income&quot;</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#9ECBFF">        &quot;customer_demographics:credit_score&quot;</span></span>
+<span class="line"><span style="color:#E1E4E8">    ]</span></span>
+<span class="line"><span style="color:#E1E4E8">).to_df()</span></span></code></pre>
+<p><strong>Data Versioning and Lineage</strong></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="yaml"><code><span class="line"><span style="color:#85E89D">Data Governance Framework</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#85E89D">  Versioning Strategy</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#E1E4E8">    - </span><span style="color:#9ECBFF">Dataset versioning with DVC</span></span>
+<span class="line"><span style="color:#E1E4E8">    - </span><span style="color:#9ECBFF">Schema evolution tracking</span></span>
+<span class="line"><span style="color:#E1E4E8">    - </span><span style="color:#9ECBFF">Backward compatibility validation</span></span>
+<span class="line"><span style="color:#E1E4E8">  </span></span>
+<span class="line"><span style="color:#85E89D">  Lineage Tracking</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#E1E4E8">    - </span><span style="color:#9ECBFF">Data source to model mapping</span></span>
+<span class="line"><span style="color:#E1E4E8">    - </span><span style="color:#9ECBFF">Feature dependency graphs</span></span>
+<span class="line"><span style="color:#E1E4E8">    - </span><span style="color:#9ECBFF">Model ancestry tracking</span></span>
+<span class="line"><span style="color:#E1E4E8">  </span></span>
+<span class="line"><span style="color:#85E89D">  Quality Monitoring</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#E1E4E8">    - </span><span style="color:#9ECBFF">Data drift detection</span></span>
+<span class="line"><span style="color:#E1E4E8">    - </span><span style="color:#9ECBFF">Schema validation</span></span>
+<span class="line"><span style="color:#E1E4E8">    - </span><span style="color:#9ECBFF">Statistical profiling</span></span></code></pre>
+<h3 id="chapter-5-model-development-and-experimentation">Chapter 5: Model Development and Experimentation</h3>
+<p><strong>Experiment Tracking and Management</strong></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="python"><code><span class="line"><span style="color:#6A737D"># Example: Advanced Experiment Tracking with MLflow</span></span>
+<span class="line"><span style="color:#F97583">import</span><span style="color:#E1E4E8"> mlflow</span></span>
+<span class="line"><span style="color:#F97583">import</span><span style="color:#E1E4E8"> mlflow.sklearn</span></span>
+<span class="line"><span style="color:#F97583">from</span><span style="color:#E1E4E8"> mlflow.tracking </span><span style="color:#F97583">import</span><span style="color:#E1E4E8"> MlflowClient</span></span>
+<span class="line"><span style="color:#F97583">import</span><span style="color:#E1E4E8"> optuna</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">class</span><span style="color:#B392F0"> MLExperimentManager</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#F97583">    def</span><span style="color:#79B8FF"> __init__</span><span style="color:#E1E4E8">(self, experiment_name: </span><span style="color:#79B8FF">str</span><span style="color:#E1E4E8">):</span></span>
+<span class="line"><span style="color:#79B8FF">        self</span><span style="color:#E1E4E8">.experiment_name </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> experiment_name</span></span>
+<span class="line"><span style="color:#E1E4E8">        mlflow.set_experiment(experiment_name)</span></span>
+<span class="line"><span style="color:#79B8FF">        self</span><span style="color:#E1E4E8">.client </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> MlflowClient()</span></span>
+<span class="line"><span style="color:#E1E4E8">    </span></span>
+<span class="line"><span style="color:#F97583">    def</span><span style="color:#B392F0"> hyperparameter_optimization</span><span style="color:#E1E4E8">(self, objective_function, n_trials</span><span style="color:#F97583">=</span><span style="color:#79B8FF">100</span><span style="color:#E1E4E8">):</span></span>
+<span class="line"><span style="color:#9ECBFF">        &quot;&quot;&quot;Automated hyperparameter optimization with Optuna&quot;&quot;&quot;</span></span>
+<span class="line"><span style="color:#E1E4E8">        </span></span>
+<span class="line"><span style="color:#F97583">        def</span><span style="color:#B392F0"> objective</span><span style="color:#E1E4E8">(trial):</span></span>
+<span class="line"><span style="color:#6A737D">            # Suggest hyperparameters</span></span>
+<span class="line"><span style="color:#E1E4E8">            params </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#9ECBFF">                &#39;n_estimators&#39;</span><span style="color:#E1E4E8">: trial.suggest_int(</span><span style="color:#9ECBFF">&#39;n_estimators&#39;</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">50</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">300</span><span style="color:#E1E4E8">),</span></span>
+<span class="line"><span style="color:#9ECBFF">                &#39;max_depth&#39;</span><span style="color:#E1E4E8">: trial.suggest_int(</span><span style="color:#9ECBFF">&#39;max_depth&#39;</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">3</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">20</span><span style="color:#E1E4E8">),</span></span>
+<span class="line"><span style="color:#9ECBFF">                &#39;learning_rate&#39;</span><span style="color:#E1E4E8">: trial.suggest_float(</span><span style="color:#9ECBFF">&#39;learning_rate&#39;</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">0.01</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">0.3</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"><span style="color:#E1E4E8">            }</span></span>
+<span class="line"><span style="color:#E1E4E8">            </span></span>
+<span class="line"><span style="color:#6A737D">            # Run experiment with suggested parameters</span></span>
+<span class="line"><span style="color:#F97583">            with</span><span style="color:#E1E4E8"> mlflow.start_run(</span><span style="color:#FFAB70">nested</span><span style="color:#F97583">=</span><span style="color:#79B8FF">True</span><span style="color:#E1E4E8">):</span></span>
+<span class="line"><span style="color:#E1E4E8">                score </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> objective_function(params)</span></span>
+<span class="line"><span style="color:#E1E4E8">                mlflow.log_params(params)</span></span>
+<span class="line"><span style="color:#E1E4E8">                mlflow.log_metric(</span><span style="color:#9ECBFF">&quot;score&quot;</span><span style="color:#E1E4E8">, score)</span></span>
+<span class="line"><span style="color:#F97583">                return</span><span style="color:#E1E4E8"> score</span></span>
+<span class="line"><span style="color:#E1E4E8">        </span></span>
+<span class="line"><span style="color:#6A737D">        # Run optimization</span></span>
+<span class="line"><span style="color:#E1E4E8">        study </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> optuna.create_study(</span><span style="color:#FFAB70">direction</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">&#39;maximize&#39;</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"><span style="color:#E1E4E8">        study.optimize(objective, </span><span style="color:#FFAB70">n_trials</span><span style="color:#F97583">=</span><span style="color:#E1E4E8">n_trials)</span></span>
+<span class="line"><span style="color:#E1E4E8">        </span></span>
+<span class="line"><span style="color:#6A737D">        # Log best parameters</span></span>
+<span class="line"><span style="color:#E1E4E8">        best_params </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> study.best_params</span></span>
+<span class="line"><span style="color:#F97583">        with</span><span style="color:#E1E4E8"> mlflow.start_run():</span></span>
+<span class="line"><span style="color:#E1E4E8">            mlflow.log_params(best_params)</span></span>
+<span class="line"><span style="color:#E1E4E8">            mlflow.log_metric(</span><span style="color:#9ECBFF">&quot;best_score&quot;</span><span style="color:#E1E4E8">, study.best_value)</span></span>
+<span class="line"><span style="color:#E1E4E8">            </span></span>
+<span class="line"><span style="color:#F97583">        return</span><span style="color:#E1E4E8"> best_params</span></span>
+<span class="line"><span style="color:#E1E4E8">    </span></span>
+<span class="line"><span style="color:#F97583">    def</span><span style="color:#B392F0"> model_comparison</span><span style="color:#E1E4E8">(self, models: </span><span style="color:#79B8FF">dict</span><span style="color:#E1E4E8">, X_train, X_test, y_train, y_test):</span></span>
+<span class="line"><span style="color:#9ECBFF">        &quot;&quot;&quot;Compare multiple models and log results&quot;&quot;&quot;</span></span>
+<span class="line"><span style="color:#E1E4E8">        results </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> {}</span></span>
+<span class="line"><span style="color:#E1E4E8">        </span></span>
+<span class="line"><span style="color:#F97583">        for</span><span style="color:#E1E4E8"> model_name, model </span><span style="color:#F97583">in</span><span style="color:#E1E4E8"> models.items():</span></span>
+<span class="line"><span style="color:#F97583">            with</span><span style="color:#E1E4E8"> mlflow.start_run(</span><span style="color:#FFAB70">run_name</span><span style="color:#F97583">=</span><span style="color:#F97583">f</span><span style="color:#9ECBFF">&quot;</span><span style="color:#79B8FF">{</span><span style="color:#E1E4E8">model_name</span><span style="color:#79B8FF">}</span><span style="color:#9ECBFF">_comparison&quot;</span><span style="color:#E1E4E8">):</span></span>
+<span class="line"><span style="color:#6A737D">                # Train model</span></span>
+<span class="line"><span style="color:#E1E4E8">                model.fit(X_train, y_train)</span></span>
+<span class="line"><span style="color:#E1E4E8">                </span></span>
+<span class="line"><span style="color:#6A737D">                # Evaluate</span></span>
+<span class="line"><span style="color:#E1E4E8">                train_score </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> model.score(X_train, y_train)</span></span>
+<span class="line"><span style="color:#E1E4E8">                test_score </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> model.score(X_test, y_test)</span></span>
+<span class="line"><span style="color:#E1E4E8">                </span></span>
+<span class="line"><span style="color:#6A737D">                # Log metrics</span></span>
+<span class="line"><span style="color:#E1E4E8">                mlflow.log_metric(</span><span style="color:#9ECBFF">&quot;train_score&quot;</span><span style="color:#E1E4E8">, train_score)</span></span>
+<span class="line"><span style="color:#E1E4E8">                mlflow.log_metric(</span><span style="color:#9ECBFF">&quot;test_score&quot;</span><span style="color:#E1E4E8">, test_score)</span></span>
+<span class="line"><span style="color:#E1E4E8">                mlflow.log_metric(</span><span style="color:#9ECBFF">&quot;overfitting&quot;</span><span style="color:#E1E4E8">, train_score </span><span style="color:#F97583">-</span><span style="color:#E1E4E8"> test_score)</span></span>
+<span class="line"><span style="color:#E1E4E8">                </span></span>
+<span class="line"><span style="color:#6A737D">                # Log model</span></span>
+<span class="line"><span style="color:#E1E4E8">                mlflow.sklearn.log_model(model, </span><span style="color:#9ECBFF">&quot;model&quot;</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"><span style="color:#E1E4E8">                </span></span>
+<span class="line"><span style="color:#E1E4E8">                results[model_name] </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#9ECBFF">                    &quot;train_score&quot;</span><span style="color:#E1E4E8">: train_score,</span></span>
+<span class="line"><span style="color:#9ECBFF">                    &quot;test_score&quot;</span><span style="color:#E1E4E8">: test_score</span></span>
+<span class="line"><span style="color:#E1E4E8">                }</span></span>
+<span class="line"><span style="color:#E1E4E8">        </span></span>
+<span class="line"><span style="color:#F97583">        return</span><span style="color:#E1E4E8"> results</span></span></code></pre>
+<h3 id="chapter-6-continuous-integration-and-testing">Chapter 6: Continuous Integration and Testing</h3>
+<p><strong>ML-Specific Testing Framework</strong></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="python"><code><span class="line"><span style="color:#6A737D"># Example: Comprehensive ML Testing Suite</span></span>
+<span class="line"><span style="color:#F97583">import</span><span style="color:#E1E4E8"> pytest</span></span>
+<span class="line"><span style="color:#F97583">import</span><span style="color:#E1E4E8"> pandas </span><span style="color:#F97583">as</span><span style="color:#E1E4E8"> pd</span></span>
+<span class="line"><span style="color:#F97583">import</span><span style="color:#E1E4E8"> numpy </span><span style="color:#F97583">as</span><span style="color:#E1E4E8"> np</span></span>
+<span class="line"><span style="color:#F97583">from</span><span style="color:#E1E4E8"> sklearn.metrics </span><span style="color:#F97583">import</span><span style="color:#E1E4E8"> accuracy_score</span></span>
+<span class="line"><span style="color:#F97583">import</span><span style="color:#E1E4E8"> great_expectations </span><span style="color:#F97583">as</span><span style="color:#E1E4E8"> ge</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">class</span><span style="color:#B392F0"> MLTestSuite</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#F97583">    def</span><span style="color:#79B8FF"> __init__</span><span style="color:#E1E4E8">(self, model, test_data, validation_data):</span></span>
+<span class="line"><span style="color:#79B8FF">        self</span><span style="color:#E1E4E8">.model </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> model</span></span>
+<span class="line"><span style="color:#79B8FF">        self</span><span style="color:#E1E4E8">.test_data </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> test_data</span></span>
+<span class="line"><span style="color:#79B8FF">        self</span><span style="color:#E1E4E8">.validation_data </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> validation_data</span></span>
+<span class="line"><span style="color:#E1E4E8">    </span></span>
+<span class="line"><span style="color:#F97583">    def</span><span style="color:#B392F0"> test_data_schema_validation</span><span style="color:#E1E4E8">(self):</span></span>
+<span class="line"><span style="color:#9ECBFF">        &quot;&quot;&quot;Validate input data schema&quot;&quot;&quot;</span></span>
+<span class="line"><span style="color:#E1E4E8">        df </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> ge.from_pandas(</span><span style="color:#79B8FF">self</span><span style="color:#E1E4E8">.test_data)</span></span>
+<span class="line"><span style="color:#E1E4E8">        </span></span>
+<span class="line"><span style="color:#6A737D">        # Define expectations</span></span>
+<span class="line"><span style="color:#E1E4E8">        df.expect_table_columns_to_match_ordered_list([</span></span>
+<span class="line"><span style="color:#9ECBFF">            &#39;feature_1&#39;</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">&#39;feature_2&#39;</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">&#39;feature_3&#39;</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">&#39;target&#39;</span></span>
+<span class="line"><span style="color:#E1E4E8">        ])</span></span>
+<span class="line"><span style="color:#E1E4E8">        </span></span>
+<span class="line"><span style="color:#E1E4E8">        df.expect_column_values_to_not_be_null(</span><span style="color:#9ECBFF">&#39;feature_1&#39;</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"><span style="color:#E1E4E8">        df.expect_column_values_to_be_between(</span><span style="color:#9ECBFF">&#39;feature_2&#39;</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">0</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">100</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"><span style="color:#E1E4E8">        </span></span>
+<span class="line"><span style="color:#E1E4E8">        validation_result </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> df.validate()</span></span>
+<span class="line"><span style="color:#F97583">        assert</span><span style="color:#E1E4E8"> validation_result.success, </span><span style="color:#9ECBFF">&quot;Data schema validation failed&quot;</span></span>
+<span class="line"><span style="color:#E1E4E8">    </span></span>
+<span class="line"><span style="color:#F97583">    def</span><span style="color:#B392F0"> test_model_performance_regression</span><span style="color:#E1E4E8">(self):</span></span>
+<span class="line"><span style="color:#9ECBFF">        &quot;&quot;&quot;Test for model performance regression&quot;&quot;&quot;</span></span>
+<span class="line"><span style="color:#E1E4E8">        X_val </span><span style="color:#F97583">=</span><span style="color:#79B8FF"> self</span><span style="color:#E1E4E8">.validation_data.drop([</span><span style="color:#9ECBFF">&#39;target&#39;</span><span style="color:#E1E4E8">], </span><span style="color:#FFAB70">axis</span><span style="color:#F97583">=</span><span style="color:#79B8FF">1</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"><span style="color:#E1E4E8">        y_val </span><span style="color:#F97583">=</span><span style="color:#79B8FF"> self</span><span style="color:#E1E4E8">.validation_data[</span><span style="color:#9ECBFF">&#39;target&#39;</span><span style="color:#E1E4E8">]</span></span>
+<span class="line"><span style="color:#E1E4E8">        </span></span>
+<span class="line"><span style="color:#E1E4E8">        predictions </span><span style="color:#F97583">=</span><span style="color:#79B8FF"> self</span><span style="color:#E1E4E8">.model.predict(X_val)</span></span>
+<span class="line"><span style="color:#E1E4E8">        accuracy </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> accuracy_score(y_val, predictions)</span></span>
+<span class="line"><span style="color:#E1E4E8">        </span></span>
+<span class="line"><span style="color:#6A737D">        # Minimum acceptable performance threshold</span></span>
+<span class="line"><span style="color:#E1E4E8">        min_accuracy </span><span style="color:#F97583">=</span><span style="color:#79B8FF"> 0.85</span></span>
+<span class="line"><span style="color:#F97583">        assert</span><span style="color:#E1E4E8"> accuracy </span><span style="color:#F97583">&gt;=</span><span style="color:#E1E4E8"> min_accuracy, </span><span style="color:#F97583">f</span><span style="color:#9ECBFF">&quot;Model accuracy </span><span style="color:#79B8FF">{</span><span style="color:#E1E4E8">accuracy</span><span style="color:#79B8FF">}</span><span style="color:#9ECBFF"> below threshold </span><span style="color:#79B8FF">{</span><span style="color:#E1E4E8">min_accuracy</span><span style="color:#79B8FF">}</span><span style="color:#9ECBFF">&quot;</span></span>
+<span class="line"><span style="color:#E1E4E8">    </span></span>
+<span class="line"><span style="color:#F97583">    def</span><span style="color:#B392F0"> test_prediction_consistency</span><span style="color:#E1E4E8">(self):</span></span>
+<span class="line"><span style="color:#9ECBFF">        &quot;&quot;&quot;Test prediction consistency&quot;&quot;&quot;</span></span>
+<span class="line"><span style="color:#E1E4E8">        X_test </span><span style="color:#F97583">=</span><span style="color:#79B8FF"> self</span><span style="color:#E1E4E8">.test_data.drop([</span><span style="color:#9ECBFF">&#39;target&#39;</span><span style="color:#E1E4E8">], </span><span style="color:#FFAB70">axis</span><span style="color:#F97583">=</span><span style="color:#79B8FF">1</span><span style="color:#E1E4E8">).head(</span><span style="color:#79B8FF">100</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"><span style="color:#E1E4E8">        </span></span>
+<span class="line"><span style="color:#6A737D">        # Make predictions multiple times</span></span>
+<span class="line"><span style="color:#E1E4E8">        pred_1 </span><span style="color:#F97583">=</span><span style="color:#79B8FF"> self</span><span style="color:#E1E4E8">.model.predict(X_test)</span></span>
+<span class="line"><span style="color:#E1E4E8">        pred_2 </span><span style="color:#F97583">=</span><span style="color:#79B8FF"> self</span><span style="color:#E1E4E8">.model.predict(X_test)</span></span>
+<span class="line"><span style="color:#E1E4E8">        </span></span>
+<span class="line"><span style="color:#6A737D">        # Predictions should be identical for same input</span></span>
+<span class="line"><span style="color:#F97583">        assert</span><span style="color:#E1E4E8"> np.array_equal(pred_1, pred_2), </span><span style="color:#9ECBFF">&quot;Model predictions are not consistent&quot;</span></span>
+<span class="line"><span style="color:#E1E4E8">    </span></span>
+<span class="line"><span style="color:#F97583">    def</span><span style="color:#B392F0"> test_model_bias_fairness</span><span style="color:#E1E4E8">(self):</span></span>
+<span class="line"><span style="color:#9ECBFF">        &quot;&quot;&quot;Test for model bias across sensitive attributes&quot;&quot;&quot;</span></span>
+<span class="line"><span style="color:#F97583">        from</span><span style="color:#E1E4E8"> fairlearn.metrics </span><span style="color:#F97583">import</span><span style="color:#E1E4E8"> demographic_parity_difference</span></span>
+<span class="line"><span style="color:#E1E4E8">        </span></span>
+<span class="line"><span style="color:#E1E4E8">        X_test </span><span style="color:#F97583">=</span><span style="color:#79B8FF"> self</span><span style="color:#E1E4E8">.test_data.drop([</span><span style="color:#9ECBFF">&#39;target&#39;</span><span style="color:#E1E4E8">], </span><span style="color:#FFAB70">axis</span><span style="color:#F97583">=</span><span style="color:#79B8FF">1</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"><span style="color:#E1E4E8">        y_test </span><span style="color:#F97583">=</span><span style="color:#79B8FF"> self</span><span style="color:#E1E4E8">.test_data[</span><span style="color:#9ECBFF">&#39;target&#39;</span><span style="color:#E1E4E8">]</span></span>
+<span class="line"><span style="color:#E1E4E8">        sensitive_features </span><span style="color:#F97583">=</span><span style="color:#79B8FF"> self</span><span style="color:#E1E4E8">.test_data[</span><span style="color:#9ECBFF">&#39;sensitive_attribute&#39;</span><span style="color:#E1E4E8">]</span></span>
+<span class="line"><span style="color:#E1E4E8">        </span></span>
+<span class="line"><span style="color:#E1E4E8">        predictions </span><span style="color:#F97583">=</span><span style="color:#79B8FF"> self</span><span style="color:#E1E4E8">.model.predict(X_test)</span></span>
+<span class="line"><span style="color:#E1E4E8">        </span></span>
+<span class="line"><span style="color:#6A737D">        # Calculate demographic parity difference</span></span>
+<span class="line"><span style="color:#E1E4E8">        dp_diff </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> demographic_parity_difference(</span></span>
+<span class="line"><span style="color:#E1E4E8">            y_test, predictions, </span><span style="color:#FFAB70">sensitive_features</span><span style="color:#F97583">=</span><span style="color:#E1E4E8">sensitive_features</span></span>
+<span class="line"><span style="color:#E1E4E8">        )</span></span>
+<span class="line"><span style="color:#E1E4E8">        </span></span>
+<span class="line"><span style="color:#6A737D">        # Maximum acceptable bias threshold</span></span>
+<span class="line"><span style="color:#E1E4E8">        max_bias </span><span style="color:#F97583">=</span><span style="color:#79B8FF"> 0.1</span></span>
+<span class="line"><span style="color:#F97583">        assert</span><span style="color:#79B8FF"> abs</span><span style="color:#E1E4E8">(dp_diff) </span><span style="color:#F97583">&lt;=</span><span style="color:#E1E4E8"> max_bias, </span><span style="color:#F97583">f</span><span style="color:#9ECBFF">&quot;Model bias </span><span style="color:#79B8FF">{</span><span style="color:#E1E4E8">dp_diff</span><span style="color:#79B8FF">}</span><span style="color:#9ECBFF"> exceeds threshold </span><span style="color:#79B8FF">{</span><span style="color:#E1E4E8">max_bias</span><span style="color:#79B8FF">}</span><span style="color:#9ECBFF">&quot;</span></span>
+<span class="line"><span style="color:#E1E4E8">    </span></span>
+<span class="line"><span style="color:#F97583">    def</span><span style="color:#B392F0"> test_model_explainability</span><span style="color:#E1E4E8">(self):</span></span>
+<span class="line"><span style="color:#9ECBFF">        &quot;&quot;&quot;Test model explainability requirements&quot;&quot;&quot;</span></span>
+<span class="line"><span style="color:#F97583">        import</span><span style="color:#E1E4E8"> shap</span></span>
+<span class="line"><span style="color:#E1E4E8">        </span></span>
+<span class="line"><span style="color:#E1E4E8">        X_sample </span><span style="color:#F97583">=</span><span style="color:#79B8FF"> self</span><span style="color:#E1E4E8">.test_data.drop([</span><span style="color:#9ECBFF">&#39;target&#39;</span><span style="color:#E1E4E8">], </span><span style="color:#FFAB70">axis</span><span style="color:#F97583">=</span><span style="color:#79B8FF">1</span><span style="color:#E1E4E8">).head(</span><span style="color:#79B8FF">10</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"><span style="color:#E1E4E8">        </span></span>
+<span class="line"><span style="color:#6A737D">        # Generate SHAP explanations</span></span>
+<span class="line"><span style="color:#E1E4E8">        explainer </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> shap.Explainer(</span><span style="color:#79B8FF">self</span><span style="color:#E1E4E8">.model)</span></span>
+<span class="line"><span style="color:#E1E4E8">        shap_values </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> explainer(X_sample)</span></span>
+<span class="line"><span style="color:#E1E4E8">        </span></span>
+<span class="line"><span style="color:#6A737D">        # Verify explanations exist for all predictions</span></span>
+<span class="line"><span style="color:#F97583">        assert</span><span style="color:#E1E4E8"> shap_values.shape[</span><span style="color:#79B8FF">0</span><span style="color:#E1E4E8">] </span><span style="color:#F97583">==</span><span style="color:#E1E4E8"> X_sample.shape[</span><span style="color:#79B8FF">0</span><span style="color:#E1E4E8">]</span></span>
+<span class="line"><span style="color:#F97583">        assert</span><span style="color:#F97583"> not</span><span style="color:#E1E4E8"> np.any(np.isnan(shap_values.values))</span></span></code></pre>
+<h3 id="chapter-7-model-deployment-and-serving">Chapter 7: Model Deployment and Serving</h3>
+<p><strong>Production Deployment Patterns</strong></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="python"><code><span class="line"><span style="color:#6A737D"># Example: Model Serving with FastAPI and Docker</span></span>
+<span class="line"><span style="color:#F97583">from</span><span style="color:#E1E4E8"> fastapi </span><span style="color:#F97583">import</span><span style="color:#E1E4E8"> FastAPI, HTTPException</span></span>
+<span class="line"><span style="color:#F97583">from</span><span style="color:#E1E4E8"> pydantic </span><span style="color:#F97583">import</span><span style="color:#E1E4E8"> BaseModel</span></span>
+<span class="line"><span style="color:#F97583">import</span><span style="color:#E1E4E8"> joblib</span></span>
+<span class="line"><span style="color:#F97583">import</span><span style="color:#E1E4E8"> numpy </span><span style="color:#F97583">as</span><span style="color:#E1E4E8"> np</span></span>
+<span class="line"><span style="color:#F97583">import</span><span style="color:#E1E4E8"> logging</span></span>
+<span class="line"><span style="color:#F97583">from</span><span style="color:#E1E4E8"> typing </span><span style="color:#F97583">import</span><span style="color:#E1E4E8"> List</span></span>
+<span class="line"><span style="color:#F97583">import</span><span style="color:#E1E4E8"> uvicorn</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D"># Model input schema</span></span>
+<span class="line"><span style="color:#F97583">class</span><span style="color:#B392F0"> PredictionRequest</span><span style="color:#E1E4E8">(</span><span style="color:#B392F0">BaseModel</span><span style="color:#E1E4E8">):</span></span>
+<span class="line"><span style="color:#E1E4E8">    features: List[</span><span style="color:#79B8FF">float</span><span style="color:#E1E4E8">]</span></span>
+<span class="line"><span style="color:#E1E4E8">    model_version: </span><span style="color:#79B8FF">str</span><span style="color:#F97583"> =</span><span style="color:#9ECBFF"> &quot;latest&quot;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">class</span><span style="color:#B392F0"> PredictionResponse</span><span style="color:#E1E4E8">(</span><span style="color:#B392F0">BaseModel</span><span style="color:#E1E4E8">):</span></span>
+<span class="line"><span style="color:#E1E4E8">    prediction: </span><span style="color:#79B8FF">float</span></span>
+<span class="line"><span style="color:#E1E4E8">    probability: List[</span><span style="color:#79B8FF">float</span><span style="color:#E1E4E8">]</span></span>
+<span class="line"><span style="color:#E1E4E8">    model_version: </span><span style="color:#79B8FF">str</span></span>
+<span class="line"><span style="color:#E1E4E8">    response_time_ms: </span><span style="color:#79B8FF">float</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D"># Initialize FastAPI app</span></span>
+<span class="line"><span style="color:#E1E4E8">app </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> FastAPI(</span><span style="color:#FFAB70">title</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">&quot;ML Model Serving API&quot;</span><span style="color:#E1E4E8">, </span><span style="color:#FFAB70">version</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">&quot;1.0.0&quot;</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D"># Model registry</span></span>
+<span class="line"><span style="color:#E1E4E8">models </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> {}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#B392F0">@app.on_event</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">&quot;startup&quot;</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"><span style="color:#F97583">async</span><span style="color:#F97583"> def</span><span style="color:#B392F0"> load_models</span><span style="color:#E1E4E8">():</span></span>
+<span class="line"><span style="color:#9ECBFF">    &quot;&quot;&quot;Load models on startup&quot;&quot;&quot;</span></span>
+<span class="line"><span style="color:#F97583">    try</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#E1E4E8">        models[</span><span style="color:#9ECBFF">&quot;v1.0&quot;</span><span style="color:#E1E4E8">] </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> joblib.load(</span><span style="color:#9ECBFF">&quot;models/model_v1.pkl&quot;</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"><span style="color:#E1E4E8">        models[</span><span style="color:#9ECBFF">&quot;v1.1&quot;</span><span style="color:#E1E4E8">] </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> joblib.load(</span><span style="color:#9ECBFF">&quot;models/model_v1_1.pkl&quot;</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"><span style="color:#E1E4E8">        models[</span><span style="color:#9ECBFF">&quot;latest&quot;</span><span style="color:#E1E4E8">] </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> models[</span><span style="color:#9ECBFF">&quot;v1.1&quot;</span><span style="color:#E1E4E8">]</span></span>
+<span class="line"><span style="color:#E1E4E8">        logging.info(</span><span style="color:#9ECBFF">&quot;Models loaded successfully&quot;</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"><span style="color:#F97583">    except</span><span style="color:#79B8FF"> Exception</span><span style="color:#F97583"> as</span><span style="color:#E1E4E8"> e:</span></span>
+<span class="line"><span style="color:#E1E4E8">        logging.error(</span><span style="color:#F97583">f</span><span style="color:#9ECBFF">&quot;Failed to load models: </span><span style="color:#79B8FF">{</span><span style="color:#E1E4E8">e</span><span style="color:#79B8FF">}</span><span style="color:#9ECBFF">&quot;</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"><span style="color:#F97583">        raise</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#B392F0">@app.post</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">&quot;/predict&quot;</span><span style="color:#E1E4E8">, </span><span style="color:#FFAB70">response_model</span><span style="color:#F97583">=</span><span style="color:#E1E4E8">PredictionResponse)</span></span>
+<span class="line"><span style="color:#F97583">async</span><span style="color:#F97583"> def</span><span style="color:#B392F0"> predict</span><span style="color:#E1E4E8">(request: PredictionRequest):</span></span>
+<span class="line"><span style="color:#9ECBFF">    &quot;&quot;&quot;Make prediction using specified model version&quot;&quot;&quot;</span></span>
+<span class="line"><span style="color:#F97583">    import</span><span style="color:#E1E4E8"> time</span></span>
+<span class="line"><span style="color:#E1E4E8">    start_time </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> time.time()</span></span>
+<span class="line"><span style="color:#E1E4E8">    </span></span>
+<span class="line"><span style="color:#F97583">    try</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#6A737D">        # Validate model version</span></span>
+<span class="line"><span style="color:#F97583">        if</span><span style="color:#E1E4E8"> request.model_version </span><span style="color:#F97583">not</span><span style="color:#F97583"> in</span><span style="color:#E1E4E8"> models:</span></span>
+<span class="line"><span style="color:#F97583">            raise</span><span style="color:#E1E4E8"> HTTPException(</span></span>
+<span class="line"><span style="color:#FFAB70">                status_code</span><span style="color:#F97583">=</span><span style="color:#79B8FF">400</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#FFAB70">                detail</span><span style="color:#F97583">=</span><span style="color:#F97583">f</span><span style="color:#9ECBFF">&quot;Model version </span><span style="color:#79B8FF">{</span><span style="color:#E1E4E8">request.model_version</span><span style="color:#79B8FF">}</span><span style="color:#9ECBFF"> not found&quot;</span></span>
+<span class="line"><span style="color:#E1E4E8">            )</span></span>
+<span class="line"><span style="color:#E1E4E8">        </span></span>
+<span class="line"><span style="color:#E1E4E8">        model </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> models[request.model_version]</span></span>
+<span class="line"><span style="color:#E1E4E8">        </span></span>
+<span class="line"><span style="color:#6A737D">        # Prepare input data</span></span>
+<span class="line"><span style="color:#E1E4E8">        features </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> np.array(request.features).reshape(</span><span style="color:#79B8FF">1</span><span style="color:#E1E4E8">, </span><span style="color:#F97583">-</span><span style="color:#79B8FF">1</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"><span style="color:#E1E4E8">        </span></span>
+<span class="line"><span style="color:#6A737D">        # Make prediction</span></span>
+<span class="line"><span style="color:#E1E4E8">        prediction </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> model.predict(features)[</span><span style="color:#79B8FF">0</span><span style="color:#E1E4E8">]</span></span>
+<span class="line"><span style="color:#E1E4E8">        probabilities </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> model.predict_proba(features)[</span><span style="color:#79B8FF">0</span><span style="color:#E1E4E8">].tolist()</span></span>
+<span class="line"><span style="color:#E1E4E8">        </span></span>
+<span class="line"><span style="color:#E1E4E8">        response_time </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> (time.time() </span><span style="color:#F97583">-</span><span style="color:#E1E4E8"> start_time) </span><span style="color:#F97583">*</span><span style="color:#79B8FF"> 1000</span></span>
+<span class="line"><span style="color:#E1E4E8">        </span></span>
+<span class="line"><span style="color:#F97583">        return</span><span style="color:#E1E4E8"> PredictionResponse(</span></span>
+<span class="line"><span style="color:#FFAB70">            prediction</span><span style="color:#F97583">=</span><span style="color:#79B8FF">float</span><span style="color:#E1E4E8">(prediction),</span></span>
+<span class="line"><span style="color:#FFAB70">            probability</span><span style="color:#F97583">=</span><span style="color:#E1E4E8">probabilities,</span></span>
+<span class="line"><span style="color:#FFAB70">            model_version</span><span style="color:#F97583">=</span><span style="color:#E1E4E8">request.model_version,</span></span>
+<span class="line"><span style="color:#FFAB70">            response_time_ms</span><span style="color:#F97583">=</span><span style="color:#E1E4E8">response_time</span></span>
+<span class="line"><span style="color:#E1E4E8">        )</span></span>
+<span class="line"><span style="color:#E1E4E8">        </span></span>
+<span class="line"><span style="color:#F97583">    except</span><span style="color:#79B8FF"> Exception</span><span style="color:#F97583"> as</span><span style="color:#E1E4E8"> e:</span></span>
+<span class="line"><span style="color:#E1E4E8">        logging.error(</span><span style="color:#F97583">f</span><span style="color:#9ECBFF">&quot;Prediction error: </span><span style="color:#79B8FF">{</span><span style="color:#E1E4E8">e</span><span style="color:#79B8FF">}</span><span style="color:#9ECBFF">&quot;</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"><span style="color:#F97583">        raise</span><span style="color:#E1E4E8"> HTTPException(</span><span style="color:#FFAB70">status_code</span><span style="color:#F97583">=</span><span style="color:#79B8FF">500</span><span style="color:#E1E4E8">, </span><span style="color:#FFAB70">detail</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">&quot;Prediction failed&quot;</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#B392F0">@app.get</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">&quot;/health&quot;</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"><span style="color:#F97583">async</span><span style="color:#F97583"> def</span><span style="color:#B392F0"> health_check</span><span style="color:#E1E4E8">():</span></span>
+<span class="line"><span style="color:#9ECBFF">    &quot;&quot;&quot;Health check endpoint&quot;&quot;&quot;</span></span>
+<span class="line"><span style="color:#F97583">    return</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#9ECBFF">        &quot;status&quot;</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">&quot;healthy&quot;</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#9ECBFF">        &quot;available_models&quot;</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">list</span><span style="color:#E1E4E8">(models.keys()),</span></span>
+<span class="line"><span style="color:#9ECBFF">        &quot;timestamp&quot;</span><span style="color:#E1E4E8">: time.time()</span></span>
+<span class="line"><span style="color:#E1E4E8">    }</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D"># Dockerfile for containerized deployment</span></span>
+<span class="line"><span style="color:#E1E4E8">dockerfile_content </span><span style="color:#F97583">=</span><span style="color:#9ECBFF"> &quot;&quot;&quot;</span></span>
+<span class="line"><span style="color:#9ECBFF">FROM python:3.9-slim</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#9ECBFF">WORKDIR /app</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#9ECBFF">COPY requirements.txt .</span></span>
+<span class="line"><span style="color:#9ECBFF">RUN pip install --no-cache-dir -r requirements.txt</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#9ECBFF">COPY . .</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#9ECBFF">EXPOSE 8000</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#9ECBFF">CMD [&quot;uvicorn&quot;, &quot;main:app&quot;, &quot;--host&quot;, &quot;0.0.0.0&quot;, &quot;--port&quot;, &quot;8000&quot;]</span></span>
+<span class="line"><span style="color:#9ECBFF">&quot;&quot;&quot;</span></span></code></pre>
+<h3 id="chapter-8-monitoring-and-observability">Chapter 8: Monitoring and Observability</h3>
+<p><strong>Production ML Monitoring Framework</strong></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="python"><code><span class="line"><span style="color:#6A737D"># Example: Comprehensive ML Monitoring with Prometheus</span></span>
+<span class="line"><span style="color:#F97583">import</span><span style="color:#E1E4E8"> numpy </span><span style="color:#F97583">as</span><span style="color:#E1E4E8"> np</span></span>
+<span class="line"><span style="color:#F97583">import</span><span style="color:#E1E4E8"> pandas </span><span style="color:#F97583">as</span><span style="color:#E1E4E8"> pd</span></span>
+<span class="line"><span style="color:#F97583">from</span><span style="color:#E1E4E8"> prometheus_client </span><span style="color:#F97583">import</span><span style="color:#E1E4E8"> Counter, Histogram, Gauge</span></span>
+<span class="line"><span style="color:#F97583">import</span><span style="color:#E1E4E8"> logging</span></span>
+<span class="line"><span style="color:#F97583">from</span><span style="color:#E1E4E8"> scipy </span><span style="color:#F97583">import</span><span style="color:#E1E4E8"> stats</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">class</span><span style="color:#B392F0"> MLMonitor</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#F97583">    def</span><span style="color:#79B8FF"> __init__</span><span style="color:#E1E4E8">(self):</span></span>
+<span class="line"><span style="color:#6A737D">        # Prometheus metrics</span></span>
+<span class="line"><span style="color:#79B8FF">        self</span><span style="color:#E1E4E8">.prediction_counter </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> Counter(</span></span>
+<span class="line"><span style="color:#9ECBFF">            &#39;ml_predictions_total&#39;</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#9ECBFF">            &#39;Total number of predictions made&#39;</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#E1E4E8">            [</span><span style="color:#9ECBFF">&#39;model_version&#39;</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">&#39;status&#39;</span><span style="color:#E1E4E8">]</span></span>
+<span class="line"><span style="color:#E1E4E8">        )</span></span>
+<span class="line"><span style="color:#E1E4E8">        </span></span>
+<span class="line"><span style="color:#79B8FF">        self</span><span style="color:#E1E4E8">.prediction_latency </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> Histogram(</span></span>
+<span class="line"><span style="color:#9ECBFF">            &#39;ml_prediction_duration_seconds&#39;</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#9ECBFF">            &#39;Time spent making predictions&#39;</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#E1E4E8">            [</span><span style="color:#9ECBFF">&#39;model_version&#39;</span><span style="color:#E1E4E8">]</span></span>
+<span class="line"><span style="color:#E1E4E8">        )</span></span>
+<span class="line"><span style="color:#E1E4E8">        </span></span>
+<span class="line"><span style="color:#79B8FF">        self</span><span style="color:#E1E4E8">.data_drift_score </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> Gauge(</span></span>
+<span class="line"><span style="color:#9ECBFF">            &#39;ml_data_drift_score&#39;</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#9ECBFF">            &#39;Data drift detection score&#39;</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#E1E4E8">            [</span><span style="color:#9ECBFF">&#39;feature_name&#39;</span><span style="color:#E1E4E8">]</span></span>
+<span class="line"><span style="color:#E1E4E8">        )</span></span>
+<span class="line"><span style="color:#E1E4E8">        </span></span>
+<span class="line"><span style="color:#79B8FF">        self</span><span style="color:#E1E4E8">.model_accuracy </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> Gauge(</span></span>
+<span class="line"><span style="color:#9ECBFF">            &#39;ml_model_accuracy&#39;</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#9ECBFF">            &#39;Current model accuracy&#39;</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#E1E4E8">            [</span><span style="color:#9ECBFF">&#39;model_version&#39;</span><span style="color:#E1E4E8">]</span></span>
+<span class="line"><span style="color:#E1E4E8">        )</span></span>
+<span class="line"><span style="color:#E1E4E8">        </span></span>
+<span class="line"><span style="color:#6A737D">        # Reference data for drift detection</span></span>
+<span class="line"><span style="color:#79B8FF">        self</span><span style="color:#E1E4E8">.reference_data </span><span style="color:#F97583">=</span><span style="color:#79B8FF"> None</span></span>
+<span class="line"><span style="color:#E1E4E8">        </span></span>
+<span class="line"><span style="color:#F97583">    def</span><span style="color:#B392F0"> log_prediction</span><span style="color:#E1E4E8">(self, model_version: </span><span style="color:#79B8FF">str</span><span style="color:#E1E4E8">, success: </span><span style="color:#79B8FF">bool</span><span style="color:#E1E4E8">, latency: </span><span style="color:#79B8FF">float</span><span style="color:#E1E4E8">):</span></span>
+<span class="line"><span style="color:#9ECBFF">        &quot;&quot;&quot;Log prediction metrics&quot;&quot;&quot;</span></span>
+<span class="line"><span style="color:#E1E4E8">        status </span><span style="color:#F97583">=</span><span style="color:#9ECBFF"> &quot;success&quot;</span><span style="color:#F97583"> if</span><span style="color:#E1E4E8"> success </span><span style="color:#F97583">else</span><span style="color:#9ECBFF"> &quot;error&quot;</span></span>
+<span class="line"><span style="color:#79B8FF">        self</span><span style="color:#E1E4E8">.prediction_counter.labels(</span></span>
+<span class="line"><span style="color:#FFAB70">            model_version</span><span style="color:#F97583">=</span><span style="color:#E1E4E8">model_version,</span></span>
+<span class="line"><span style="color:#FFAB70">            status</span><span style="color:#F97583">=</span><span style="color:#E1E4E8">status</span></span>
+<span class="line"><span style="color:#E1E4E8">        ).inc()</span></span>
+<span class="line"><span style="color:#E1E4E8">        </span></span>
+<span class="line"><span style="color:#F97583">        if</span><span style="color:#E1E4E8"> success:</span></span>
+<span class="line"><span style="color:#79B8FF">            self</span><span style="color:#E1E4E8">.prediction_latency.labels(</span></span>
+<span class="line"><span style="color:#FFAB70">                model_version</span><span style="color:#F97583">=</span><span style="color:#E1E4E8">model_version</span></span>
+<span class="line"><span style="color:#E1E4E8">            ).observe(latency)</span></span>
+<span class="line"><span style="color:#E1E4E8">    </span></span>
+<span class="line"><span style="color:#F97583">    def</span><span style="color:#B392F0"> detect_data_drift</span><span style="color:#E1E4E8">(self, new_data: pd.DataFrame, threshold: </span><span style="color:#79B8FF">float</span><span style="color:#F97583"> =</span><span style="color:#79B8FF"> 0.05</span><span style="color:#E1E4E8">):</span></span>
+<span class="line"><span style="color:#9ECBFF">        &quot;&quot;&quot;Detect data drift using statistical tests&quot;&quot;&quot;</span></span>
+<span class="line"><span style="color:#F97583">        if</span><span style="color:#79B8FF"> self</span><span style="color:#E1E4E8">.reference_data </span><span style="color:#F97583">is</span><span style="color:#79B8FF"> None</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#E1E4E8">            logging.warning(</span><span style="color:#9ECBFF">&quot;No reference data available for drift detection&quot;</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"><span style="color:#F97583">            return</span></span>
+<span class="line"><span style="color:#E1E4E8">        </span></span>
+<span class="line"><span style="color:#E1E4E8">        drift_detected </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> {}</span></span>
+<span class="line"><span style="color:#E1E4E8">        </span></span>
+<span class="line"><span style="color:#F97583">        for</span><span style="color:#E1E4E8"> column </span><span style="color:#F97583">in</span><span style="color:#E1E4E8"> new_data.columns:</span></span>
+<span class="line"><span style="color:#F97583">            if</span><span style="color:#E1E4E8"> column </span><span style="color:#F97583">in</span><span style="color:#79B8FF"> self</span><span style="color:#E1E4E8">.reference_data.columns:</span></span>
+<span class="line"><span style="color:#6A737D">                # Kolmogorov-Smirnov test for drift detection</span></span>
+<span class="line"><span style="color:#E1E4E8">                ks_statistic, p_value </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> stats.ks_2samp(</span></span>
+<span class="line"><span style="color:#79B8FF">                    self</span><span style="color:#E1E4E8">.reference_data[column],</span></span>
+<span class="line"><span style="color:#E1E4E8">                    new_data[column]</span></span>
+<span class="line"><span style="color:#E1E4E8">                )</span></span>
+<span class="line"><span style="color:#E1E4E8">                </span></span>
+<span class="line"><span style="color:#6A737D">                # Update Prometheus metric</span></span>
+<span class="line"><span style="color:#79B8FF">                self</span><span style="color:#E1E4E8">.data_drift_score.labels(</span><span style="color:#FFAB70">feature_name</span><span style="color:#F97583">=</span><span style="color:#E1E4E8">column).set(ks_statistic)</span></span>
+<span class="line"><span style="color:#E1E4E8">                </span></span>
+<span class="line"><span style="color:#6A737D">                # Check for significant drift</span></span>
+<span class="line"><span style="color:#F97583">                if</span><span style="color:#E1E4E8"> p_value </span><span style="color:#F97583">&lt;</span><span style="color:#E1E4E8"> threshold:</span></span>
+<span class="line"><span style="color:#E1E4E8">                    drift_detected[column] </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#9ECBFF">                        &#39;ks_statistic&#39;</span><span style="color:#E1E4E8">: ks_statistic,</span></span>
+<span class="line"><span style="color:#9ECBFF">                        &#39;p_value&#39;</span><span style="color:#E1E4E8">: p_value</span></span>
+<span class="line"><span style="color:#E1E4E8">                    }</span></span>
+<span class="line"><span style="color:#E1E4E8">                    logging.warning(</span><span style="color:#F97583">f</span><span style="color:#9ECBFF">&quot;Data drift detected in feature </span><span style="color:#79B8FF">{</span><span style="color:#E1E4E8">column</span><span style="color:#79B8FF">}</span><span style="color:#9ECBFF">&quot;</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"><span style="color:#E1E4E8">        </span></span>
+<span class="line"><span style="color:#F97583">        return</span><span style="color:#E1E4E8"> drift_detected</span></span>
+<span class="line"><span style="color:#E1E4E8">    </span></span>
+<span class="line"><span style="color:#F97583">    def</span><span style="color:#B392F0"> update_model_performance</span><span style="color:#E1E4E8">(self, model_version: </span><span style="color:#79B8FF">str</span><span style="color:#E1E4E8">, accuracy: </span><span style="color:#79B8FF">float</span><span style="color:#E1E4E8">):</span></span>
+<span class="line"><span style="color:#9ECBFF">        &quot;&quot;&quot;Update model performance metrics&quot;&quot;&quot;</span></span>
+<span class="line"><span style="color:#79B8FF">        self</span><span style="color:#E1E4E8">.model_accuracy.labels(</span><span style="color:#FFAB70">model_version</span><span style="color:#F97583">=</span><span style="color:#E1E4E8">model_version).set(accuracy)</span></span>
+<span class="line"><span style="color:#E1E4E8">        </span></span>
+<span class="line"><span style="color:#6A737D">        # Alert if performance degrades significantly</span></span>
+<span class="line"><span style="color:#F97583">        if</span><span style="color:#E1E4E8"> accuracy </span><span style="color:#F97583">&lt;</span><span style="color:#79B8FF"> 0.8</span><span style="color:#E1E4E8">:  </span><span style="color:#6A737D"># Threshold</span></span>
+<span class="line"><span style="color:#E1E4E8">            logging.error(</span><span style="color:#F97583">f</span><span style="color:#9ECBFF">&quot;Model </span><span style="color:#79B8FF">{</span><span style="color:#E1E4E8">model_version</span><span style="color:#79B8FF">}</span><span style="color:#9ECBFF"> performance degraded: </span><span style="color:#79B8FF">{</span><span style="color:#E1E4E8">accuracy</span><span style="color:#79B8FF">}</span><span style="color:#9ECBFF">&quot;</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"><span style="color:#E1E4E8">    </span></span>
+<span class="line"><span style="color:#F97583">    def</span><span style="color:#B392F0"> set_reference_data</span><span style="color:#E1E4E8">(self, data: pd.DataFrame):</span></span>
+<span class="line"><span style="color:#9ECBFF">        &quot;&quot;&quot;Set reference data for drift detection&quot;&quot;&quot;</span></span>
+<span class="line"><span style="color:#79B8FF">        self</span><span style="color:#E1E4E8">.reference_data </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> data.copy()</span></span></code></pre>
+<h3 id="chapter-9-ab-testing-and-gradual-rollouts">Chapter 9: A/B Testing and Gradual Rollouts</h3>
+<p><strong>ML Model A/B Testing Framework</strong></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="python"><code><span class="line"><span style="color:#6A737D"># Example: A/B Testing for ML Models</span></span>
+<span class="line"><span style="color:#F97583">import</span><span style="color:#E1E4E8"> hashlib</span></span>
+<span class="line"><span style="color:#F97583">import</span><span style="color:#E1E4E8"> random</span></span>
+<span class="line"><span style="color:#F97583">from</span><span style="color:#E1E4E8"> typing </span><span style="color:#F97583">import</span><span style="color:#E1E4E8"> Dict, Any</span></span>
+<span class="line"><span style="color:#F97583">import</span><span style="color:#E1E4E8"> logging</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">class</span><span style="color:#B392F0"> MLABTesting</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#F97583">    def</span><span style="color:#79B8FF"> __init__</span><span style="color:#E1E4E8">(self, experiments_config: Dict[</span><span style="color:#79B8FF">str</span><span style="color:#E1E4E8">, Any]):</span></span>
+<span class="line"><span style="color:#79B8FF">        self</span><span style="color:#E1E4E8">.experiments </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> experiments_config</span></span>
+<span class="line"><span style="color:#79B8FF">        self</span><span style="color:#E1E4E8">.results </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> {}</span></span>
+<span class="line"><span style="color:#E1E4E8">    </span></span>
+<span class="line"><span style="color:#F97583">    def</span><span style="color:#B392F0"> get_experiment_assignment</span><span style="color:#E1E4E8">(self, user_id: </span><span style="color:#79B8FF">str</span><span style="color:#E1E4E8">, experiment_name: </span><span style="color:#79B8FF">str</span><span style="color:#E1E4E8">) -&gt; </span><span style="color:#79B8FF">str</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#9ECBFF">        &quot;&quot;&quot;Assign user to experiment variant&quot;&quot;&quot;</span></span>
+<span class="line"><span style="color:#F97583">        if</span><span style="color:#E1E4E8"> experiment_name </span><span style="color:#F97583">not</span><span style="color:#F97583"> in</span><span style="color:#79B8FF"> self</span><span style="color:#E1E4E8">.experiments:</span></span>
+<span class="line"><span style="color:#F97583">            return</span><span style="color:#9ECBFF"> &quot;control&quot;</span></span>
+<span class="line"><span style="color:#E1E4E8">        </span></span>
+<span class="line"><span style="color:#E1E4E8">        experiment </span><span style="color:#F97583">=</span><span style="color:#79B8FF"> self</span><span style="color:#E1E4E8">.experiments[experiment_name]</span></span>
+<span class="line"><span style="color:#E1E4E8">        </span></span>
+<span class="line"><span style="color:#6A737D">        # Consistent hash-based assignment</span></span>
+<span class="line"><span style="color:#E1E4E8">        hash_input </span><span style="color:#F97583">=</span><span style="color:#F97583"> f</span><span style="color:#9ECBFF">&quot;</span><span style="color:#79B8FF">{</span><span style="color:#E1E4E8">user_id</span><span style="color:#79B8FF">}</span><span style="color:#9ECBFF">_</span><span style="color:#79B8FF">{</span><span style="color:#E1E4E8">experiment_name</span><span style="color:#79B8FF">}</span><span style="color:#9ECBFF">_</span><span style="color:#79B8FF">{</span><span style="color:#E1E4E8">experiment[</span><span style="color:#9ECBFF">&#39;seed&#39;</span><span style="color:#E1E4E8">]</span><span style="color:#79B8FF">}</span><span style="color:#9ECBFF">&quot;</span></span>
+<span class="line"><span style="color:#E1E4E8">        hash_value </span><span style="color:#F97583">=</span><span style="color:#79B8FF"> int</span><span style="color:#E1E4E8">(hashlib.md5(hash_input.encode()).hexdigest(), </span><span style="color:#79B8FF">16</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"><span style="color:#E1E4E8">        </span></span>
+<span class="line"><span style="color:#6A737D">        # Determine assignment based on traffic allocation</span></span>
+<span class="line"><span style="color:#E1E4E8">        assignment_value </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> hash_value </span><span style="color:#F97583">%</span><span style="color:#79B8FF"> 100</span></span>
+<span class="line"><span style="color:#E1E4E8">        cumulative_percentage </span><span style="color:#F97583">=</span><span style="color:#79B8FF"> 0</span></span>
+<span class="line"><span style="color:#E1E4E8">        </span></span>
+<span class="line"><span style="color:#F97583">        for</span><span style="color:#E1E4E8"> variant, percentage </span><span style="color:#F97583">in</span><span style="color:#E1E4E8"> experiment[</span><span style="color:#9ECBFF">&#39;variants&#39;</span><span style="color:#E1E4E8">].items():</span></span>
+<span class="line"><span style="color:#E1E4E8">            cumulative_percentage </span><span style="color:#F97583">+=</span><span style="color:#E1E4E8"> percentage</span></span>
+<span class="line"><span style="color:#F97583">            if</span><span style="color:#E1E4E8"> assignment_value </span><span style="color:#F97583">&lt;</span><span style="color:#E1E4E8"> cumulative_percentage:</span></span>
+<span class="line"><span style="color:#F97583">                return</span><span style="color:#E1E4E8"> variant</span></span>
+<span class="line"><span style="color:#E1E4E8">        </span></span>
+<span class="line"><span style="color:#F97583">        return</span><span style="color:#9ECBFF"> &quot;control&quot;</span></span>
+<span class="line"><span style="color:#E1E4E8">    </span></span>
+<span class="line"><span style="color:#F97583">    def</span><span style="color:#B392F0"> log_experiment_result</span><span style="color:#E1E4E8">(self, user_id: </span><span style="color:#79B8FF">str</span><span style="color:#E1E4E8">, experiment_name: </span><span style="color:#79B8FF">str</span><span style="color:#E1E4E8">, </span></span>
+<span class="line"><span style="color:#E1E4E8">                            variant: </span><span style="color:#79B8FF">str</span><span style="color:#E1E4E8">, metric_name: </span><span style="color:#79B8FF">str</span><span style="color:#E1E4E8">, metric_value: </span><span style="color:#79B8FF">float</span><span style="color:#E1E4E8">):</span></span>
+<span class="line"><span style="color:#9ECBFF">        &quot;&quot;&quot;Log experiment results for analysis&quot;&quot;&quot;</span></span>
+<span class="line"><span style="color:#F97583">        if</span><span style="color:#E1E4E8"> experiment_name </span><span style="color:#F97583">not</span><span style="color:#F97583"> in</span><span style="color:#79B8FF"> self</span><span style="color:#E1E4E8">.results:</span></span>
+<span class="line"><span style="color:#79B8FF">            self</span><span style="color:#E1E4E8">.results[experiment_name] </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> {}</span></span>
+<span class="line"><span style="color:#E1E4E8">        </span></span>
+<span class="line"><span style="color:#F97583">        if</span><span style="color:#E1E4E8"> variant </span><span style="color:#F97583">not</span><span style="color:#F97583"> in</span><span style="color:#79B8FF"> self</span><span style="color:#E1E4E8">.results[experiment_name]:</span></span>
+<span class="line"><span style="color:#79B8FF">            self</span><span style="color:#E1E4E8">.results[experiment_name][variant] </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> {}</span></span>
+<span class="line"><span style="color:#E1E4E8">        </span></span>
+<span class="line"><span style="color:#F97583">        if</span><span style="color:#E1E4E8"> metric_name </span><span style="color:#F97583">not</span><span style="color:#F97583"> in</span><span style="color:#79B8FF"> self</span><span style="color:#E1E4E8">.results[experiment_name][variant]:</span></span>
+<span class="line"><span style="color:#79B8FF">            self</span><span style="color:#E1E4E8">.results[experiment_name][variant][metric_name] </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> []</span></span>
+<span class="line"><span style="color:#E1E4E8">        </span></span>
+<span class="line"><span style="color:#79B8FF">        self</span><span style="color:#E1E4E8">.results[experiment_name][variant][metric_name].append(metric_value)</span></span>
+<span class="line"><span style="color:#E1E4E8">    </span></span>
+<span class="line"><span style="color:#F97583">    def</span><span style="color:#B392F0"> analyze_experiment</span><span style="color:#E1E4E8">(self, experiment_name: </span><span style="color:#79B8FF">str</span><span style="color:#E1E4E8">, metric_name: </span><span style="color:#79B8FF">str</span><span style="color:#E1E4E8">):</span></span>
+<span class="line"><span style="color:#9ECBFF">        &quot;&quot;&quot;Analyze experiment results with statistical significance&quot;&quot;&quot;</span></span>
+<span class="line"><span style="color:#F97583">        from</span><span style="color:#E1E4E8"> scipy.stats </span><span style="color:#F97583">import</span><span style="color:#E1E4E8"> ttest_ind</span></span>
+<span class="line"><span style="color:#E1E4E8">        </span></span>
+<span class="line"><span style="color:#F97583">        if</span><span style="color:#E1E4E8"> experiment_name </span><span style="color:#F97583">not</span><span style="color:#F97583"> in</span><span style="color:#79B8FF"> self</span><span style="color:#E1E4E8">.results:</span></span>
+<span class="line"><span style="color:#F97583">            return</span><span style="color:#79B8FF"> None</span></span>
+<span class="line"><span style="color:#E1E4E8">        </span></span>
+<span class="line"><span style="color:#E1E4E8">        variants </span><span style="color:#F97583">=</span><span style="color:#79B8FF"> self</span><span style="color:#E1E4E8">.results[experiment_name]</span></span>
+<span class="line"><span style="color:#E1E4E8">        </span></span>
+<span class="line"><span style="color:#F97583">        if</span><span style="color:#79B8FF"> len</span><span style="color:#E1E4E8">(variants) </span><span style="color:#F97583">&lt;</span><span style="color:#79B8FF"> 2</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#F97583">            return</span><span style="color:#79B8FF"> None</span></span>
+<span class="line"><span style="color:#E1E4E8">        </span></span>
+<span class="line"><span style="color:#E1E4E8">        control_data </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> variants.get(</span><span style="color:#9ECBFF">&#39;control&#39;</span><span style="color:#E1E4E8">, {}).get(metric_name, [])</span></span>
+<span class="line"><span style="color:#E1E4E8">        </span></span>
+<span class="line"><span style="color:#E1E4E8">        analysis_results </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> {}</span></span>
+<span class="line"><span style="color:#E1E4E8">        </span></span>
+<span class="line"><span style="color:#F97583">        for</span><span style="color:#E1E4E8"> variant_name, variant_data </span><span style="color:#F97583">in</span><span style="color:#E1E4E8"> variants.items():</span></span>
+<span class="line"><span style="color:#F97583">            if</span><span style="color:#E1E4E8"> variant_name </span><span style="color:#F97583">==</span><span style="color:#9ECBFF"> &#39;control&#39;</span><span style="color:#F97583"> or</span><span style="color:#E1E4E8"> metric_name </span><span style="color:#F97583">not</span><span style="color:#F97583"> in</span><span style="color:#E1E4E8"> variant_data:</span></span>
+<span class="line"><span style="color:#F97583">                continue</span></span>
+<span class="line"><span style="color:#E1E4E8">            </span></span>
+<span class="line"><span style="color:#E1E4E8">            variant_values </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> variant_data[metric_name]</span></span>
+<span class="line"><span style="color:#E1E4E8">            </span></span>
+<span class="line"><span style="color:#F97583">            if</span><span style="color:#79B8FF"> len</span><span style="color:#E1E4E8">(control_data) </span><span style="color:#F97583">&gt;</span><span style="color:#79B8FF"> 0</span><span style="color:#F97583"> and</span><span style="color:#79B8FF"> len</span><span style="color:#E1E4E8">(variant_values) </span><span style="color:#F97583">&gt;</span><span style="color:#79B8FF"> 0</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#6A737D">                # Perform t-test</span></span>
+<span class="line"><span style="color:#E1E4E8">                t_stat, p_value </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> ttest_ind(control_data, variant_values)</span></span>
+<span class="line"><span style="color:#E1E4E8">                </span></span>
+<span class="line"><span style="color:#E1E4E8">                control_mean </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> np.mean(control_data)</span></span>
+<span class="line"><span style="color:#E1E4E8">                variant_mean </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> np.mean(variant_values)</span></span>
+<span class="line"><span style="color:#E1E4E8">                lift </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> (variant_mean </span><span style="color:#F97583">-</span><span style="color:#E1E4E8"> control_mean) </span><span style="color:#F97583">/</span><span style="color:#E1E4E8"> control_mean </span><span style="color:#F97583">*</span><span style="color:#79B8FF"> 100</span></span>
+<span class="line"><span style="color:#E1E4E8">                </span></span>
+<span class="line"><span style="color:#E1E4E8">                analysis_results[variant_name] </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#9ECBFF">                    &#39;control_mean&#39;</span><span style="color:#E1E4E8">: control_mean,</span></span>
+<span class="line"><span style="color:#9ECBFF">                    &#39;variant_mean&#39;</span><span style="color:#E1E4E8">: variant_mean,</span></span>
+<span class="line"><span style="color:#9ECBFF">                    &#39;lift_percentage&#39;</span><span style="color:#E1E4E8">: lift,</span></span>
+<span class="line"><span style="color:#9ECBFF">                    &#39;t_statistic&#39;</span><span style="color:#E1E4E8">: t_stat,</span></span>
+<span class="line"><span style="color:#9ECBFF">                    &#39;p_value&#39;</span><span style="color:#E1E4E8">: p_value,</span></span>
+<span class="line"><span style="color:#9ECBFF">                    &#39;significant&#39;</span><span style="color:#E1E4E8">: p_value </span><span style="color:#F97583">&lt;</span><span style="color:#79B8FF"> 0.05</span></span>
+<span class="line"><span style="color:#E1E4E8">                }</span></span>
+<span class="line"><span style="color:#E1E4E8">        </span></span>
+<span class="line"><span style="color:#F97583">        return</span><span style="color:#E1E4E8"> analysis_results</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D"># Example experiment configuration</span></span>
+<span class="line"><span style="color:#E1E4E8">experiments_config </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#9ECBFF">    &quot;recommendation_model_test&quot;</span><span style="color:#E1E4E8">: {</span></span>
+<span class="line"><span style="color:#9ECBFF">        &quot;seed&quot;</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">&quot;rec_model_v2&quot;</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#9ECBFF">        &quot;variants&quot;</span><span style="color:#E1E4E8">: {</span></span>
+<span class="line"><span style="color:#9ECBFF">            &quot;control&quot;</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">50</span><span style="color:#E1E4E8">,      </span><span style="color:#6A737D"># 50% get current model</span></span>
+<span class="line"><span style="color:#9ECBFF">            &quot;treatment&quot;</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">50</span><span style="color:#6A737D">     # 50% get new model</span></span>
+<span class="line"><span style="color:#E1E4E8">        }</span></span>
+<span class="line"><span style="color:#E1E4E8">    }</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+<h3 id="chapter-10-organizational-and-cultural-transformation">Chapter 10: Organizational and Cultural Transformation</h3>
+<p><strong>Building MLOps-Driven Teams</strong></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="yaml"><code><span class="line"><span style="color:#85E89D">Team Structure Evolution</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#85E89D">Traditional Data Science Team</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#85E89D">  Roles</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#E1E4E8">    - </span><span style="color:#9ECBFF">Data Scientists (model building)</span></span>
+<span class="line"><span style="color:#E1E4E8">    - </span><span style="color:#9ECBFF">Data Engineers (data pipelines)</span></span>
+<span class="line"><span style="color:#E1E4E8">    - </span><span style="color:#9ECBFF">Software Engineers (application development)</span></span>
+<span class="line"><span style="color:#E1E4E8">    - </span><span style="color:#9ECBFF">DevOps Engineers (infrastructure)</span></span>
+<span class="line"><span style="color:#E1E4E8">  </span></span>
+<span class="line"><span style="color:#85E89D">  Challenges</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#E1E4E8">    - </span><span style="color:#9ECBFF">Handoff friction between roles</span></span>
+<span class="line"><span style="color:#E1E4E8">    - </span><span style="color:#9ECBFF">Limited production deployment capability</span></span>
+<span class="line"><span style="color:#E1E4E8">    - </span><span style="color:#9ECBFF">Inconsistent tooling and processes</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#85E89D">MLOps-Enabled Team</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#85E89D">  Roles</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#E1E4E8">    - </span><span style="color:#9ECBFF">ML Engineers (end-to-end model lifecycle)</span></span>
+<span class="line"><span style="color:#E1E4E8">    - </span><span style="color:#9ECBFF">MLOps Engineers (platform and automation)</span></span>
+<span class="line"><span style="color:#E1E4E8">    - </span><span style="color:#9ECBFF">Data Scientists (research and experimentation)</span></span>
+<span class="line"><span style="color:#E1E4E8">    - </span><span style="color:#9ECBFF">Product Managers (business value alignment)</span></span>
+<span class="line"><span style="color:#E1E4E8">  </span></span>
+<span class="line"><span style="color:#85E89D">  Capabilities</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#E1E4E8">    - </span><span style="color:#9ECBFF">Full-stack ML development</span></span>
+<span class="line"><span style="color:#E1E4E8">    - </span><span style="color:#9ECBFF">Automated deployment pipelines</span></span>
+<span class="line"><span style="color:#E1E4E8">    - </span><span style="color:#9ECBFF">Production monitoring and maintenance</span></span>
+<span class="line"><span style="color:#E1E4E8">    - </span><span style="color:#9ECBFF">Business metric optimization</span></span></code></pre>
+<p><strong>Cultural Change Management</strong></p>
+<ol>
+<li>
+<p><strong>Executive Sponsorship and Vision</strong></p>
+<ul>
+<li>Clear communication of MLOps value proposition</li>
+<li>Investment in training and tooling</li>
+<li>Success metrics and accountability</li>
+</ul>
+</li>
+<li>
+<p><strong>Skills Development Program</strong></p>
+<ul>
+<li>MLOps certification pathways</li>
+<li>Cross-functional collaboration training</li>
+<li>Tool-specific workshops</li>
+</ul>
+</li>
+<li>
+<p><strong>Process Standardization</strong></p>
+<ul>
+<li>ML project lifecycle templates</li>
+<li>Code review and approval workflows</li>
+<li>Documentation and knowledge sharing</li>
+</ul>
+</li>
+</ol>
+<h2 id="implementation-roadmap">Implementation Roadmap</h2>
+<h3 id="phase-1-foundation-months-1-3">Phase 1: Foundation (Months 1-3)</h3>
+<p><strong>Objectives</strong>: Establish MLOps capabilities and pilot implementation</p>
+<p><strong>Activities</strong>:</p>
+<ul>
+<li>Current state assessment and gap analysis</li>
+<li>Tool selection and procurement</li>
+<li>Team training and skill development</li>
+<li>Pilot project identification and planning</li>
+</ul>
+<p><strong>Deliverables</strong>:</p>
+<ul>
+<li>MLOps maturity assessment report</li>
+<li>Technology stack selection and procurement</li>
+<li>Training program completion</li>
+<li>Pilot project charter and timeline</li>
+</ul>
+<h3 id="phase-2-pilot-implementation-months-4-8">Phase 2: Pilot Implementation (Months 4-8)</h3>
+<p><strong>Objectives</strong>: Implement MLOps for selected use case</p>
+<p><strong>Activities</strong>:</p>
+<ul>
+<li>End-to-end pipeline development</li>
+<li>Monitoring and alerting setup</li>
+<li>Documentation and process creation</li>
+<li>Performance measurement and optimization</li>
+</ul>
+<p><strong>Deliverables</strong>:</p>
+<ul>
+<li>Automated ML pipeline in production</li>
+<li>Monitoring dashboard and alerts</li>
+<li>Process documentation and runbooks</li>
+<li>Success metrics and lessons learned</li>
+</ul>
+<h3 id="phase-3-scale-and-standardize-months-9-15">Phase 3: Scale and Standardize (Months 9-15)</h3>
+<p><strong>Objectives</strong>: Expand MLOps across organization</p>
+<p><strong>Activities</strong>:</p>
+<ul>
+<li>Additional use case onboarding</li>
+<li>Platform capabilities enhancement</li>
+<li>Process refinement and standardization</li>
+<li>Advanced features implementation</li>
+</ul>
+<p><strong>Deliverables</strong>:</p>
+<ul>
+<li>Multiple ML models in production</li>
+<li>Standardized MLOps platform</li>
+<li>Training and enablement materials</li>
+<li>Governance and compliance frameworks</li>
+</ul>
+<h3 id="phase-4-optimize-and-innovate-months-16">Phase 4: Optimize and Innovate (Months 16+)</h3>
+<p><strong>Objectives</strong>: Continuous improvement and innovation</p>
+<p><strong>Activities</strong>:</p>
+<ul>
+<li>Performance optimization and cost reduction</li>
+<li>Advanced automation implementation</li>
+<li>Innovation and experimentation</li>
+<li>Knowledge sharing and community building</li>
+</ul>
+<p><strong>Deliverables</strong>:</p>
+<ul>
+<li>Optimized MLOps platform</li>
+<li>Innovation pipeline and roadmap</li>
+<li>Internal MLOps community and practices</li>
+<li>Industry thought leadership</li>
+</ul>
+<h2 id="success-metrics-and-roi">Success Metrics and ROI</h2>
+<h3 id="technical-metrics">Technical Metrics</h3>
+<ul>
+<li><strong>Time to Production</strong>: Reduction from months to days</li>
+<li><strong>Model Performance</strong>: Consistent accuracy and reliability</li>
+<li><strong>System Reliability</strong>: 99.9% uptime for ML services</li>
+<li><strong>Deployment Frequency</strong>: Weekly or daily model updates</li>
+</ul>
+<h3 id="business-metrics">Business Metrics</h3>
+<ul>
+<li><strong>Revenue Impact</strong>: Increased revenue from ML-driven features</li>
+<li><strong>Cost Optimization</strong>: Reduced infrastructure and operational costs</li>
+<li><strong>Time to Value</strong>: Faster delivery of ML-powered products</li>
+<li><strong>Risk Mitigation</strong>: Reduced model failures and compliance issues</li>
+</ul>
+<h3 id="organizational-metrics">Organizational Metrics</h3>
+<ul>
+<li><strong>Team Productivity</strong>: Increased velocity of ML development</li>
+<li><strong>Skill Development</strong>: Improved MLOps capabilities across teams</li>
+<li><strong>Collaboration</strong>: Enhanced cross-functional working relationships</li>
+<li><strong>Innovation</strong>: Increased experimentation and innovation capacity</li>
+</ul>
+<h2 id="download-includes">Download Includes</h2>
+<ul>
+<li><strong>48-page comprehensive implementation guide</strong></li>
+<li><strong>MLOps maturity assessment framework</strong> with scoring rubric</li>
+<li><strong>Technology selection matrix</strong> with vendor comparison</li>
+<li><strong>Code templates and examples</strong> for common MLOps patterns</li>
+<li><strong>Pipeline configuration templates</strong> for Kubeflow, Airflow, and cloud platforms</li>
+<li><strong>Monitoring and alerting setup guides</strong> with Prometheus and Grafana</li>
+<li><strong>A/B testing framework</strong> with statistical analysis tools</li>
+<li><strong>ROI calculation model</strong> with customizable parameters</li>
+<li><strong>Change management toolkit</strong> with communication templates</li>
+<li><strong>Training curriculum</strong> for MLOps skill development</li>
+</ul>
+<h2 id="case-study-highlights">Case Study Highlights</h2>
+<h3 id="global-e-commerce-platform">Global E-commerce Platform</h3>
+<p><strong>Challenge</strong>: 200+ ML models with inconsistent deployment and monitoring</p>
+<p><strong>Implementation</strong>:</p>
+<ul>
+<li>Kubernetes-based MLOps platform with Kubeflow Pipelines</li>
+<li>Feature store implementation with Feast</li>
+<li>Comprehensive monitoring with Prometheus and Grafana</li>
+</ul>
+<p><strong>Results</strong>:</p>
+<ul>
+<li>85% reduction in model deployment time</li>
+<li>40% improvement in model accuracy through A/B testing</li>
+<li>$2.3M annual cost savings through automation</li>
+<li>60% increase in data science team productivity</li>
+</ul>
+<h3 id="financial-services-firm">Financial Services Firm</h3>
+<p><strong>Challenge</strong>: Regulatory compliance for ML models and risk management</p>
+<p><strong>Implementation</strong>:</p>
+<ul>
+<li>Model governance framework with approval workflows</li>
+<li>Bias detection and fairness monitoring</li>
+<li>Explainable AI integration for regulatory reporting</li>
+</ul>
+<p><strong>Results</strong>:</p>
+<ul>
+<li>100% regulatory compliance for ML models</li>
+<li>50% reduction in model risk assessment time</li>
+<li>25% improvement in loan approval accuracy</li>
+<li>Zero regulatory violations in 18 months</li>
+</ul>
+<p><em>This framework is based on implementations across 50+ organizations and represents proven practices for scaling ML operations in production environments.</em></p> </div> <!-- Author Bio --> <div class="mt-16 p-8 bg-gray-50 rounded-2xl"> <div class="flex flex-col sm:flex-row gap-6"> <div class="w-20 h-20 bg-brandGreen rounded-full flex items-center justify-center flex-shrink-0"> <span class="text-white font-bold text-xl">AN</span> </div> <div> <h3 class="text-2xl font-bold text-gray-900 mb-2">Alexander Nykolaiszyn</h3> <p class="text-gray-600 mb-4">
+Manager Business Insights at Lennar | Host of Trailblazer Analytics Podcast | 15+ years transforming raw data into strategic business value through BI, automation, and AI integrations.
+</p> <div class="flex gap-4"> <a href="https://linkedin.com/in/alexnyk" target="_blank" rel="noopener noreferrer" class="text-brandGreen hover:text-green-700 font-semibold">
+LinkedIn →
+</a> <a href="https://medium.com/@alex.nykolaiszyn" target="_blank" rel="noopener noreferrer" class="text-brandGreen hover:text-green-700 font-semibold">
+Medium →
+</a> </div> </div> </div> </div> <!-- Navigation --> <div class="mt-12 flex justify-center"> <a href="/white-papers" class="bg-brandGreen text-white px-8 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors">
+← Back to Whitepapers
+</a> </div> </div> </div> </article> <footer class="bg-gray-900 text-gray-200 py-16"><div class="container mx-auto px-6"><div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12"><div class="lg:col-span-1"><div class="flex items-center gap-3 mb-4"><div class="w-10 h-10 bg-brandGold rounded-full flex items-center justify-center"><span class="text-black font-bold text-lg">TA</span></div><span class="font-bold text-xl text-brandGold">Trailblazer Analytics</span></div>            <p class="text-gray-400 mb-6 max-w-sm">Empowering analytics professionals through tools, insights, and thought leadership. Building careers in data and analytics.</p><div class="flex gap-4"><a href="https://twitter.com/trailblazeranalytics" aria-label="Twitter" class="hover:text-brandGold transition-colors"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M22.46 6c-.77.35-1.6.59-2.47.7a4.3 4.3 0 001.88-2.37 8.59 8.59 0 01-2.72 1.04A4.28 4.28 0 0016.11 4c-2.37 0-4.29 1.92-4.29 4.29 0 .34.04.67.11.99C7.69 9.13 4.07 7.38 1.64 4.7c-.37.64-.58 1.38-.58 2.17 0 1.5.76 2.82 1.92 3.6-.71-.02-1.38-.22-1.97-.54v.05c0 2.1 1.5 3.85 3.5 4.25-.36.1-.74.16-1.13.16-.28 0-.54-.03-.8-.08.54 1.7 2.12 2.94 3.99 2.97A8.6 8.6 0 012 19.54c-.29 0-.57-.02-.85-.05A12.13 12.13 0 007.29 21c7.55 0 11.68-6.26 11.68-11.68 0-.18-.01-.36-.02-.54A8.18 8.18 0 0024 4.59a8.36 8.36 0 01-2.54.7z"></path></svg></a><a href="https://linkedin.com/company/trailblazer-analytics" aria-label="LinkedIn" class="hover:text-brandGold transition-colors"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5v-14c0-2.76-2.24-5-5-5zm-11 19h-3v-9h3v9zm-1.5-10.28c-.97 0-1.75-.79-1.75-1.75s.78-1.75 1.75-1.75 1.75.79 1.75 1.75-.78 1.75-1.75 1.75zm13.5 10.28h-3v-4.5c0-1.08-.02-2.47-1.5-2.47-1.5 0-1.73 1.17-1.73 2.39v4.58h-3v-9h2.88v1.23h.04c.4-.75 1.38-1.54 2.84-1.54 3.04 0 3.6 2 3.6 4.59v4.72z"></path></svg></a><a href="https://medium.com/@alex.nykolaiszyn" aria-label="Medium" class="hover:text-brandGold transition-colors"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M13.54 12a6.8 6.8 0 01-6.77 6.82A6.8 6.8 0 010 12a6.8 6.8 0 016.77-6.82A6.8 6.8 0 0113.54 12zM20.96 12c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42 3.38 2.88 3.38 6.42M24 12c0 3.17-.53 5.75-1.19 5.75-.66 0-1.19-2.58-1.19-5.75s.53-5.75 1.19-5.75C23.47 6.25 24 8.83 24 12z"></path></svg></a><a href="https://github.com/trailblazer-analytics" aria-label="GitHub" class="hover:text-brandGold transition-colors"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.5.5.09.66-.22.66-.48 0-.24-.01-.87-.01-1.7-2.78.6-3.37-1.34-3.37-1.34-.45-1.15-1.11-1.46-1.11-1.46-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.89 1.53 2.34 1.09 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.56-1.11-4.56-4.95 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02A9.56 9.56 0 0112 6.8c.85.004 1.71.115 2.51.337 1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.85-2.34 4.7-4.57 4.95.36.31.68.92.68 1.85 0 1.34-.01 2.42-.01 2.75 0 .27.16.58.67.48A10.01 10.01 0 0022 12c0-5.52-4.48-10-10-10z"></path></svg></a></div></div>          <div><h3 class="font-bold text-lg text-white mb-4">Resources</h3><ul class="space-y-2"><li><a href="/trailblazer-analytics-devkit/insights" class="text-gray-400 hover:text-brandGold transition-colors">Insights &amp; Analysis</a></li><li><a href="/trailblazer-analytics-devkit/podcast" class="text-gray-400 hover:text-brandGold transition-colors">Podcast</a></li><li><a href="/trailblazer-analytics-devkit/tech-notes" class="text-gray-400 hover:text-brandGold transition-colors">Tech Notes</a></li><li><a href="/trailblazer-analytics-devkit/tools" class="text-gray-400 hover:text-brandGold transition-colors">Tools &amp; Software</a></li><li><a href="/trailblazer-analytics-devkit/downloads" class="text-gray-400 hover:text-brandGold transition-colors">Free Downloads</a></li><li><a href="/trailblazer-analytics-devkit/white-papers" class="text-gray-400 hover:text-brandGold transition-colors">White Papers</a></li></ul></div>          <div><h3 class="font-bold text-lg text-white mb-4">Community</h3><ul class="space-y-2"><li><a href="/trailblazer-analytics-devkit/about" class="text-gray-400 hover:text-brandGold transition-colors">About Alexander</a></li><li><a href="/trailblazer-analytics-devkit/tools" class="text-gray-400 hover:text-brandGold transition-colors">Analytics Tools</a></li><li><a href="/trailblazer-analytics-devkit/contact" class="text-gray-400 hover:text-brandGold transition-colors">Connect</a></li><li><a href="/trailblazer-analytics-devkit/speaking" class="text-gray-400 hover:text-brandGold transition-colors">Speaking</a></li><li><a href="/trailblazer-analytics-devkit/newsletter" class="text-gray-400 hover:text-brandGold transition-colors">Newsletter</a></li></ul></div><div><h3 class="font-bold text-lg text-white mb-4">Stay Updated</h3>            <p class="text-gray-400 mb-4 text-sm">Get the latest tools, insights, and analytics career tips.</p><form class="space-y-3"><input type="email" placeholder="Enter your email" class="w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded-lg text-gray-200 placeholder-gray-500 focus:ring-2 focus:ring-brandGold focus:border-transparent" required=""/><button type="submit" class="w-full bg-brandGold hover:bg-yellow-600 text-black font-semibold py-2 px-4 rounded-lg transition-colors">Subscribe</button></form></div></div><div class="border-t border-gray-800 pt-8"><div class="flex flex-col md:flex-row justify-between items-center gap-4"><div class="text-sm text-gray-400">© 2025 Trailblazer Analytics. All rights reserved.</div><nav class="flex flex-wrap gap-6 text-sm"><a href="/privacy" class="text-gray-400 hover:text-brandGold transition-colors">Privacy Policy</a><a href="/terms" class="text-gray-400 hover:text-brandGold transition-colors">Terms of Service</a><a href="/cookies" class="text-gray-400 hover:text-brandGold transition-colors">Cookie Policy</a><a href="/sitemap" class="text-gray-400 hover:text-brandGold transition-colors">Sitemap</a></nav></div></div></div></footer>  </body></html>

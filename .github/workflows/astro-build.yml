@@ -1,0 +1,29 @@
+name: Build & Package Astro Site
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 8
+      - name: Install deps
+        run: pnpm install
+      - name: Build site
+        run: pnpm run build
+      - name: Zip dist
+        run: |
+          cd dist
+          zip -r ../trailblazer-analytics-dist.zip .
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: trailblazer-analytics-dist
+          path: trailblazer-analytics-dist.zip
+          retention-days: 14
