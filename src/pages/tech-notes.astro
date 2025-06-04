@@ -59,8 +59,7 @@ const seoData = {
                 <span>Updated Dec 2024</span>
               </div>
             </div>
-          </div>
-          <a href="#" class="inline-flex items-center text-brandGreen font-medium hover:text-green-700 transition-colors">
+          </div>          <a href="/tech-notes/pandas-performance-tips" class="inline-flex items-center text-brandGreen font-medium hover:text-green-700 transition-colors">
             Read Full Guide
             <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
@@ -74,18 +73,17 @@ const seoData = {
   <!-- Tech Notes Grid -->
   <section class="py-16 bg-gray-50">
     <div class="container mx-auto px-6">
-      <div class="max-w-6xl mx-auto">
-        <div class="flex justify-between items-center mb-12">
+      <div class="max-w-6xl mx-auto">        <div class="flex justify-between items-center mb-12">
           <h2 class="text-3xl font-bold text-gray-900">Latest Tech Notes</h2>
-          <div class="flex gap-2">
-            <button class="px-4 py-2 bg-brandGreen text-white rounded-lg text-sm">All</button>
-            <button class="px-4 py-2 bg-white text-gray-600 border rounded-lg text-sm hover:bg-gray-50">Python</button>
-            <button class="px-4 py-2 bg-white text-gray-600 border rounded-lg text-sm hover:bg-gray-50">SQL</button>
-            <button class="px-4 py-2 bg-white text-gray-600 border rounded-lg text-sm hover:bg-gray-50">ML</button>
+          <div class="flex gap-2" id="filter-buttons">
+            <button class="filter-btn px-4 py-2 bg-brandGreen text-white rounded-lg text-sm" data-filter="all">All</button>
+            <button class="filter-btn px-4 py-2 bg-white text-gray-600 border rounded-lg text-sm hover:bg-gray-50" data-filter="Python">Python</button>
+            <button class="filter-btn px-4 py-2 bg-white text-gray-600 border rounded-lg text-sm hover:bg-gray-50" data-filter="SQL">SQL</button>
+            <button class="filter-btn px-4 py-2 bg-white text-gray-600 border rounded-lg text-sm hover:bg-gray-50" data-filter="ML">ML</button>
           </div>
         </div>        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {techNotes.map((note) => (
-            <article class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+            <article class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow" data-tags={note.data.tags ? note.data.tags.join(',') : ''}>
               <div class="p-6">
                 <div class="flex items-center gap-2 mb-3">
                   {note.data.tags && note.data.tags.map(tag => (
@@ -115,10 +113,8 @@ const seoData = {
                 </div>
               </div>
             </article>
-          ))}
-
-          <!-- Tech Note 5 -->
-          <article class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+          ))}          <!-- Tech Note 5 -->
+          <article class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow" data-tags="Python">
             <div class="p-6">
               <div class="flex items-center gap-2 mb-3">
                 <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full">Python</span>
@@ -134,7 +130,7 @@ const seoData = {
           </article>
 
           <!-- Tech Note 6 -->
-          <article class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+          <article class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow" data-tags="SQL">
             <div class="p-6">
               <div class="flex items-center gap-2 mb-3">
                 <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full">SQL</span>
@@ -180,6 +176,41 @@ const seoData = {
       </div>
     </div>
   </section>
-
   <Footer />
 </Base>
+
+<script>
+  // Tech Notes Tag Filtering
+  document.addEventListener('DOMContentLoaded', function() {
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const techNoteCards = document.querySelectorAll('[data-tags]');
+    
+    filterButtons.forEach(button => {
+      button.addEventListener('click', function() {
+        const filterValue = this.getAttribute('data-filter');
+        
+        // Update button states
+        filterButtons.forEach(btn => {
+          btn.classList.remove('bg-brandGreen', 'text-white');
+          btn.classList.add('bg-white', 'text-gray-600', 'border');
+        });
+        this.classList.remove('bg-white', 'text-gray-600', 'border');
+        this.classList.add('bg-brandGreen', 'text-white');
+        
+        // Filter tech note cards
+        techNoteCards.forEach(card => {
+          if (filterValue === 'all') {
+            card.style.display = 'block';
+          } else {
+            const cardTags = card.getAttribute('data-tags').split(',');
+            if (cardTags.some(tag => tag.trim().toLowerCase().includes(filterValue.toLowerCase()))) {
+              card.style.display = 'block';
+            } else {
+              card.style.display = 'none';
+            }
+          }
+        });
+      });
+    });
+  });
+</script>
