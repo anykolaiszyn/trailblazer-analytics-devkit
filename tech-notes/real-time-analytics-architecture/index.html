@@ -1,12 +1,18 @@
 <!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Trailblazer Analytics</title><!-- Adding inline styles for critical CSS --><!-- Debug script for asset loading issues --><script>
+      // Only run debug logging in development or when explicitly enabled
+      const isDebugMode = window.location.hostname === 'localhost' || 
+                         window.location.search.includes('debug=true');
+      
       window.addEventListener('DOMContentLoaded', () => {
-        console.log('Base URL:', '${base}');
-        console.log('Asset paths:');
-        document.querySelectorAll('link[rel="stylesheet"], script[src]').forEach(el => {
-          console.log(el.getAttribute('href') || el.getAttribute('src'));
-        });
+        if (isDebugMode) {
+          console.log('[Debug] Base URL:', '${base}');
+          console.log('[Debug] Asset paths:');
+          document.querySelectorAll('link[rel="stylesheet"], script[src]').forEach(el => {
+            console.log(el.getAttribute('href') || el.getAttribute('src'));
+          });
+        }
         
-        // Check for 404 errors on CSS/JS files
+        // Always check for 404 errors on CSS/JS files
         window.addEventListener('error', function(e) {
           if (e.target && (e.target.tagName === 'LINK' || e.target.tagName === 'SCRIPT')) {
             console.error('Failed to load:', e.target.getAttribute('href') || e.target.getAttribute('src'));

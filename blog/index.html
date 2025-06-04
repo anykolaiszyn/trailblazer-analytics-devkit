@@ -1,12 +1,18 @@
 <!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Trailblazer Analytics</title><!-- Adding inline styles for critical CSS --><!-- Debug script for asset loading issues --><script>
+      // Only run debug logging in development or when explicitly enabled
+      const isDebugMode = window.location.hostname === 'localhost' || 
+                         window.location.search.includes('debug=true');
+      
       window.addEventListener('DOMContentLoaded', () => {
-        console.log('Base URL:', '${base}');
-        console.log('Asset paths:');
-        document.querySelectorAll('link[rel="stylesheet"], script[src]').forEach(el => {
-          console.log(el.getAttribute('href') || el.getAttribute('src'));
-        });
+        if (isDebugMode) {
+          console.log('[Debug] Base URL:', '${base}');
+          console.log('[Debug] Asset paths:');
+          document.querySelectorAll('link[rel="stylesheet"], script[src]').forEach(el => {
+            console.log(el.getAttribute('href') || el.getAttribute('src'));
+          });
+        }
         
-        // Check for 404 errors on CSS/JS files
+        // Always check for 404 errors on CSS/JS files
         window.addEventListener('error', function(e) {
           if (e.target && (e.target.tagName === 'LINK' || e.target.tagName === 'SCRIPT')) {
             console.error('Failed to load:', e.target.getAttribute('href') || e.target.getAttribute('src'));
@@ -31,11 +37,11 @@ Blog Post
 Read More →
 </a> </div> </div> </article><article class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow"> <div class="p-6"> <div class="flex items-center mb-4"> <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">
 Blog Post
-</span> </div> <h2 class="text-xl font-bold text-gray-900 mb-3"> <a href="/blog/augmented-analytics-revolution" class="hover:text-blue-600 transition-colors"> The Rise of Augmented Analytics: How AI is Reshaping Business Intelligence </a> </h2>  <div class="flex items-center justify-between">  <a href="/blog/augmented-analytics-revolution" class="text-blue-600 hover:text-blue-800 font-medium text-sm transition-colors">
+</span> </div> <h2 class="text-xl font-bold text-gray-900 mb-3"> <a href="/blog/bi-trends-2025" class="hover:text-blue-600 transition-colors"> 5 BI Trends Shaping 2025 </a> </h2> <p class="text-gray-600 mb-4 line-clamp-3"> Key trends transforming business intelligence in 2025. </p> <div class="flex items-center justify-between"> <time class="text-sm text-gray-500"> May 14, 2025 </time> <a href="/blog/bi-trends-2025" class="text-blue-600 hover:text-blue-800 font-medium text-sm transition-colors">
 Read More →
 </a> </div> </div> </article><article class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow"> <div class="p-6"> <div class="flex items-center mb-4"> <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">
 Blog Post
-</span> </div> <h2 class="text-xl font-bold text-gray-900 mb-3"> <a href="/blog/bi-trends-2025" class="hover:text-blue-600 transition-colors"> 5 BI Trends Shaping 2025 </a> </h2> <p class="text-gray-600 mb-4 line-clamp-3"> Key trends transforming business intelligence in 2025. </p> <div class="flex items-center justify-between"> <time class="text-sm text-gray-500"> May 14, 2025 </time> <a href="/blog/bi-trends-2025" class="text-blue-600 hover:text-blue-800 font-medium text-sm transition-colors">
+</span> </div> <h2 class="text-xl font-bold text-gray-900 mb-3"> <a href="/blog/augmented-analytics-revolution" class="hover:text-blue-600 transition-colors"> The Rise of Augmented Analytics: How AI is Reshaping Business Intelligence </a> </h2>  <div class="flex items-center justify-between">  <a href="/blog/augmented-analytics-revolution" class="text-blue-600 hover:text-blue-800 font-medium text-sm transition-colors">
 Read More →
 </a> </div> </div> </article><article class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow"> <div class="p-6"> <div class="flex items-center mb-4"> <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">
 Blog Post
