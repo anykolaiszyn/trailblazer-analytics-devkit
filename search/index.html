@@ -1,0 +1,40 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Search Results | Trailblazer Analytics</title><meta name="description" content="Find articles, white papers, tech notes, downloads, and other resources on Trailblazer Analytics."><meta name="author" content="Alexander Nykolaiszyn"><!-- Canonical URL --><link rel="canonical" href="https://anykolaiszyn.github.io/trailblazer-analytics-devkit/search/"><!-- Open Graph / Facebook --><meta property="og:type" content="website"><meta property="og:url" content="https://anykolaiszyn.github.io/trailblazer-analytics-devkit/search/"><meta property="og:title" content="Search Results | Trailblazer Analytics"><meta property="og:description" content="Find articles, white papers, tech notes, downloads, and other resources on Trailblazer Analytics."><meta property="og:image" content="https://trailblazer-analytics.com/trailblazer-analytics-devkitimages/search-cover.jpg"><!-- Twitter --><meta property="twitter:card" content="summary_large_image"><meta property="twitter:url" content="https://anykolaiszyn.github.io/trailblazer-analytics-devkit/search/"><meta property="twitter:title" content="Search Results | Trailblazer Analytics"><meta property="twitter:description" content="Find articles, white papers, tech notes, downloads, and other resources on Trailblazer Analytics."><meta property="twitter:image" content="https://trailblazer-analytics.com/trailblazer-analytics-devkitimages/search-cover.jpg"><!-- Favicon --><link rel="icon" type="image/svg+xml" href="/trailblazer-analytics-devkitfavicon.svg"><link rel="apple-touch-icon" sizes="180x180" href="/trailblazer-analytics-devkitapple-touch-icon.png"><link rel="manifest" href="/trailblazer-analytics-devkitsite.webmanifest"><!-- Preload critical resources --><link rel="preload" href="/trailblazer-analytics-devkitassets/styles.css" as="style"><link rel="preload" href="/trailblazer-analytics-devkitfonts/inter-var.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="/trailblazer-analytics-devkitimages/search-cover.jpg" as="image"><!-- Structured Data --><script type="application/ld+json">{"@context":"https://schema.org","@type":"SearchResultsPage"}</script><!-- Adding inline styles for critical CSS --><!-- Debug script for asset loading issues --><script>
+      // Only run debug logging in development or when explicitly enabled
+      const isDebugMode = window.location.hostname === 'localhost' || 
+                         window.location.search.includes('debug=true');
+      
+      window.addEventListener('DOMContentLoaded', () => {
+        if (isDebugMode) {
+          console.log('[Debug] Base URL:', '${base}');
+          console.log('[Debug] Asset paths:');
+          document.querySelectorAll('link[rel="stylesheet"], script[src]').forEach(el => {
+            console.log(el.getAttribute('href') || el.getAttribute('src'));
+          });
+        }
+        
+        // Always check for 404 errors on CSS/JS files
+        window.addEventListener('error', function(e) {
+          if (e.target && (e.target.tagName === 'LINK' || e.target.tagName === 'SCRIPT')) {
+            console.error('Failed to load:', e.target.getAttribute('href') || e.target.getAttribute('src'));
+          }
+        }, true);
+      });    </script><script async src="https://www.googletagmanager.com/gtag/js?id=G-XYZABC1234"></script>
+      <script>(function(){const googleAnalyticsId = "G-XYZABC1234";
+
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', googleAnalyticsId);
+      })();</script><script>(function(){const hotjarId = "3654789";
+
+        (function(h,o,t,j,a,r){
+          h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+          h._hjSettings={hjid:hotjarId,hjsv:6};
+          a=o.getElementsByTagName('head')[0];
+          r=o.createElement('script');r.async=1;
+          r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+          a.appendChild(r);
+        })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+      })();</script><script defer data-domain="trailblazer-analytics.com" src="https://plausible.io/js/script.js"></script><link rel="stylesheet" href="/trailblazer-analytics-devkit/assets/about.DepA0hi7.css"></head> <body class="min-h-screen flex flex-col">  <div class="container mx-auto px-6 py-12"> <h1 class="text-4xl font-bold mb-8 text-center">Search Results</h1> <div class="max-w-2xl mx-auto mb-8"> <div class="relative"> <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none"> <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path> </svg> </div> <input type="text" id="search-input" class="block w-full pl-10 pr-3 py-3 border border-gray-300 dark:border-gray-700 rounded-md leading-5 bg-white dark:bg-gray-800 placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none focus:placeholder-gray-400 dark:focus:placeholder-gray-500 focus:ring-2 focus:ring-brandGreen dark:focus:ring-brandGold focus:border-transparent" placeholder="Search posts, guides, and more..." aria-label="Search"> </div> </div> <div id="results-status" class="text-center py-8 text-gray-500">
+Enter a search term above to find content
+</div> <div id="results-container" class="max-w-4xl mx-auto grid gap-6 lg:grid-cols-2 hidden"> <!-- Results will be inserted here --> </div> <div id="no-results" class="text-center py-12 hidden"> <img src="/trailblazer-analytics-devkitimages/no-results.svg" alt="No results found" width="300" height="300" class loading="lazy" decoding="async" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" srcset="/trailblazer-analytics-devkitimages/no-results.svg 300w, /trailblazer-analytics-devkitimages/no-results.svg 320w, /trailblazer-analytics-devkitimages/no-results.svg 600w" style="aspect-ratio: 300/300;"> <h2 class="text-2xl font-bold mb-2">No results found</h2> <p class="text-gray-600 mb-6">Try different keywords or browse our content categories below</p> <div class="grid gap-4 md:grid-cols-3 max-w-2xl mx-auto"> <a href="/insights" class="border border-gray-300 rounded-lg p-4 hover:border-brandGreen hover:shadow-md transition"> <h3 class="font-bold mb-1">Blog & Insights</h3> <p class="text-sm text-gray-600">Articles and thoughts on data strategy</p> </a> <a href="/tech-notes" class="border border-gray-300 rounded-lg p-4 hover:border-brandGreen hover:shadow-md transition"> <h3 class="font-bold mb-1">Tech Notes</h3> <p class="text-sm text-gray-600">Tutorials and technical guides</p> </a> <a href="/downloads" class="border border-gray-300 rounded-lg p-4 hover:border-brandGreen hover:shadow-md transition"> <h3 class="font-bold mb-1">Downloads</h3> <p class="text-sm text-gray-600">Templates and resources</p> </a> </div> </div> </div>  </body></html> <script type="module" src="/trailblazer-analytics-devkit/assets/search.astro_astro_type_script_index_0_lang.XefOk1zn.js"></script>
